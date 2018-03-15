@@ -1,0 +1,1817 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="id-ID">
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Memakai simple-escp Pada Aplikasi Web | The Solid Snake</title>
+	<link rel="pingback" href="https://thesolidsnake.wordpress.com/xmlrpc.php" />
+	<meta name="google-site-verification" content="NzqoVBd6y1tcqROmJBAmbetOCuCBoo2o_OJUI7bpI9U" />
+<link rel='dns-prefetch' href='//s2.wp.com' />
+<link rel='dns-prefetch' href='//s1.wp.com' />
+<link rel='dns-prefetch' href='//s0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="The Solid Snake &raquo; Feed" href="https://thesolidsnake.wordpress.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Solid Snake &raquo; Umpan Komentar" href="https://thesolidsnake.wordpress.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="The Solid Snake &raquo; Memakai simple-escp Pada Aplikasi&nbsp;Web Umpan Komentar" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/feed/" />
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1516999477h&ver=4.9.4"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='all-css-0-1' href='https://s0.wp.com/_static/??-eJyNkmFzwiAMhv/QItPd3L7s9luAxjYKDUeozn+/1LrOVY/bFy5veB8CIeaUwHNfsC8mDpDC0FIv5pQ8R5BIAc8LtfIiT+YxJoMTnykVYlU7DoFPNX/HR8zgBucCKl3OAWc79T4MjaY1YRorHekBsorU31v2YoruHxx/zUGtbqDDSGFJ1h/gomr2jMEWbCCxlIWqYbbRy4Kz+drAWU8QmZ7L5VFzUDvNc0bNx2TL6IjYkMWAUW01LKbtDzWGnT64Wma6qnMpowjoGmmIUDotdM9NaZMGZ1RiTpkEF//4qAY1LWonC6drT/+NCHuyAaa23YoarO3Fm++A46bmbpEhsLfjEP8RsAuWcn1QXOBWw/Yytb+yBhUWyJg4F9hxjks9op/xY/26fn7bbrYv7/tvJk5lmQ==?cssminify=yes' type='text/css' media='all' />
+<style id='wpcom-admin-bar-inline-css' type='text/css'>
+
+			.admin-bar {
+				position: inherit !important;
+				top: auto !important;
+			}
+			.admin-bar .goog-te-banner-frame {
+				top: 32px !important
+			}
+			@media screen and (max-width: 782px) {
+				.admin-bar .goog-te-banner-frame {
+					top: 46px !important;
+				}
+			}
+			@media screen and (max-width: 480px) {
+				.admin-bar .goog-te-banner-frame {
+					position: absolute;
+				}
+			}
+		
+</style>
+<link rel='stylesheet' id='print-css-1-1' href='https://s0.wp.com/wp-content/mu-plugins/global-print/global-print.css?m=1465851035h&cssminify=yes' type='text/css' media='print' />
+<link rel='stylesheet' id='all-css-2-1' href='https://s0.wp.com/_static/??-eJx9TssKwjAQ/CHjEmilHsRv2aYxWdlkQzatv297UBGxp3kwMww8inGSm88N0mwKz4GyAk6JshmxQkJtvq7MyOJrpcnrxzs61QP8mXCNJG8Tb7YXL6LN3BipgkaslMML91oqjpANS5Bv8VNq0af1euwgsIzIW+CaLra3p/PQ2264PwErH2NX?cssminify=yes' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s0.wp.com/_static/??-eJx9kGEKwjAMhS9kVwab4g/xLFuXjdS2qU3r0NNbYaLOKgRCyEfy3pOzF+iUSQOw1LnOCcJ1aZXmjfwHCItT6CJUFt0TVuQiuChtEt6kCR1LTj2rgD4i5WkkY2he4/m0J44WmLsJCltLPRoQiSFkwMWsaqQC9+kA3QWh9GxlFKLv1EkEYLx9fX+zEsBkv4N4aF1NpbTYv4L5HfNCHe2hbvZt3TbNbqvvGUWZ4A=='></script>
+<link rel='stylesheet' id='all-css-0-2' href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/style.css?m=1377793621h&cssminify=yes' type='text/css' media='all' />
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s1.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://thesolidsnake.wordpress.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml" /> 
+<link rel='prev' title='Memakai simple-escp Di&nbsp;Griffon' href='https://thesolidsnake.wordpress.com/2014/07/20/memakai-simple-escp-di-griffon/' />
+<link rel='next' title='Memakai DNSCrypt Untuk Menghindari DNS&nbsp;Injection' href='https://thesolidsnake.wordpress.com/2014/07/27/memakai-dnscrypt-untuk-menghindari-dns-injection/' />
+<meta name="generator" content="WordPress.com" />
+<link rel="canonical" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/" />
+<link rel='shortlink' href='https://wp.me/pkjf9-TZ' />
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Fthesolidsnake.wordpress.com%2F2014%2F07%2F21%2Fmemakai-simple-escp-pada-aplikasi-web%2F&amp;for=wpcom-auto-discovery" /><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Fthesolidsnake.wordpress.com%2F2014%2F07%2F21%2Fmemakai-simple-escp-pada-aplikasi-web%2F&amp;for=wpcom-auto-discovery" />
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Memakai simple-escp Pada Aplikasi Web" />
+<meta property="og:url" content="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/" />
+<meta property="og:description" content="Pengguna bisa mencetak melalui browser dengan memilih menu File, Print.. di browser atau melalui JavaScript window.print(). Percetakan yang dilakukan dengan cara seperti ini adalah percetakan graph…" />
+<meta property="article:published_time" content="2014-07-21T12:40:22+00:00" />
+<meta property="article:modified_time" content="2014-07-21T12:40:22+00:00" />
+<meta property="og:site_name" content="The Solid Snake" />
+<meta property="og:image" content="https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=630" />
+<meta property="og:locale" content="id_ID" />
+<meta name="twitter:site" content="@wordpressdotcom" />
+<meta name="twitter:text:title" content="Memakai simple-escp Pada Aplikasi&nbsp;Web" />
+<meta name="twitter:image" content="https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png?w=240" />
+<meta name="twitter:card" content="summary" />
+<meta property="fb:app_id" content="249643311490" />
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom" />
+<link rel="shortcut icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="icon" type="image/x-icon" href="https://s2.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48" />
+<link rel="apple-touch-icon-precomposed" href="https://s0.wp.com/i/webclip.png" />
+<link rel='openid.server' href='https://thesolidsnake.wordpress.com/?openidserver=1' />
+<link rel='openid.delegate' href='https://thesolidsnake.wordpress.com/' />
+<link rel="search" type="application/opensearchdescription+xml" href="https://thesolidsnake.wordpress.com/osd.xml" title="The Solid Snake" />
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com" />
+<meta name="theme-color" content="#aaaaaa" />
+		<style id="wpcom-hotfix-masterbar-style">
+			@media screen and (min-width: 783px) {
+				#wpadminbar .quicklinks li#wp-admin-bar-my-account.with-avatar > a img {
+					margin-top: 5px;
+				}
+			}
+		</style>
+		<meta name="application-name" content="The Solid Snake" /><meta name="msapplication-window" content="width=device-width;height=device-height" /><meta name="msapplication-tooltip" content="Catatan Harian Seorang Developer" /><meta name="msapplication-task" content="name=Berlangganan;action-uri=https://thesolidsnake.wordpress.com/feed/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Dukungan WordPress.com;action-uri=http://support.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="msapplication-task" content="name=Forum WordPress.com;action-uri=http://forums.wordpress.com/;icon-uri=https://s2.wp.com/i/favicon.ico" /><meta name="title" content="Memakai simple-escp Pada Aplikasi&nbsp;Web | The Solid Snake on WordPress.com" />
+<meta name="description" content="Pengguna bisa mencetak melalui browser dengan memilih menu File, Print.. di browser atau melalui JavaScript window.print(). Percetakan yang dilakukan dengan cara seperti ini adalah percetakan graphic mode. Bagaimana bila yang diinginkan adalah percetakan text mode? Pada percetakan text mode, posisi bisa ditentukan secara lebih akurat dan pengaturan halaman dapat dilakukan dalam satuan baris dan karakter.&hellip;" />
+		<style type="text/css">
+			#header {
+				background: transparent url(https://thesolidsnake.files.wordpress.com/2013/05/cropped-google1.png) no-repeat;
+				border: none;
+			}
+		</style>
+		<style type="text/css">
+			#header h1,
+			#header h1 a,
+			#header h1 a:visited,
+			#header h4,
+			#header h4 a,
+			#header h4 a:visited,
+			.header-left {
+				color: #ffffff;
+			}
+		</style>
+<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #aaaaaa; }
+</style>
+<link rel="amphtml" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/amp/" /><style type="text/css" media="print">#wpadminbar { display:none; }</style>
+<style type="text/css" media="screen">
+	html { margin-top: 32px !important; }
+	* html body { margin-top: 32px !important; }
+	@media screen and ( max-width: 782px ) {
+		html { margin-top: 46px !important; }
+		* html body { margin-top: 46px !important; }
+	}
+</style>
+<style type="text/css" id="syntaxhighlighteranchor"></style>
+</head>
+
+<body class="post-template-default single single-post postid-3471 single-format-standard logged-in admin-bar no-customize-support custom-background mp6 customizer-styles-applied highlander-enabled highlander-light">
+
+<div id="header">
+	<div class="header-left">
+					<h4><a href="https://thesolidsnake.wordpress.com/">The Solid Snake</a></h4>
+				<p id="description">Catatan Harian Seorang Developer</p>
+	</div>
+	<div class="header-right">
+		<form method="get" id="searchform" action="https://thesolidsnake.wordpress.com/" >
+			<div><label class="hidden" for="s">Search:</label>
+			<input type="text" value="" name="s" id="s" />
+			<input type="submit" id="searchsubmit" value="Lanjut" /></div>
+		</form>
+	</div>
+</div>
+<div id="access">
+	<div id="nav">
+		<div id="supernav" class="navleft nav">
+			<div class="menu"><ul>
+<li ><a href="https://thesolidsnake.wordpress.com/">Beranda</a></li><li class="page_item page-item-1269"><a href="https://thesolidsnake.wordpress.com/1269-2/">Hubungi Saya</a></li>
+</ul></div>
+		</div>
+		<div class="navright">
+			<a class="rsslink" rel="nofollow" href="https://thesolidsnake.wordpress.com/feed/">Pos</a>
+			<a class="rsslink" rel="nofollow" href="https://thesolidsnake.wordpress.com/comments/feed/">Komentar</a>
+		</div>
+	</div>
+
+	<div id="subnav" class="subnav nav">
+		<div class="menu-second-menu-container"><ul id="menu-second-menu" class="menu"><li id="menu-item-1722" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-1722"><a href="https://thesolidsnake.wordpress.com/category/java-technology/">Java</a>
+<ul class="sub-menu">
+	<li id="menu-item-1727" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1727"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-programming-language/">Java Programming Language</a></li>
+	<li id="menu-item-1725" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1725"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-ide-tools/">Java IDE &amp; Tools</a></li>
+	<li id="menu-item-1724" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-1724"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-frameworks-libraries/">Java Frameworks &amp; Libraries</a></li>
+	<li id="menu-item-1723" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1723"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-enterprise-edition/">Java Enterprise Edition</a></li>
+	<li id="menu-item-1726" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1726"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-micro-edition/">Java Micro Edition</a></li>
+</ul>
+</li>
+<li id="menu-item-1741" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor menu-item-has-children menu-item-1741"><a href="https://thesolidsnake.wordpress.com/category/groovy/">Groovy</a>
+<ul class="sub-menu">
+	<li id="menu-item-1905" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1905"><a href="https://thesolidsnake.wordpress.com/category/groovy/groovy-languange/">Groovy Languange</a></li>
+	<li id="menu-item-2023" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-2023"><a href="https://thesolidsnake.wordpress.com/category/groovy/griffon/">Griffon</a></li>
+	<li id="menu-item-1906" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1906"><a href="https://thesolidsnake.wordpress.com/category/groovy/groovy-tools-libraries/">Groovy Tools &amp; Libraries</a></li>
+</ul>
+</li>
+<li id="menu-item-1974" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1974"><a href="https://thesolidsnake.wordpress.com/category/php/">PHP</a>
+<ul class="sub-menu">
+	<li id="menu-item-1744" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1744"><a href="https://thesolidsnake.wordpress.com/category/php/php-programming-language/">PHP Programming Language</a></li>
+	<li id="menu-item-1743" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1743"><a>PHP Framework &amp; Libraries</a></li>
+</ul>
+</li>
+<li id="menu-item-1739" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1739"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/">Pemograman Lainnya</a>
+<ul class="sub-menu">
+	<li id="menu-item-2024" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2024"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/android/">Android</a></li>
+	<li id="menu-item-1740" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1740"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/assembly/">Assembly</a></li>
+	<li id="menu-item-3740" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3740"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/c-sharp/">C#</a></li>
+	<li id="menu-item-3647" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-3647"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/r/">R</a></li>
+	<li id="menu-item-2265" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2265"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/visual-c/">Visual C++</a></li>
+</ul>
+</li>
+<li id="menu-item-1745" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1745"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/">Web Front End</a>
+<ul class="sub-menu">
+	<li id="menu-item-1746" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1746"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/javascript-web-front-end/">JavaScript</a></li>
+	<li id="menu-item-1747" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1747"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/javascript-libraries/">JavaScript Libraries</a></li>
+	<li id="menu-item-1748" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1748"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/web-front-end-tools/">Web Front-End Tools</a></li>
+</ul>
+</li>
+<li id="menu-item-1736" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1736"><a>Database</a>
+<ul class="sub-menu">
+	<li id="menu-item-1737" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1737"><a href="https://thesolidsnake.wordpress.com/category/database/oracle-database/">Oracle Database</a></li>
+	<li id="menu-item-2107" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2107"><a href="https://thesolidsnake.wordpress.com/category/database/mysql/">MySQL</a></li>
+	<li id="menu-item-2108" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2108"><a href="https://thesolidsnake.wordpress.com/category/database/oracle-timesten/">Oracle TimesTen</a></li>
+	<li id="menu-item-4190" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-4190"><a href="https://thesolidsnake.wordpress.com/category/database/nosql/">NoSQL</a></li>
+</ul>
+</li>
+<li id="menu-item-1733" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1733"><a href="https://thesolidsnake.wordpress.com/category/operating-system/">Operating System</a>
+<ul class="sub-menu">
+	<li id="menu-item-1734" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1734"><a href="https://thesolidsnake.wordpress.com/category/operating-system/linux/">Linux</a></li>
+	<li id="menu-item-1735" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1735"><a href="https://thesolidsnake.wordpress.com/category/operating-system/windows-7/">Windows 7</a></li>
+</ul>
+</li>
+<li id="menu-item-1728" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-1728"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/">Lain-Lain</a>
+<ul class="sub-menu">
+	<li id="menu-item-1729" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1729"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/algoritma/">Algoritma</a></li>
+	<li id="menu-item-1730" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1730"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/computer-hardware/">Computer Hardware</a></li>
+	<li id="menu-item-1731" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1731"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/computer-networking/">Computer Networking</a></li>
+	<li id="menu-item-1732" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-1732"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/software-engineering/">Software Engineering</a></li>
+</ul>
+</li>
+</ul></div>	</div>
+</div>
+
+<div id="wrap">
+<div id="content">
+
+	<div id="content-left">
+
+		
+			<div id="nav-above">
+				<div class="nav-previous"><a href="https://thesolidsnake.wordpress.com/2014/07/20/memakai-simple-escp-di-griffon/" rel="prev"><span class="meta-nav">&larr;</span> Memakai simple-escp Di&nbsp;Griffon</a></div>
+				<div class="nav-next"><a href="https://thesolidsnake.wordpress.com/2014/07/27/memakai-dnscrypt-untuk-menghindari-dns-injection/" rel="next">Memakai DNSCrypt Untuk Menghindari DNS&nbsp;Injection <span class="meta-nav">&rarr;</span></a></div>
+			</div>
+
+			<div class="post-3471 post type-post status-publish format-standard hentry category-griffon category-java-frameworks-libraries tag-simple-escp">
+
+				<div class="entry">
+
+					<h1>Memakai simple-escp Pada Aplikasi&nbsp;Web</h1>
+
+					<div class="post-info">
+						<p>
+							<span class="time">21 Juli 2014</span>
+																						<span class="post-comments"><a href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/#comments">1 Komentar</a></span>
+																				</p>
+					</div>
+
+					<div class="pd-rating" id="pd_rating_holder_1449883_post_3471"></div><br/><p>Pengguna bisa mencetak melalui browser dengan memilih menu <strong>File</strong>, <strong>Print..</strong> di browser atau melalui JavaScript <code>window.print()</code>.  Percetakan yang dilakukan dengan cara seperti ini adalah percetakan <em>graphic mode</em>.  Bagaimana bila yang diinginkan adalah percetakan <em>text mode</em>?  Pada percetakan <em>text mode</em>, posisi bisa ditentukan secara lebih akurat dan pengaturan halaman dapat dilakukan dalam satuan baris dan karakter.  simple-escp adalah salah satu library Java yang dapat dipakai untuk keperluan ini.  Untuk memakai simple-escp pada aplikasi web, saya dapat menyertakannya sebagai <strong>applet</strong>.  Applet adalah kode program Java yang akan dikerjakan di sisi client di browser (sama seperti Adobe Flash, Microsoft Silverlight, ActiveX, dan sebagainya).  Salah satu fitur andalan applet adalah kode program JavaScript di halaman HTML yang sama dapat dipakai untuk memanipulasi applet.  Begitu juga sebaliknya, applet juga dapat memanggil kode program JavaScript yang dideklarasikan pada halaman HTML yang sama.</p>
+<p>Untuk membuat applet, saya dapat menggunakan framework Griffon.  Saya akan mulai dengan membuat proyek baru dengan memberikan perintah:</p>
+<pre>
+griffon create-app simple-escp-applet
+</pre>
+<p>Karena applet ini akan memanggil simple-escp, saya perlu mengubah bagian <code>griffon.project.dependency.resolution</code> dari <em>griffon-app/conf/BuildConfig.groovy</em> menjadi seperti berikut ini:</p>
+<pre class="brush: groovy; title: ; notranslate" title="">
+griffon.project.dependency.resolution = {
+    // inherit Griffon&#039; default dependencies
+    inherits(&quot;global&quot;) {
+    }
+    log &quot;warn&quot; // log level of Ivy resolver, either &#039;error&#039;, &#039;warn&#039;, &#039;info&#039;, &#039;debug&#039; or &#039;verbose&#039;
+    repositories {
+        griffonHome()
+        mavenRepo &quot;http://dl.bintray.com/jockihendry/maven&quot;
+    }
+    dependencies {
+        compile &#039;jockihendry:simple-escp:0.4&#039;
+    }
+}
+</pre>
+<p>Saya juga perlu mengubah bagian <code>webstart</code> agar nilai <code>codebase</code> merujuk ke lokasi URL di server nanti, seperti pada contoh berikut ini:</p>
+<pre class="brush: groovy; title: ; notranslate" title="">
+production {
+    ...
+    griffon {
+       ...
+       webstart {
+          codebase = &quot;http://localhost/cetak&quot;
+       }
+    }
+}
+</pre>
+<p>Selain itu, saya akan memanggil JavaScript yang ada di HTML melalui Applet melalui <code>netscape.javascript.JSObject</code>.  Class ini terletak pada <em>plugin.jar</em> dan tidak tersedia pada saat kompilasi.  Untuk itu, saya men-copy file tersebut dari <em>C:\Program Files\Java\jdk\jre\lib</em> ke folder <em>lib</em> di proyek Griffon.</p>
+<p>Karena saya perlu melakukan <em>signing</em> pada applet yang dihasilkan Griffon, maka saya mengubah bagian <code>signingkey</code> di environment <code>production</code> menjadi seperti berikut ini:</p>
+<pre class="brush: groovy; title: ; notranslate" title="">
+production {
+   signingkey {
+      params {                
+         storepass = &#039;thesolidsnake&#039;
+         keypass = &#039;thesolidsnake&#039;
+         lazy = false // sign, regardless of existing signatures
+      }
+   }
+   ...
+}
+</pre>
+<p>Sekarang, saya siap untuk membuat kode program.  Satu hal yang menjadi kendala adalah <code>DataSource</code>.  Saat ini simple-escp menerima <code>DataSource</code> dalam bentuk Map atau JavaBean object yang merupakan tipe data Java.  Kedua data source tersebut tidak dapat dipakai di JavaScript.  Untuk itu, saya perlu membuat <code>DataSource</code> baru yang bisa membaca data dalam bentuk object JavaScript di halaman HTML yang sama.  simple-escp memungkinkan pengguna membuat implementasi <code>DataSource</code> sendiri seperti yang terlihat pada kode program berikut ini (saya meletakkannya di <em>src\main\datasource\JSONDataSource.groovy</em>):</p>
+<pre class="brush: java; title: ; notranslate" title="">
+package datasource;
+
+import simple.escp.data.DataSource;
+import simple.escp.exception.InvalidPlaceholder;
+import javax.json.Json;
+import javax.json.JsonNumber;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import javax.json.JsonValue;
+import java.io.StringReader;
+
+public class JSONDataSource implements DataSource {
+
+    private String jsonString;
+    private JsonObject json;
+
+    public JSONDataSource(String jsonString) {
+        this.jsonString = jsonString;
+        try (JsonReader reader = Json.createReader(new StringReader(jsonString))) {
+            json = reader.readObject();
+        }
+    }
+
+    @Override
+    public boolean has(String s) {
+        return json.containsKey(s);
+    }
+
+    @Override
+    public Object get(String member) throws InvalidPlaceholder {
+        JsonValue value = json.get(member);
+        if (value.getValueType() == JsonValue.ValueType.ARRAY) {
+            return value;
+        } else if (value.getValueType() == JsonValue.ValueType.NUMBER) {
+            return ((JsonNumber) value).bigDecimalValue();
+        } else {
+            return value.toString();
+        }
+    }
+
+    @Override
+    public Object getSource() {
+        return jsonString;
+    }
+
+    @Override
+    public String[] getMembers() {
+        return json.keySet().toArray(new String[0]);
+    }
+}
+</pre>
+<p>Saya kemudian mengubah isi dari <em>SimpleEscpAppletView.groovy</em> menjadi seperti berikut ini:</p>
+<pre class="brush: groovy; title: ; notranslate" title="">
+package simple.escp.applet
+
+import java.awt.BorderLayout
+
+application() {
+
+    panel(id: &#039;mainPanel&#039;, layout: new BorderLayout()) {
+
+    }
+
+}
+</pre>
+<p>Sebagai langkah terakhir dalam membuat applet, saya mengubah kode program <em>SimpleEscpAppletController.groovy</em> menjadi seperti berikut ini:</p>
+<pre class="brush: groovy; title: ; notranslate" title="">
+package simple.escp.applet
+
+import datasource.JSONDataSource
+import simple.escp.fill.FillJob
+import simple.escp.json.JsonTemplate
+import simple.escp.swing.PrintPreviewPane
+import sun.plugin.javascript.JSObject
+import javax.swing.JPanel
+import java.awt.BorderLayout
+
+class SimpleEscpAppletController {
+
+    def model
+    def view
+
+    void mvcGroupInit(Map args) {
+        def window = JSObject.getWindow(app)
+        def report = new JsonTemplate(window.eval(&quot;JSON.stringify(template);&quot;)).parse()
+        def dataSource = window.eval(&quot;JSON.stringify(source);&quot;);
+        def result = new FillJob(report, new JSONDataSource(dataSource)).fill()
+        PrintPreviewPane pane = new PrintPreviewPane(result,
+            report.pageFormat.pageLength, report.pageFormat.pageWidth)
+        JPanel mainPanel = view.mainPanel
+        mainPanel.add(pane, BorderLayout.CENTER)
+    }
+
+}
+</pre>
+<p>Untuk menghasilkan applet, saya memberikan perintah berikut ini:</p>
+<pre>
+griffon package applet
+</pre>
+<p>Griffon secara otomatis akan menghasilkan file distribusi applet pada folder <em>dist/applet</em>.  Pada folder ini, selain file JAR, saya juga akan menemukan file <em>applet.jnlp</em> yang dapat dipakai untuk memanggil applet di HTML.  Seluruh file JAR juga sudah di-sign dengan key yang di-generate untuk keperluan sementara.  Saya juga dapat menemukan file <em>applet.html</em> yang berisi contoh pemanggilan applet.</p>
+<p>Berikutnya, saya memindahkan seluruh file JAR (dan juga versi yang sudah di-compress dalam bentuk <em>.jar.pack.gz</em>), file gambar, file JNLP dan file HTML ke lokasi deployment di webserver.  Sebagai contoh, karena saya memakai NGINX, saya akan memindahkan file tersebut ke folder <em>html/cetak</em>.  Saya kemudian mengubah file <em>applet.html</em> menjadi seperti berikut ini:</p>
+<pre class="brush: xml; title: ; notranslate" title="">
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01 Transitional//EN&quot;
+        &quot;http://www.w3.org/TR/html4/loose.dtd&quot;&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Latihan Cetak&lt;/title&gt;
+    &lt;script&gt;
+    var template = {
+        pageFormat: {
+            pageLength: 10,
+            pageWidth: 50,
+            usePageLengthFromPrinter: false
+        },
+        template: {
+            header: [&quot; PT. XYZ                                    HAL: %{PAGE_NO}&quot;],
+            detail: [
+                &quot; Nomor Faktur: ${nomorFaktur:20}&quot;,
+                {
+                    &quot;table&quot;: &quot;listItemFaktur&quot;,
+                    &quot;border&quot;: true,
+                    &quot;columns&quot;: [
+                        { caption: &quot;Nama Barang&quot;, source: &quot;namaBarang&quot;, width: 25, wrap: true },
+                        { caption: &quot;Qty&quot;, source: &quot;qty::right&quot;, width: 5 },
+                        { caption: &quot;Harga&quot;, source: &quot;harga.bigDecimalValue()::right::number&quot;, width: 15 }
+                    ]
+                }
+            ]
+        }
+    };
+
+    var source = {
+        nomorFaktur: &#039;FA-1234-556677-XX-BB-CC&#039;,
+        listItemFaktur: [
+            {namaBarang: &#039;Plantronics Backbet Go 2 With Charging Case&#039;, qty: 1, harga: 13750000},
+            {namaBarang: &#039;CORT Gitar Akustik AD810 - Natural Satin&#039;, qty: 1, harga: 14900000},
+            {namaBarang: &#039;SAMSON Monitor Speaker System MediaOne 3A&#039;, qty: 1, harga: 14250000}
+        ]
+    };
+
+  &lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;h1&gt;Latihan Cetak&lt;/h1&gt;
+
+&lt;p&gt;Halaman ini akan memanggil applet yang mencetak ke printer dot matrix dengan bantuan JavaScript.&lt;/p&gt;
+
+&lt;APPLET CODEBASE=&#039;http://localhost/cetak&#039;
+        CODE=&#039;griffon.swing.SwingApplet&#039;
+        ARCHIVE=&#039;griffon-swing-runtime-1.4.0.jar,griffon-rt-1.5.0.jar,groovy-all-2.2.1.jar,javax.json-1.0.4.jar,javax.json-api-1.0.jar,jcl-over-slf4j-1.7.5.jar,jul-to-slf4j-1.7.5.jar,log4j-1.2.17.jar,plugin.jar,simple-escp-0.4.jar,simple-escp-applet-0.1.jar,slf4j-api-1.7.5.jar,slf4j-log4j12-1.7.5.jar&#039;
+        WIDTH=&#039;800&#039; HEIGHT=&#039;500&#039;&gt;
+    &lt;PARAM NAME=&quot;java_arguments&quot; VALUE=&quot;-Djnlp.packEnabled=true&quot;&gt;
+    &lt;PARAM NAME=&#039;jnlp_href&#039; VALUE=&#039;http://localhost/cetak/applet.jnlp&#039;&gt;
+    &lt;PARAM NAME=&#039;dragggable&#039; VALUE=&#039;true&#039;&gt;
+    &lt;PARAM NAME=&#039;image&#039; VALUE=&#039;griffon.png&#039;&gt;
+    &lt;PARAM NAME=&#039;boxmessage&#039; VALUE=&#039;Loading Simple-escp-applet&#039;&gt;
+    &lt;PARAM NAME=&#039;boxbgcolor&#039; VALUE=&#039;#FFFFFF&#039;&gt;
+    &lt;PARAM NAME=&#039;boxfgcolor&#039; VALUE=&#039;#000000&#039;&gt;
+    &lt;PARAM NAME=&#039;codebase_lookup&#039; VALUE=&#039;false&#039;&gt;
+&lt;/APPLET&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+<p>Pada HTML di atas, saya mendeklarasikan dua variabel JavaScript yang wajib ada, yaitu variabel <code>template</code> dan <code>source</code>.  Kedua variabel ini akan dibaca oleh applet dan masing-masing diterjemahkan menjadi <code>JsonTemplate</code> dan <code>JSONDataSource</code>.  Pada kasus yang lebih kompleks, ini variabel <code>source</code> biasanya akan dihasilkan oleh sisi server.  Sebagai contoh, bila bahasa pemograman di sisi server adalah PHP, saya dapat menggunakan function <code>json_encode()</code> untuk menghasilkan object JavaScript dari array atau object PHP yang mengimplementasikan <code>JsonSerializable</code>.</p>
+<p>Sekarang, saya akan mencoba membuka halaman <em><a href="http://localhost/cetak/applet.html" rel="nofollow">http://localhost/cetak/applet.html</a></em> melalui browser pada sistem operasi yang telah memiliki instalasi Java.  Saya menemukan dialog peringatan seperti berikut ini:</p>
+<div data-shortcode="caption" id="attachment_3472" style="max-width: 518px" class="wp-caption aligncenter"><a href="https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png"><img data-attachment-id="3472" data-permalink="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/gambar1-194/" data-orig-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png?w=630" data-orig-size="508,310" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="Peringatan di browser pada saat menjalankan applet" data-image-description="&lt;p&gt;Peringatan di browser pada saat menjalankan applet&lt;/p&gt;
+" data-medium-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png?w=630?w=300" data-large-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png?w=630?w=508" src="https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png?w=630" alt="Peringatan di browser pada saat menjalankan applet"   class="size-full wp-image-3472" srcset="https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png 508w, https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png?w=150 150w, https://thesolidsnake.files.wordpress.com/2014/07/gambar15.png?w=300 300w" sizes="(max-width: 508px) 100vw, 508px" /></a><p class="wp-caption-text">Peringatan di browser pada saat menjalankan applet</p></div>
+<p>Karena saya memang ingin mengaktifkan Java di browser, maka saya memilih <strong>Later</strong>.  Setelah itu, akan kembali muncul pesan peringatan lainnya seperti pada gambar berikut ini:</p>
+<div data-shortcode="caption" id="attachment_3473" style="max-width: 521px" class="wp-caption aligncenter"><a href="https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png"><img data-attachment-id="3473" data-permalink="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/gambar2-156/" data-orig-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png?w=630" data-orig-size="511,360" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="Peringatan saat menjalankan applet yang tidak sertifikatnya tidak diverifikasi" data-image-description="&lt;p&gt;Peringatan saat menjalankan applet yang tidak sertifikatnya tidak diverifikasi&lt;/p&gt;
+" data-medium-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png?w=630?w=300" data-large-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png?w=630?w=511" src="https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png?w=630" alt="Peringatan saat menjalankan applet yang tidak sertifikatnya tidak diverifikasi"   class="size-full wp-image-3473" srcset="https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png 511w, https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png?w=150 150w, https://thesolidsnake.files.wordpress.com/2014/07/gambar23.png?w=300 300w" sizes="(max-width: 511px) 100vw, 511px" /></a><p class="wp-caption-text">Peringatan saat menjalankan applet yang tidak sertifikatnya tidak diverifikasi</p></div>
+<p>Pesan peringatan ini muncul karena JAR saya di-sign sendiri tanpa verifikasi dari pihak terpercaya seperti Verisign, GoDaddy dan sejenisnya (yang memungut biaya verifikasi).  Pesan keamanan ini diberikan karena applet yang di-sign oleh publisher tak dikenal memiliki akses yang lebih leluasa dibandingkan applet yang tidak di-sign sama sekali, misalnya baca/tulis file serta melakukan percetakan.</p>
+<p>Saya memberi tanda centang pada <em>I accept the risk and want to run this application.</em> dan men-klik tombol <strong>Run</strong>.  Tampilan browser saya akan terlihat seperti pada gambar berikut ini:</p>
+<div data-shortcode="caption" id="attachment_3474" style="max-width: 640px" class="wp-caption aligncenter"><a href="https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png"><img data-attachment-id="3474" data-permalink="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/gambar3-117/" data-orig-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png" data-orig-size="857,704" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="Tampilan di browser" data-image-description="&lt;p&gt;Tampilan di browser&lt;/p&gt;
+" data-medium-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=300" data-large-file="https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=630&#038;h=517" src="https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=630&#038;h=517" alt="Tampilan di browser" width="630" height="517" class="size-large wp-image-3474" srcset="https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=630&amp;h=517 630w, https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=150&amp;h=123 150w, https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=300&amp;h=246 300w, https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png?w=768&amp;h=631 768w, https://thesolidsnake.files.wordpress.com/2014/07/gambar32.png 857w" sizes="(max-width: 630px) 100vw, 630px" /></a><p class="wp-caption-text">Tampilan di browser</p></div>
+<p>Bila saya men-klik tombol <strong>Print</strong> dari <code>PrintPreviewPane</code> milik simple-escp, maka percetakan akan dilakukan pada <em>text mode</em> ke printer dot matrix yang sedang terpilih.</p>
+<div id="jp-post-flair" class="sharedaddy sd-rating-enabled sd-like-enabled sd-sharing-enabled"><div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Bagikan ini:</h3><div class="sd-content"><ul><li class="share-facebook"><a rel="nofollow" data-shared="sharing-facebook-3471" class="share-facebook sd-button share-icon" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/?share=facebook" target="_blank" title="Bagikan pada Facebook"><span>Facebook</span></a></li><li class="share-linkedin"><a rel="nofollow" data-shared="sharing-linkedin-3471" class="share-linkedin sd-button share-icon" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/?share=linkedin" target="_blank" title="Klik untuk berbagi di Linkedln"><span>LinkedIn</span></a></li><li class="share-twitter"><a rel="nofollow" data-shared="sharing-twitter-3471" class="share-twitter sd-button share-icon" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/?share=twitter" target="_blank" title="Klik untuk berbagi pada Twitter"><span>Twitter</span></a></li><li class="share-google-plus-1"><a rel="nofollow" data-shared="sharing-google-3471" class="share-google-plus-1 sd-button share-icon" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/?share=google-plus-1" target="_blank" title="Klik untuk berbagi via Google+"><span>Google</span></a></li><li class="share-email"><a rel="nofollow" data-shared="" class="share-email sd-button share-icon" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/?share=email" target="_blank" title="Klik untuk email"><span>Surat elektronik</span></a></li><li class="share-print"><a rel="nofollow" data-shared="" class="share-print sd-button share-icon" href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/#print" target="_blank" title="Klik untuk mencetak"><span>Cetak</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-4840535-3471-5aa013245dbee' data-src='//widgets.wp.com/likes/index.html?ver=20180228#blog_id=4840535&amp;post_id=3471&amp;origin=thesolidsnake.wordpress.com&amp;obj_id=4840535-3471-5aa013245dbee' data-name='like-post-frame-4840535-3471-5aa013245dbee'><h3 class='sd-title'>Sukai ini:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Suka</span></span> <span class="loading">Memuat...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>
+<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Terkait</em></h3>
+</div></div><div class="clear"></div>
+					
+					<!--
+					<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+			xmlns:dc="http://purl.org/dc/elements/1.1/"
+			xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+		<rdf:Description rdf:about="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/"
+    dc:identifier="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/"
+    dc:title="Memakai simple-escp Pada Aplikasi&nbsp;Web"
+    trackback:ping="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/trackback/" />
+</rdf:RDF>					-->
+
+				</div>
+
+				<div class="post-meta">
+					<p>
+						<span class="categories">Filed under <a href="https://thesolidsnake.wordpress.com/category/groovy/griffon/" rel="category tag">Griffon</a>, <a href="https://thesolidsnake.wordpress.com/category/java-technology/java-frameworks-libraries/" rel="category tag">Java Frameworks &amp; Libraries</a></span>
+						<span class="tags">Tagged with <a href="https://thesolidsnake.wordpress.com/tag/simple-escp/" rel="tag">simple-escp</a></span>					</p>
+				</div>
+
+			</div>
+
+						<div class="author-box">
+				<p><strong>Perihal Solid Snake</strong><br />I'm nothing...</p>
+			</div>
+			
+						<p></p>
+
+			<div id="comments">
+	
+
+	<h3 id="comments-title">One Response to <em>Memakai simple-escp Pada Aplikasi&nbsp;Web</em>	</h3>
+
+	<ol class="commentlist snap_preview">
+				<li class="comment byuser comment-author-alhasany09 even thread-even depth-1 highlander-comment" id="li-comment-929">
+		<div id="comment-929">
+		<div class="comment-author vcard">
+						<cite class="fn"><a href='http://allpemrograman.wordpress.com' rel='external nofollow' class='url'>alhasany09</a></cite> <span class="says">says:</span>		</div>
+		
+		<div class="comment-meta commentmetadata"><a href="https://thesolidsnake.wordpress.com/2014/07/21/memakai-simple-escp-pada-aplikasi-web/#comment-929">08 Mei 2017 pukul 3:35 PM</a></div>
+
+		<div class="comment-body"><p>maaf mau tanya, jika saat package applet ada error seperti ini bagaimana ya?</p>
+<p>simple-escp-applet/src/main/datasource/JSONDataSource.groovy: 30: expecting &#8216;{&#8216;, found &#8216;(&#8216; @ line 30, column 13.</p>
+<p>try (JsonReader reader = Json.createReader(new StringReader(jsonString))) {</p>
+</div>
+
+		<div class="reply">
+			<a class='comment-reply-link' href='/2014/07/21/memakai-simple-escp-pada-aplikasi-web/?replytocom=929#respond' onclick='return addComment.moveForm("comment-929", "929", "respond", "3471")'>Balas</a>		</div>
+	</div>
+
+	</li><!-- #comment-## -->
+	</ol>
+
+
+	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Apa komentar Anda? <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2014/07/21/memakai-simple-escp-pada-aplikasi-web/#respond" style="display:none;">Batalkan balasan</a></small></h3>			<form action="https://thesolidsnake.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<input type="hidden" id="highlander_comment_nonce" name="highlander_comment_nonce" value="f206698e13" /><input type="hidden" name="_wp_http_referer" value="/2014/07/21/memakai-simple-escp-pada-aplikasi-web/" />
+<input type="hidden" name="hc_post_as" id="hc_post_as" value="wordpress" />
+
+<div class="comment-form-field comment-textarea">
+	<label for="comment">Ketikkan komentar di sini...</label>
+	<div id="comment-form-comment"><textarea id="comment" name="comment" title="Ketikkan komentar di sini..."></textarea></div>
+</div>
+
+<div id="comment-form-identity" class="comment_registration">
+
+	<div id="comment-form-nascar">
+		<p>Please log in using one of these methods to post your comment:</p>
+		<ul>
+			<li class="selected">
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" title="WordPress.com">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" title="Twitter">
+					<span></span>
+				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" title="Facebook">
+					<span></span>
+				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="https://public-api.wordpress.com/connect/?googleplus-sign-in=https%3A%2F%2Fthesolidsnake.wordpress.com" width="24" height="24" scrolling="no" allowtransparency="true" seamless="seamless" frameborder="0"></iframe>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="" alt="Gravatar" width="25" class="no-grav" />
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">Surel <span class="required">(wajib)</span> <span class="nopublish">(Alamat takkan pernah dipublikasikan)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">Nama <span class="required">(wajib)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text" value="" /></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">Situs Web</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url" value="" /></div>
+				</div>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="https://1.gravatar.com/avatar/a22cb6f791a899b2efdf8cff9e5c3fdb?s=25&amp;d=wavatar&amp;r=G" alt="Gravatar" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="https://1.gravatar.com/avatar/a22cb6f791a899b2efdf8cff9e5c3fdb?s=25&#038;d=https%3A%2F%2Fs2.wp.com%2Fwp-content%2Fmu-plugins%2Fhighlander-comments%2Fimages%2Fwplogo.png&#038;r=G" />
+				<input type="hidden" name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="10695144" />
+				<input type="hidden" name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="2afbc5d6e787cf4e629bc6acbde805e400c8c711" />
+				<p class="comment-form-posting-as pa-wordpress"><strong>hajirodeon:</strong> You are commenting using your WordPress.com account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'wordpress' );">Logout</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Ubah</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Gambar Twitter" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" />
+				<input type="hidden" name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" />
+				<p class="comment-form-posting-as pa-twitter"><strong></strong> You are commenting using your Twitter account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'twitter' );">Logout</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Ubah</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Foto Facebook" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" />
+				<input type="hidden" name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" />
+				<p class="comment-form-posting-as pa-facebook"><strong></strong> You are commenting using your Facebook account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'facebook' );">Logout</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Ubah</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="" alt="Foto Google+" width="25" class="no-grav" />
+			</div>
+
+				<div class="comment-form-fields">
+				<input type="hidden" name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" />
+				<input type="hidden" name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" />
+				<p class="comment-form-posting-as pa-googleplus"><strong></strong> You are commenting using your Google+ account. <span class="comment-form-log-out">(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout( 'googleplus' );">Logout</a>&nbsp;/&nbsp;<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Ubah</a>&nbsp;)</span></p>
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Batal</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe">
+	<p class="comment-subscription-form"><input type="checkbox" name="subscribe" id="subscribe" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Beri tahu saya komentar baru melalui email.</label></p><p class="post-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto;"/> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog"  style="display: inline;">Beritahu saya pos-pos baru lewat surat elektronik.</label></p></div>
+
+<p class="form-submit"><input name="submit" type="submit" id="comment-submit" class="submit" value="Kirim Komentar" /> <input type='hidden' name='comment_post_ID' value='3471' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="df9fd5bfce" /></p>
+<input type="hidden" name="genseq" value="1520440100" />
+<p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="167"/></p>			</form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments -->
+	</div>
+
+<div id="sidebar">
+
+	<div id="categories-422845191" class="widget widget_categories"><h4>Kategori</h4>		<ul>
+	<li class="cat-item cat-item-475"><a href="https://thesolidsnake.wordpress.com/category/database/" title="Semua tulisan yang berhubungan dengan database seperti Oracle Database, MySQL Server, dsb.">Database</a> (93)
+<ul class='children'>
+	<li class="cat-item cat-item-4419"><a href="https://thesolidsnake.wordpress.com/category/database/mysql/" >MySQL</a> (8)
+</li>
+	<li class="cat-item cat-item-22319505"><a href="https://thesolidsnake.wordpress.com/category/database/nosql/" >NoSQL</a> (1)
+</li>
+	<li class="cat-item cat-item-783555"><a href="https://thesolidsnake.wordpress.com/category/database/oracle-database/" title="Semua tulisan yang berhubungan dengan Oracle Database.">Oracle Database</a> (72)
+</li>
+	<li class="cat-item cat-item-63441525"><a href="https://thesolidsnake.wordpress.com/category/database/oracle-timesten/" title="Semua tulisan yang berhubungan dengan Oracle TimesTen In-Memory Database">Oracle TimesTen</a> (12)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-883"><a href="https://thesolidsnake.wordpress.com/category/groovy/" title="Semua tulisan yang berhubungan dengan bahasa pemograman Groovy.">Groovy</a> (67)
+<ul class='children'>
+	<li class="cat-item cat-item-1204152"><a href="https://thesolidsnake.wordpress.com/category/groovy/griffon/" title="Semua tulisan yang berhubungan dengan framework Griffon.">Griffon</a> (54)
+</li>
+	<li class="cat-item cat-item-179001239"><a href="https://thesolidsnake.wordpress.com/category/groovy/groovy-languange/" title="Bahasa pemograman Groovy">Groovy Languange</a> (8)
+</li>
+	<li class="cat-item cat-item-179001795"><a href="https://thesolidsnake.wordpress.com/category/groovy/groovy-tools-libraries/" title="Tools &amp; Libraries Untuk Groovy">Groovy Tools &amp; Libraries</a> (4)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-12930"><a href="https://thesolidsnake.wordpress.com/category/java-technology/" title="Semua tulisan yang berhubungan dengan pemograman Java dan teknologi yang berkaitan dengan Java, baik Java SE, Java EE, maupun Java ME.">Java Technology</a> (130)
+<ul class='children'>
+	<li class="cat-item cat-item-287207"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-enterprise-edition/" title="Semua tulisan yang berhubungan dengan Java Enterprise Edition.">Java Enterprise Edition</a> (16)
+</li>
+	<li class="cat-item cat-item-170107884"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-frameworks-libraries/" title="Semua tulisan yang berhubungan dengan framework dan APIs yang tidak termasuk dalam distribusi Java, seperti Spring, Strut, iTEXT, dsb.">Java Frameworks &amp; Libraries</a> (70)
+</li>
+	<li class="cat-item cat-item-133248283"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-ide-tools/" title="Semua tulisan yang berhubungan dengan IDE yang dapat dipergunakan untuk pengembangan aplikasi berbasis Java, seperti Eclipse dan pengembangan plug-in dengan Eclipse.">Java IDE &amp; Tools</a> (24)
+</li>
+	<li class="cat-item cat-item-4505536"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-micro-edition/" >Java Micro Edition</a> (5)
+</li>
+	<li class="cat-item cat-item-6257908"><a href="https://thesolidsnake.wordpress.com/category/java-technology/java-programming-language/" title="Semua tulisan yang berhubungan dengan bahasa pemograman Java dan teknik-teknik yang dipakai dalam pemograman Java.">Java Programming Language</a> (22)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-10740"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/" title="Semua tulisan dalam kategori lainnya.">Lain-Lain</a> (45)
+<ul class='children'>
+	<li class="cat-item cat-item-93517"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/algoritma/" >Algoritma</a> (3)
+</li>
+	<li class="cat-item cat-item-14163"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/computer-hardware/" title="Semua tulisan yang berhubungan dengan perangkat keras komputer dan pemograman tingkat rendah seperti assembly.">Computer Hardware</a> (4)
+</li>
+	<li class="cat-item cat-item-298573"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/computer-networking/" title="Semua tulisan yang berhubungan dengan computer networking seperti IP networking.">Computer Networking</a> (11)
+</li>
+	<li class="cat-item cat-item-11176"><a href="https://thesolidsnake.wordpress.com/category/lain-lain/software-engineering/" title="Semua tulisan yang berhubungan dengan software engineering dan cabang-cabangnya.">Software Engineering</a> (27)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-5495"><a href="https://thesolidsnake.wordpress.com/category/operating-system/" title="Semua tulisan yang berhubungan dengan sistem operasi, seperti penggunaan sistem operasi atau pengembangan sistem operasi tersebut.">Operating System</a> (45)
+<ul class='children'>
+	<li class="cat-item cat-item-610"><a href="https://thesolidsnake.wordpress.com/category/operating-system/linux/" title="Semua tulisan yang berhubungan dengan sistem operasi Linux.">Linux</a> (17)
+</li>
+	<li class="cat-item cat-item-729864"><a href="https://thesolidsnake.wordpress.com/category/operating-system/windows-7/" title="Semua tulisan yang berhubungan dengan sistem operasi Windows 7.">Windows 7</a> (28)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-170503127"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/" title="Semua tulisan yang berhubungan dengan bahasa pemograman DSL atau bahasa pemograman lain seperti Python, Ruby, R dan sebagainya.">Pemograman Lainnya</a> (60)
+<ul class='children'>
+	<li class="cat-item cat-item-641922"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/android/" title="Semua tulisan yang berkaitan dengan pemograman di Android.">Android</a> (24)
+</li>
+	<li class="cat-item cat-item-6595"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/assembly/" >Assembly</a> (4)
+</li>
+	<li class="cat-item cat-item-14056"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/c-sharp/" title="Semua tulisan yang berkaitan dengan pemograman C#">C Sharp</a> (17)
+</li>
+	<li class="cat-item cat-item-10189"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/r/" title="Artikel yang berhubungan dengan bahasa R.">R</a> (6)
+</li>
+	<li class="cat-item cat-item-87493"><a href="https://thesolidsnake.wordpress.com/category/pemograman-lainnya/visual-c/" title="Semua tulisan yang berkaitan dengan pemograman Visual C++">Visual C++</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-458"><a href="https://thesolidsnake.wordpress.com/category/php/" >PHP</a> (29)
+<ul class='children'>
+	<li class="cat-item cat-item-170520939"><a href="https://thesolidsnake.wordpress.com/category/php/php-frameworks-libraries/" >PHP Frameworks &amp; Libraries</a> (20)
+</li>
+	<li class="cat-item cat-item-12976159"><a href="https://thesolidsnake.wordpress.com/category/php/php-programming-language/" >PHP Programming Language</a> (9)
+</li>
+</ul>
+</li>
+	<li class="cat-item cat-item-19148886"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/" title="Semua tulisan yang berhubungan dengan pemograman web di sisi front-end yang berhubungan dengan tampilan, seperti JavaScript, jQuery,  jqGrid, dan sebagainya.">Web Front End</a> (51)
+<ul class='children'>
+	<li class="cat-item cat-item-112392493"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/javascript-web-front-end/" title="Semua tulisan yang berhubungan dengan JavaScript">JavaScript</a> (18)
+</li>
+	<li class="cat-item cat-item-2133618"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/javascript-libraries/" title="Semua tulisan yang berhubungan dengan framework dan APIs di web front-end seperti jQuery, jQuery UI dan sebagainya.">JavaScript Libraries</a> (13)
+</li>
+	<li class="cat-item cat-item-132991840"><a href="https://thesolidsnake.wordpress.com/category/web-front-end/web-front-end-tools/" title="Tulisan yang berkaitan dengan tools yang digunakan dalam pengembangan web front end.">Web Front-End Tools</a> (24)
+</li>
+</ul>
+</li>
+		</ul>
+</div>		<div id="recent-posts-2" class="widget widget_recent_entries">		<h4>Tulisan Terakhir</h4>		<ul>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2017/08/08/menambah-atau-mengubah-endpoint-yang-dihasilkan-spring-data-rest/">Menambah atau mengubah endpoint yang dihasilkan Spring Data&nbsp;Rest</a>
+											<span class="post-date">08 Agustus 2017</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2017/08/05/menghindari-cors-saat-memakai-spring-boot-bersama-dengan-webpack/">Menghindari CORS saat memakai Spring Boot bersama dengan&nbsp;Webpack</a>
+											<span class="post-date">05 Agustus 2017</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2017/07/17/memakai-bootstrap-bersama-dengan-vue-js-dan-webpack/">Memakai Bootstrap bersama dengan Vue.js dan&nbsp;Webpack</a>
+											<span class="post-date">17 Juli 2017</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2017/07/15/memperbaharui-output-webpack-di-browser-secara-otomatis/">Memperbaharui Output Webpack Di Browser Secara&nbsp;Otomatis</a>
+											<span class="post-date">15 Juli 2017</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2017/07/11/belajar-menilai-seberapa-sempurna-rancangan-rest-api/">Belajar menilai seberapa sempurna rancangan REST&nbsp;API</a>
+											<span class="post-date">11 Juli 2017</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2017/07/10/menyatukan-frontend-dan-backend-pada-satu-proyek-yang-sama/">Menyatukan Frontend dan Backend Pada Satu Proyek Yang&nbsp;Sama</a>
+											<span class="post-date">10 Juli 2017</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/05/10/memakai-graph-database-dengan-neo4j/">Memakai Graph Database Dengan&nbsp;Neo4j</a>
+											<span class="post-date">10 Mei 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/05/08/membuat-fitur-produk-serupa-dengan-predictionio/">Membuat Fitur &#8220;Produk Serupa&#8221; Dengan&nbsp;PredictionIO</a>
+											<span class="post-date">08 Mei 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/05/06/belajar-memakai-specification-di-spring-data-jpa/">Belajar Memakai Specification Di Spring Data&nbsp;JPA</a>
+											<span class="post-date">06 Mei 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/05/04/belajar-membuat-aplikasi-web-dengan-spring-framework/">Belajar Membuat Aplikasi Web Dengan Spring&nbsp;Framework</a>
+											<span class="post-date">04 Mei 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/04/09/mematikan-kamera-pada-perangkat-android-dengan-device-administrator-api/">Mematikan Kamera Pada Perangkat Android Dengan Device Administrator&nbsp;API</a>
+											<span class="post-date">09 April 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/04/08/membuat-keyboard-jarak-jauh-untuk-android/">Membuat Keyboard Jarak Jauh Untuk&nbsp;Android</a>
+											<span class="post-date">08 April 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/04/06/belajar-membuat-live-wallpaper-untuk-android/">Belajar Membuat Live Wallpaper Untuk&nbsp;Android</a>
+											<span class="post-date">06 April 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/04/04/belajar-membaca-nilai-sensor-accelerometer-di-android/">Belajar Membaca Nilai Sensor Accelerometer Di&nbsp;Android</a>
+											<span class="post-date">04 April 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/04/01/menampilkan-peta-dengan-google-maps-api/">Menampilkan Peta Dengan Google Maps&nbsp;API</a>
+											<span class="post-date">01 April 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/03/28/memakai-database-sqlite-di-android/">Memakai Database SQLite Di&nbsp;Android</a>
+											<span class="post-date">28 Maret 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/03/25/mencari-arah-dengan-kompas-digital-di-android/">Mencari Arah Dengan Kompas Digital Di&nbsp;Android</a>
+											<span class="post-date">25 Maret 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/03/24/mencari-lokasi-dengan-gps-di-android/">Mencari Lokasi Dengan GPS Di&nbsp;Android</a>
+											<span class="post-date">24 Maret 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/03/18/mengatur-wilayah-focus-pada-kamera-di-android/">Mengatur Wilayah Focus Pada Kamera Di&nbsp;Android</a>
+											<span class="post-date">18 Maret 2015</span>
+									</li>
+											<li>
+					<a href="https://thesolidsnake.wordpress.com/2015/03/16/memakai-efek-warna-di-kamera-pada-android/">Memakai Efek Warna Di Kamera Pada&nbsp;Android</a>
+											<span class="post-date">16 Maret 2015</span>
+									</li>
+					</ul>
+		</div><div id="archives-2" class="widget widget_archive"><h4>Arsip</h4>		<label class="screen-reader-text" for="archives-dropdown-2">Arsip</label>
+		<select id="archives-dropdown-2" name="archive-dropdown" onchange='document.location.href=this.options[this.selectedIndex].value;'>
+			
+			<option value="">Pilih Bulan</option>
+				<option value='https://thesolidsnake.wordpress.com/2017/08/'> Agustus 2017 </option>
+	<option value='https://thesolidsnake.wordpress.com/2017/07/'> Juli 2017 </option>
+	<option value='https://thesolidsnake.wordpress.com/2015/05/'> Mei 2015 </option>
+	<option value='https://thesolidsnake.wordpress.com/2015/04/'> April 2015 </option>
+	<option value='https://thesolidsnake.wordpress.com/2015/03/'> Maret 2015 </option>
+	<option value='https://thesolidsnake.wordpress.com/2015/02/'> Februari 2015 </option>
+	<option value='https://thesolidsnake.wordpress.com/2015/01/'> Januari 2015 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/12/'> Desember 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/11/'> November 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/10/'> Oktober 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/09/'> September 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/08/'> Agustus 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/07/'> Juli 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/06/'> Juni 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/05/'> Mei 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/03/'> Maret 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/02/'> Februari 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2014/01/'> Januari 2014 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/12/'> Desember 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/11/'> November 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/10/'> Oktober 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/09/'> September 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/08/'> Agustus 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/07/'> Juli 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/06/'> Juni 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/05/'> Mei 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/04/'> April 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/03/'> Maret 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/02/'> Februari 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2013/01/'> Januari 2013 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/12/'> Desember 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/11/'> November 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/10/'> Oktober 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/09/'> September 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/08/'> Agustus 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/07/'> Juli 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/06/'> Juni 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/05/'> Mei 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/02/'> Februari 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2012/01/'> Januari 2012 </option>
+	<option value='https://thesolidsnake.wordpress.com/2011/11/'> November 2011 </option>
+	<option value='https://thesolidsnake.wordpress.com/2011/10/'> Oktober 2011 </option>
+	<option value='https://thesolidsnake.wordpress.com/2011/08/'> Agustus 2011 </option>
+	<option value='https://thesolidsnake.wordpress.com/2011/07/'> Juli 2011 </option>
+	<option value='https://thesolidsnake.wordpress.com/2011/06/'> Juni 2011 </option>
+	<option value='https://thesolidsnake.wordpress.com/2011/02/'> Februari 2011 </option>
+	<option value='https://thesolidsnake.wordpress.com/2010/12/'> Desember 2010 </option>
+	<option value='https://thesolidsnake.wordpress.com/2010/10/'> Oktober 2010 </option>
+	<option value='https://thesolidsnake.wordpress.com/2010/09/'> September 2010 </option>
+	<option value='https://thesolidsnake.wordpress.com/2010/08/'> Agustus 2010 </option>
+	<option value='https://thesolidsnake.wordpress.com/2010/02/'> Februari 2010 </option>
+	<option value='https://thesolidsnake.wordpress.com/2010/01/'> Januari 2010 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/10/'> Oktober 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/09/'> September 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/08/'> Agustus 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/07/'> Juli 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/06/'> Juni 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/05/'> Mei 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/04/'> April 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2009/01/'> Januari 2009 </option>
+	<option value='https://thesolidsnake.wordpress.com/2008/12/'> Desember 2008 </option>
+	<option value='https://thesolidsnake.wordpress.com/2008/11/'> November 2008 </option>
+	<option value='https://thesolidsnake.wordpress.com/2008/10/'> Oktober 2008 </option>
+	<option value='https://thesolidsnake.wordpress.com/2008/09/'> September 2008 </option>
+
+		</select>
+		</div><div id="wp_tag_cloud-2" class="widget wp_widget_tag_cloud"><h4></h4><div style="overflow:hidden"><a href="https://thesolidsnake.wordpress.com/tag/active-template-library/" class="tag-cloud-link tag-link-43967324 tag-link-position-1" style="font-size: 9.3461538461538pt;" aria-label="Active Template Library (4 item)">Active Template Library</a>
+<a href="https://thesolidsnake.wordpress.com/tag/analysis-pattern/" class="tag-cloud-link tag-link-16509627 tag-link-position-2" style="font-size: 10.423076923077pt;" aria-label="analysis pattern (5 item)">analysis pattern</a>
+<a href="https://thesolidsnake.wordpress.com/tag/apache-maven/" class="tag-cloud-link tag-link-7372522 tag-link-position-3" style="font-size: 9.3461538461538pt;" aria-label="Apache Maven (4 item)">Apache Maven</a>
+<a href="https://thesolidsnake.wordpress.com/tag/apache-tomcat/" class="tag-cloud-link tag-link-137489 tag-link-position-4" style="font-size: 12.038461538462pt;" aria-label="Apache Tomcat (7 item)">Apache Tomcat</a>
+<a href="https://thesolidsnake.wordpress.com/tag/aptana-studio/" class="tag-cloud-link tag-link-5494582 tag-link-position-5" style="font-size: 16.884615384615pt;" aria-label="Aptana Studio (17 item)">Aptana Studio</a>
+<a href="https://thesolidsnake.wordpress.com/tag/asm/" class="tag-cloud-link tag-link-52145 tag-link-position-6" style="font-size: 13.384615384615pt;" aria-label="ASM (9 item)">ASM</a>
+<a href="https://thesolidsnake.wordpress.com/tag/audio/" class="tag-cloud-link tag-link-413 tag-link-position-7" style="font-size: 8pt;" aria-label="audio (3 item)">audio</a>
+<a href="https://thesolidsnake.wordpress.com/tag/auditing/" class="tag-cloud-link tag-link-84847 tag-link-position-8" style="font-size: 10.423076923077pt;" aria-label="auditing (5 item)">auditing</a>
+<a href="https://thesolidsnake.wordpress.com/tag/backup/" class="tag-cloud-link tag-link-5469 tag-link-position-9" style="font-size: 8pt;" aria-label="backup (3 item)">backup</a>
+<a href="https://thesolidsnake.wordpress.com/tag/closure/" class="tag-cloud-link tag-link-126174 tag-link-position-10" style="font-size: 10.423076923077pt;" aria-label="closure (5 item)">closure</a>
+<a href="https://thesolidsnake.wordpress.com/tag/compiler/" class="tag-cloud-link tag-link-9565 tag-link-position-11" style="font-size: 9.3461538461538pt;" aria-label="compiler (4 item)">compiler</a>
+<a href="https://thesolidsnake.wordpress.com/tag/component-object-model/" class="tag-cloud-link tag-link-10320423 tag-link-position-12" style="font-size: 9.3461538461538pt;" aria-label="Component Object Model (4 item)">Component Object Model</a>
+<a href="https://thesolidsnake.wordpress.com/tag/computer-graphics/" class="tag-cloud-link tag-link-20055 tag-link-position-13" style="font-size: 11.365384615385pt;" aria-label="computer graphics (6 item)">computer graphics</a>
+<a href="https://thesolidsnake.wordpress.com/tag/concurrency/" class="tag-cloud-link tag-link-214618 tag-link-position-14" style="font-size: 10.423076923077pt;" aria-label="concurrency (5 item)">concurrency</a>
+<a href="https://thesolidsnake.wordpress.com/tag/connectorc/" class="tag-cloud-link tag-link-105229155 tag-link-position-15" style="font-size: 9.3461538461538pt;" aria-label="Connector/C++ (4 item)">Connector/C++</a>
+<a href="https://thesolidsnake.wordpress.com/tag/database-administration/" class="tag-cloud-link tag-link-577011 tag-link-position-16" style="font-size: 15.403846153846pt;" aria-label="database administration (13 item)">database administration</a>
+<a href="https://thesolidsnake.wordpress.com/tag/eclipse/" class="tag-cloud-link tag-link-18466 tag-link-position-17" style="font-size: 18.5pt;" aria-label="Eclipse (23 item)">Eclipse</a>
+<a href="https://thesolidsnake.wordpress.com/tag/eclipse-plugin/" class="tag-cloud-link tag-link-820356 tag-link-position-18" style="font-size: 16.480769230769pt;" aria-label="Eclipse Plugin (16 item)">Eclipse Plugin</a>
+<a href="https://thesolidsnake.wordpress.com/tag/eclipse-rcp/" class="tag-cloud-link tag-link-368354 tag-link-position-19" style="font-size: 9.3461538461538pt;" aria-label="Eclipse RCP (4 item)">Eclipse RCP</a>
+<a href="https://thesolidsnake.wordpress.com/tag/git/" class="tag-cloud-link tag-link-209196 tag-link-position-20" style="font-size: 10.423076923077pt;" aria-label="Git (5 item)">Git</a>
+<a href="https://thesolidsnake.wordpress.com/tag/gradle/" class="tag-cloud-link tag-link-8644597 tag-link-position-21" style="font-size: 11.365384615385pt;" aria-label="Gradle (6 item)">Gradle</a>
+<a href="https://thesolidsnake.wordpress.com/tag/hibernate-jpa/" class="tag-cloud-link tag-link-25983930 tag-link-position-22" style="font-size: 12.711538461538pt;" aria-label="Hibernate JPA (8 item)">Hibernate JPA</a>
+<a href="https://thesolidsnake.wordpress.com/tag/html5/" class="tag-cloud-link tag-link-53242 tag-link-position-23" style="font-size: 12.038461538462pt;" aria-label="HTML5 (7 item)">HTML5</a>
+<a href="https://thesolidsnake.wordpress.com/tag/in-memory-database/" class="tag-cloud-link tag-link-415784 tag-link-position-24" style="font-size: 14.865384615385pt;" aria-label="in-memory database (12 item)">in-memory database</a>
+<a href="https://thesolidsnake.wordpress.com/tag/intellij-idea/" class="tag-cloud-link tag-link-260955 tag-link-position-25" style="font-size: 10.423076923077pt;" aria-label="IntelliJ IDEA (5 item)">IntelliJ IDEA</a>
+<a href="https://thesolidsnake.wordpress.com/tag/ireport/" class="tag-cloud-link tag-link-1818543 tag-link-position-26" style="font-size: 8pt;" aria-label="iReport (3 item)">iReport</a>
+<a href="https://thesolidsnake.wordpress.com/tag/itext/" class="tag-cloud-link tag-link-664489 tag-link-position-27" style="font-size: 10.423076923077pt;" aria-label="iTEXT (5 item)">iTEXT</a>
+<a href="https://thesolidsnake.wordpress.com/tag/jasperreports/" class="tag-cloud-link tag-link-703001 tag-link-position-28" style="font-size: 9.3461538461538pt;" aria-label="JasperReports (4 item)">JasperReports</a>
+<a href="https://thesolidsnake.wordpress.com/tag/java-persistence-api/" class="tag-cloud-link tag-link-2553635 tag-link-position-29" style="font-size: 18.769230769231pt;" aria-label="Java Persistence API (24 item)">Java Persistence API</a>
+<a href="https://thesolidsnake.wordpress.com/tag/jdbc/" class="tag-cloud-link tag-link-12920 tag-link-position-30" style="font-size: 12.711538461538pt;" aria-label="JDBC (8 item)">JDBC</a>
+<a href="https://thesolidsnake.wordpress.com/tag/jetty/" class="tag-cloud-link tag-link-403647 tag-link-position-31" style="font-size: 9.3461538461538pt;" aria-label="Jetty (4 item)">Jetty</a>
+<a href="https://thesolidsnake.wordpress.com/tag/jqgrid/" class="tag-cloud-link tag-link-6067296 tag-link-position-32" style="font-size: 9.3461538461538pt;" aria-label="jqGrid (4 item)">jqGrid</a>
+<a href="https://thesolidsnake.wordpress.com/tag/jquery/" class="tag-cloud-link tag-link-203308 tag-link-position-33" style="font-size: 13.923076923077pt;" aria-label="jQuery (10 item)">jQuery</a>
+<a href="https://thesolidsnake.wordpress.com/tag/jquery-ui/" class="tag-cloud-link tag-link-8431750 tag-link-position-34" style="font-size: 9.3461538461538pt;" aria-label="jQuery UI (4 item)">jQuery UI</a>
+<a href="https://thesolidsnake.wordpress.com/tag/jsf/" class="tag-cloud-link tag-link-51468 tag-link-position-35" style="font-size: 8pt;" aria-label="JSF (3 item)">JSF</a>
+<a href="https://thesolidsnake.wordpress.com/tag/kali-linux/" class="tag-cloud-link tag-link-139664097 tag-link-position-36" style="font-size: 9.3461538461538pt;" aria-label="Kali Linux (4 item)">Kali Linux</a>
+<a href="https://thesolidsnake.wordpress.com/tag/laravel/" class="tag-cloud-link tag-link-86504237 tag-link-position-37" style="font-size: 12.711538461538pt;" aria-label="Laravel (8 item)">Laravel</a>
+<a href="https://thesolidsnake.wordpress.com/tag/linux/" class="tag-cloud-link tag-link-610 tag-link-position-38" style="font-size: 9.3461538461538pt;" aria-label="Linux (4 item)">Linux</a>
+<a href="https://thesolidsnake.wordpress.com/tag/microsoft-excel/" class="tag-cloud-link tag-link-4834 tag-link-position-39" style="font-size: 9.3461538461538pt;" aria-label="Microsoft Excel (4 item)">Microsoft Excel</a>
+<a href="https://thesolidsnake.wordpress.com/tag/netbeans/" class="tag-cloud-link tag-link-12962 tag-link-position-40" style="font-size: 13.384615384615pt;" aria-label="NetBeans (9 item)">NetBeans</a>
+<a href="https://thesolidsnake.wordpress.com/tag/object-database/" class="tag-cloud-link tag-link-8194902 tag-link-position-41" style="font-size: 8pt;" aria-label="object database (3 item)">object database</a>
+<a href="https://thesolidsnake.wordpress.com/tag/object-oriented-programming/" class="tag-cloud-link tag-link-20106 tag-link-position-42" style="font-size: 16.076923076923pt;" aria-label="Object Oriented Programming (15 item)">Object Oriented Programming</a>
+<a href="https://thesolidsnake.wordpress.com/tag/oracle-text/" class="tag-cloud-link tag-link-694693 tag-link-position-43" style="font-size: 8pt;" aria-label="Oracle Text (3 item)">Oracle Text</a>
+<a href="https://thesolidsnake.wordpress.com/tag/oracle-workflow/" class="tag-cloud-link tag-link-6915709 tag-link-position-44" style="font-size: 8pt;" aria-label="Oracle Workflow (3 item)">Oracle Workflow</a>
+<a href="https://thesolidsnake.wordpress.com/tag/performance/" class="tag-cloud-link tag-link-1930 tag-link-position-45" style="font-size: 14.865384615385pt;" aria-label="performance (12 item)">performance</a>
+<a href="https://thesolidsnake.wordpress.com/tag/plsql/" class="tag-cloud-link tag-link-51018 tag-link-position-46" style="font-size: 14.461538461538pt;" aria-label="PL/SQL (11 item)">PL/SQL</a>
+<a href="https://thesolidsnake.wordpress.com/tag/powershell/" class="tag-cloud-link tag-link-178495 tag-link-position-47" style="font-size: 10.423076923077pt;" aria-label="PowerShell (5 item)">PowerShell</a>
+<a href="https://thesolidsnake.wordpress.com/tag/protocol/" class="tag-cloud-link tag-link-177410 tag-link-position-48" style="font-size: 12.038461538462pt;" aria-label="protocol (7 item)">protocol</a>
+<a href="https://thesolidsnake.wordpress.com/tag/quartz/" class="tag-cloud-link tag-link-322544 tag-link-position-49" style="font-size: 8pt;" aria-label="Quartz (3 item)">Quartz</a>
+<a href="https://thesolidsnake.wordpress.com/tag/reporting/" class="tag-cloud-link tag-link-38379 tag-link-position-50" style="font-size: 8pt;" aria-label="reporting (3 item)">reporting</a>
+<a href="https://thesolidsnake.wordpress.com/tag/scheduler/" class="tag-cloud-link tag-link-464101 tag-link-position-51" style="font-size: 8pt;" aria-label="scheduler (3 item)">scheduler</a>
+<a href="https://thesolidsnake.wordpress.com/tag/security/" class="tag-cloud-link tag-link-801 tag-link-position-52" style="font-size: 15.403846153846pt;" aria-label="security (13 item)">security</a>
+<a href="https://thesolidsnake.wordpress.com/tag/simple-escp/" class="tag-cloud-link tag-link-252590892 tag-link-position-53" style="font-size: 9.3461538461538pt;" aria-label="simple-escp (4 item)">simple-escp</a>
+<a href="https://thesolidsnake.wordpress.com/tag/simple-jpa/" class="tag-cloud-link tag-link-159495621 tag-link-position-54" style="font-size: 22pt;" aria-label="simple-jpa (43 item)">simple-jpa</a>
+<a href="https://thesolidsnake.wordpress.com/tag/snort/" class="tag-cloud-link tag-link-58396 tag-link-position-55" style="font-size: 9.3461538461538pt;" aria-label="Snort (4 item)">Snort</a>
+<a href="https://thesolidsnake.wordpress.com/tag/spring-data/" class="tag-cloud-link tag-link-51694791 tag-link-position-56" style="font-size: 12.038461538462pt;" aria-label="Spring Data (7 item)">Spring Data</a>
+<a href="https://thesolidsnake.wordpress.com/tag/spring-framework/" class="tag-cloud-link tag-link-68724 tag-link-position-57" style="font-size: 12.711538461538pt;" aria-label="Spring Framework (8 item)">Spring Framework</a>
+<a href="https://thesolidsnake.wordpress.com/tag/spring-web-mvc/" class="tag-cloud-link tag-link-14233432 tag-link-position-58" style="font-size: 12.038461538462pt;" aria-label="Spring Web MVC (7 item)">Spring Web MVC</a>
+<a href="https://thesolidsnake.wordpress.com/tag/sql/" class="tag-cloud-link tag-link-10346 tag-link-position-59" style="font-size: 15.807692307692pt;" aria-label="SQL (14 item)">SQL</a>
+<a href="https://thesolidsnake.wordpress.com/tag/statistika/" class="tag-cloud-link tag-link-140149 tag-link-position-60" style="font-size: 10.423076923077pt;" aria-label="statistika (5 item)">statistika</a>
+<a href="https://thesolidsnake.wordpress.com/tag/swing/" class="tag-cloud-link tag-link-8688 tag-link-position-61" style="font-size: 18.5pt;" aria-label="Swing (23 item)">Swing</a>
+<a href="https://thesolidsnake.wordpress.com/tag/swingx/" class="tag-cloud-link tag-link-1140971 tag-link-position-62" style="font-size: 11.365384615385pt;" aria-label="SwingX (6 item)">SwingX</a>
+<a href="https://thesolidsnake.wordpress.com/tag/system-programming/" class="tag-cloud-link tag-link-650038 tag-link-position-63" style="font-size: 8pt;" aria-label="system programming (3 item)">system programming</a>
+<a href="https://thesolidsnake.wordpress.com/tag/testing/" class="tag-cloud-link tag-link-12 tag-link-position-64" style="font-size: 14.461538461538pt;" aria-label="testing (11 item)">testing</a>
+<a href="https://thesolidsnake.wordpress.com/tag/uml/" class="tag-cloud-link tag-link-3616 tag-link-position-65" style="font-size: 12.711538461538pt;" aria-label="UML (8 item)">UML</a>
+<a href="https://thesolidsnake.wordpress.com/tag/visual-studio-2010/" class="tag-cloud-link tag-link-11664360 tag-link-position-66" style="font-size: 17.153846153846pt;" aria-label="Visual Studio 2010 (18 item)">Visual Studio 2010</a>
+<a href="https://thesolidsnake.wordpress.com/tag/web-services/" class="tag-cloud-link tag-link-2358 tag-link-position-67" style="font-size: 13.384615384615pt;" aria-label="web services (9 item)">web services</a>
+<a href="https://thesolidsnake.wordpress.com/tag/widget/" class="tag-cloud-link tag-link-1368 tag-link-position-68" style="font-size: 10.423076923077pt;" aria-label="widget (5 item)">widget</a>
+<a href="https://thesolidsnake.wordpress.com/tag/windows-debugger/" class="tag-cloud-link tag-link-43835720 tag-link-position-69" style="font-size: 9.3461538461538pt;" aria-label="Windows Debugger (4 item)">Windows Debugger</a>
+<a href="https://thesolidsnake.wordpress.com/tag/windows-workflow-foundation/" class="tag-cloud-link tag-link-20062 tag-link-position-70" style="font-size: 9.3461538461538pt;" aria-label="Windows Workflow Foundation (4 item)">Windows Workflow Foundation</a>
+<a href="https://thesolidsnake.wordpress.com/tag/winpcap/" class="tag-cloud-link tag-link-1103353 tag-link-position-71" style="font-size: 9.3461538461538pt;" aria-label="WinPcap (4 item)">WinPcap</a>
+<a href="https://thesolidsnake.wordpress.com/tag/xml/" class="tag-cloud-link tag-link-6852 tag-link-position-72" style="font-size: 9.3461538461538pt;" aria-label="XML (4 item)">XML</a>
+<a href="https://thesolidsnake.wordpress.com/tag/xml-db/" class="tag-cloud-link tag-link-513870 tag-link-position-73" style="font-size: 9.3461538461538pt;" aria-label="XML DB (4 item)">XML DB</a>
+<a href="https://thesolidsnake.wordpress.com/tag/zend-server/" class="tag-cloud-link tag-link-20659004 tag-link-position-74" style="font-size: 10.423076923077pt;" aria-label="Zend Server (5 item)">Zend Server</a>
+<a href="https://thesolidsnake.wordpress.com/tag/zend-studio/" class="tag-cloud-link tag-link-2446790 tag-link-position-75" style="font-size: 10.423076923077pt;" aria-label="Zend Studio (5 item)">Zend Studio</a></div></div><div id="top-posts-3" class="widget widget_top-posts"><h4>Top Posts</h4><ul class='widgets-list-layout no-grav'>
+					<li>
+												<a href="https://thesolidsnake.wordpress.com/2013/02/19/merancang-sistem-dengan-uml-mulai-dari-mana/" title="Merancang Sistem Dengan UML: Mulai Dari Mana?" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2013/02/fig1.jpg?resize=40%2C40" class='widgets-list-layout-blavatar' alt="Merancang Sistem Dengan UML: Mulai Dari Mana?" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2013/02/19/merancang-sistem-dengan-uml-mulai-dari-mana/" class="bump-view" data-bump-view="tp">
+								Merancang Sistem Dengan UML: Mulai Dari Mana?							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2015/05/04/belajar-membuat-aplikasi-web-dengan-spring-framework/" title="Belajar Membuat Aplikasi Web Dengan Spring Framework" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2015/05/gambar6.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt="Belajar Membuat Aplikasi Web Dengan Spring Framework" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2015/05/04/belajar-membuat-aplikasi-web-dengan-spring-framework/" class="bump-view" data-bump-view="tp">
+								Belajar Membuat Aplikasi Web Dengan Spring Framework							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2013/11/01/emulator-android-dan-dukungan-virtualisasi-di-prosesor/" title="Emulator Android Dan Dukungan Virtualisasi Di Prosesor" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2013/11/gambar1.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt="Emulator Android Dan Dukungan Virtualisasi Di Prosesor" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2013/11/01/emulator-android-dan-dukungan-virtualisasi-di-prosesor/" class="bump-view" data-bump-view="tp">
+								Emulator Android Dan Dukungan Virtualisasi Di Prosesor							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2014/11/03/memakai-bahasa-pemograman-r-untuk-analisa-statistik/" title="Memakai Bahasa Pemograman R Untuk Analisa Statistik" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2014/11/gambar4.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt="Memakai Bahasa Pemograman R Untuk Analisa Statistik" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2014/11/03/memakai-bahasa-pemograman-r-untuk-analisa-statistik/" class="bump-view" data-bump-view="tp">
+								Memakai Bahasa Pemograman R Untuk Analisa Statistik							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2013/08/09/mencoba-memakai-android-studio/" title="Mencoba Memakai Android Studio" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2013/08/gambar14.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt="Mencoba Memakai Android Studio" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2013/08/09/mencoba-memakai-android-studio/" class="bump-view" data-bump-view="tp">
+								Mencoba Memakai Android Studio							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2012/07/04/membuat-web-service-soap-dengan-php-dan-memanggilnya-di-client-java/" title="Membuat Web Service SOAP dengan PHP Dan Memanggilnya Di Client Java" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2012/07/gambar11.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt="Membuat Web Service SOAP dengan PHP Dan Memanggilnya Di Client Java" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2012/07/04/membuat-web-service-soap-dengan-php-dan-memanggilnya-di-client-java/" class="bump-view" data-bump-view="tp">
+								Membuat Web Service SOAP dengan PHP Dan Memanggilnya Di Client Java							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2013/07/11/meningkatkan-kinerja-database-mysql-lama/" title=" Meningkatkan Kinerja Database MySQL Lama" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2013/07/gambar1.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt=" Meningkatkan Kinerja Database MySQL Lama" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2013/07/11/meningkatkan-kinerja-database-mysql-lama/" class="bump-view" data-bump-view="tp">
+								 Meningkatkan Kinerja Database MySQL Lama							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2013/12/17/mencari-password-dengan-kali-linux/" title="Mencari Password Dengan Kali Linux" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://0.gravatar.com/avatar/0bf0fdc6fc0326e05910873a1f719b26?s=40&#038;d=wavatar&#038;r=G" class='widgets-list-layout-blavatar' alt="Mencari Password Dengan Kali Linux" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2013/12/17/mencari-password-dengan-kali-linux/" class="bump-view" data-bump-view="tp">
+								Mencari Password Dengan Kali Linux							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2013/11/17/memakai-events-di-bpmn/" title="Memakai Events Di BPMN" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2013/11/gambar12.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt="Memakai Events Di BPMN" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2013/11/17/memakai-events-di-bpmn/" class="bump-view" data-bump-view="tp">
+								Memakai Events Di BPMN							</a>
+						</div>
+											</li>
+									<li>
+												<a href="https://thesolidsnake.wordpress.com/2013/05/24/mysql-for-excel-menyatukan-microsoft-excel-dan-database/" title="MySQL for Excel: Menyatukan Microsoft Excel Dan Database" class="bump-view" data-bump-view="tp">
+							<img width="40" height="40" src="https://thesolidsnake.files.wordpress.com/2013/05/gambar15.png?resize=40%2C40" class='widgets-list-layout-blavatar' alt="MySQL for Excel: Menyatukan Microsoft Excel Dan Database" data-pin-nopin="true" />
+						</a>
+						<div class="widgets-list-layout-links">
+							<a href="https://thesolidsnake.wordpress.com/2013/05/24/mysql-for-excel-menyatukan-microsoft-excel-dan-database/" class="bump-view" data-bump-view="tp">
+								MySQL for Excel: Menyatukan Microsoft Excel Dan Database							</a>
+						</div>
+											</li>
+				</ul>
+</div><div id="pd_top_rated-4" class="widget top_rated"><h4>Top Rated</h4><div id="pd_top_rated_holder" class="pd_top_rated_holder_posts"></div><script language="javascript" src="https://polldaddy.com/js/rating/top-rated.js"></script><script language="javascript" type="text/javascript">PDRTJS_TOP = new PDRTJS_RATING_TOP( 1449883, 1449884, 1449885, '100', 20 );PDRTJS_TOP.get_top( 'posts', '0' );</script></div>
+</div>
+</div>
+
+
+<div id="footer">
+	<div class="footerleft">
+		<p><a href="https://wordpress.com/?ref=footer_website">Buat situs web atau blog gratis di WordPress.com.</a></p>
+    </div>
+    <div class="footerright">
+	        </div>
+</div>
+
+</div>
+
+<!--  -->
+	<script type="text/javascript">
+	/* <![CDATA[ */
+		jQuery(document).ready( function($) {
+			function doFollowingHover() {
+				$('#wp-admin-bar-follow > a').unbind( '.unfollow' );
+
+				$('#wp-admin-bar-follow > a').bind( 'mouseover.unfollow', function() {
+
+					$(this).html( "Berhenti mengikuti" ).parent( 'li' ).addClass( 'unfollow' );
+				});
+				$('#wp-admin-bar-follow > a').bind( 'mouseout.unfollow', function() {
+					$(this).html( "Mengikuti" ).parent( 'li' ).removeClass( 'unfollow' );
+				});
+			}
+			
+			$('#wp-admin-bar-follow > a').click( function( e ) {
+				$('#wp-admin-bar-follow > a').unbind( '.unfollow' );
+
+				e.preventDefault();
+
+				var link = $( this ), li = $( '#wp-admin-bar-follow' ), timeout = 0;
+
+				if ( li.hasClass( 'subscribed' ) ) {
+					li.removeClass( 'subscribed' ).removeClass( 'unfollow' );
+					link.html( "Ikuti" );
+
+					$('body').append( $( 'div.wpcom-bubble' ).removeClass( 'fadein' ) ).off( 'click.bubble' );
+
+					var action = 'ab_unsubscribe_from_blog';
+				} else {
+					li.addClass( 'subscribed' ).removeClass( 'unfollow' );
+					link.html( "Mengikuti" );
+
+						var left = 131 - link.width();
+						li.append( $( 'div.wpcom-bubble' ).css( { left: '-' + left + 'px' } ) );
+						$( 'div.bubble-txt', 'div.wpcom-bubble' ).html( "New posts from this blog will now appear in <a target=\"_blank\" href=\"http:\/\/id.wordpress.com\/\">your reader<\/a>. You can manage email alerts from your <a target=\"_blank\" href=\"http:\/\/id.wordpress.com\/following\/edit\/\">subscriptions page<\/a>." );
+
+						$( 'div.wpcom-bubble.action-bubble' ).addClass( 'fadein' );
+
+						setTimeout( function() {
+							$('body').on( 'click.bubble touchstart.bubble', function(e) {
+								if ( !$(e.target).hasClass('wpcom-bubble') && !$(e.target).parents( 'div.wpcom-bubble' ).length )
+									hideBubble();
+							});
+							setTimeout( hideBubble, 15000 );
+						}, 500 );
+
+					var action = 'ab_subscribe_to_blog';
+					$('#wp-admin-bar-follow > a').bind( 'mouseout.shift', function() {
+						doFollowingHover();
+						$(this).unbind( '.shift' );
+					});
+				}
+
+				var nonce = link.attr( 'href' ).split( '_wpnonce=' );
+				nonce = nonce[1];
+
+				$.post( "https:\/\/thesolidsnake.wordpress.com\/wp-admin\/admin-ajax.php", {
+					'action': action,
+					'_wpnonce': nonce,
+					'source': 'admin_bar',
+					'blog_id': 4840535				});
+			});
+		});
+	/* ]]> */
+	</script>
+<script type='text/javascript' src='//0.gravatar.com/js/gprofiles.js?ver=201810y'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":"a22cb6f791a899b2efdf8cff9e5c3fdb"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s1.wp.com/wp-content/mu-plugins/gravatar-hovercards/wpgroho.js?m=1380573781h'></script>
+	<div style="display:none">
+	</div>
+
+	<div id="ab-reblog-box">
+		<form action="" name="reblog">
+			<textarea id="reblog-content" name="reblog-content" placeholder="Tambahkan pemikiran Anda di sini... (opsional)"></textarea>
+			<label for="blogid" id="lblogid">Tuliskan ke</label>
+
+			<select name="to_blog_id" id="reblog-to-blog-id">
+														<option value="10347571">Hajirodeon&#039;s Blog</option>
+							</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="" class="cancel">Batal</a></span>
+				<input type="submit" name="reblog-submit" class="button-primary" id="reblog-submit" value="Blog Ulang Pos" />
+				<input type="hidden" id="original-blog-id" value="4840535" />
+				<input type="hidden" id="original-post-id" value="3471" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="a95009fc31" /><input type="hidden" name="_wp_http_referer" value="/2014/07/21/memakai-simple-escp-pada-aplikasi-web/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+
+	<script type="text/javascript">
+	var wpcom_reblog = {
+		request: false,
+		source: 'toolbar',
+
+		init: function() {
+			// Click reblog button on post
+			jQuery(document).on( 'click', '#wpadminbar .reblog', function(e) {
+				e.preventDefault();
+				wpcom_reblog.source = 'toolbar';
+
+				if ( jQuery( '#wpadminbar #ab-reblog-box' ).is( ':visible' ) ) {
+					wpcom_reblog.cancel_reblog();
+				}
+				else {
+					wpcom_reblog.show_reblog_box();
+				}
+			} );
+
+			// Clicked reblog button on already reblogged post.
+			jQuery(document).on( 'click', '#wpadminbar .reblogged', function(e) {
+				e.preventDefault();
+			});
+
+			// Click cancel reblog button
+			jQuery(document).on( 'click', '#ab-reblog-box a.cancel', function(e) {
+				e.preventDefault();
+				wpcom_reblog.cancel_reblog();
+			});
+
+			// Submit reblog box
+			jQuery(document).on( 'click', '#ab-reblog-box input[type=submit]', function(e) {
+				e.preventDefault();
+				wpcom_reblog.submit_reblog( jQuery(this) );
+			});
+		},
+
+		show_reblog_box: function() {
+			return this.show_reblog_box_here(
+				'#wp-admin-bar-wpr-reblog',
+				'#wpadminbar'
+			);
+		},
+
+		toggle_reblog_box_flair: function( obj_id ) {
+			if ( jQuery( '#jp-post-flair #ab-reblog-box' ).is( ':visible' ) ) {
+				wpcom_reblog.cancel_reblog();
+			}
+			else {
+				wpcom_reblog.show_reblog_box_flair( obj_id );
+			}
+		},
+
+		show_reblog_box_flair: function( obj_id ) {
+			this.source = 'post_flair';
+			this.obj_id = obj_id;
+			return this.show_reblog_box_here(
+				'.post-likes-widget',
+				'body'
+			);
+		},
+
+		show_reblog_box_here: function(anchorId, parentId) {
+			var jq = jQuery,
+			    $anchor = jq( anchorId ),
+			    $parent = jq( parentId ),
+			    $window = jq( window ),
+			    $scroll = jq('html, body'),
+			    $reblog_box = jq( '#ab-reblog-box' ),
+			    offset = $anchor.offset(),
+			    left = offset.left + 'px',
+			    width = '500px',
+			    position,
+			    top;
+
+			if ( $parent.css( 'position' ) === 'fixed' ) {
+				position = 'fixed';
+				top = $parent.position().top + $parent.outerHeight();
+			}
+			else {
+				position = 'absolute';
+				top = offset.top + $anchor.outerHeight() + 'px';
+			}
+			$reblog_box.remove();
+			$parent.append( $reblog_box );
+			$anchor.addClass( 'selected' );
+
+			if ( jq( window ).innerWidth() < offset.left + 500 ) {
+				// Most likely mobile or tablet
+				left = '0px';
+				width = ( jq( window ).innerWidth() - 24 ) + 'px';
+			}
+
+			$reblog_box
+				.find('p.response').remove().end()
+				.find('div.submit, div.submit span.canceltext').show().end()
+				.find('div.submit input[type=submit]').prop('disabled',false).end()
+				.show()
+				.css({
+					top : top,
+					left : left,
+					width : width,
+					position: position,
+					'z-index': 10 // slide under twentyfourteen's fixed-positioned masthead
+				});
+
+			// Ensure we can see the whole reblog box
+			var docViewTop = $window.scrollTop(),
+			    windowHeight = $window.height(),
+			    docViewBottom = docViewTop + windowHeight,
+			    elemTop = $reblog_box.offset().top,
+			    elemHeight = $reblog_box.outerHeight() + 10,
+			    elemBottom = elemTop + elemHeight;
+			if ( docViewTop > elemTop ) {
+				// Need to scroll up
+				// leave 75px for toolbar + Reblog button + margin
+				$scroll.animate({scrollTop: elemTop - 75});
+			}
+			else if ( docViewBottom < elemBottom ) {
+				// Need to scroll down
+				$scroll.animate({scrollTop: elemBottom - windowHeight}, 100);
+			}
+		},
+
+		submit_reblog: function( input ) {
+			var jq = jQuery;
+			var self = this;
+			if ( typeof this.request == 'object' )
+				this.request.abort();
+
+			input.attr( 'value', 'Reblogging...' );
+			input.prop( 'disabled', true );
+
+			jq( '#ab-reblog-box div.submit span.canceltext' ).fadeOut( 150, function() {
+				input.before( '<span class="spinner"></span>' );
+			});
+
+			var note = jq('#ab-reblog-box textarea').val();
+
+			if ( jq('#default-reblog-note').val() == note )
+				note = "";
+
+			this.request = jq.get( '/wp-admin/admin-ajax.php', {
+				'action': 'post_reblog',
+				'original_blog_id': jq('#original-blog-id').val(),
+				'original_post_id': jq('#original-post-id').val(),
+				'blog_id': jq('#ab-reblog-box select').val(),
+				'note': note,
+				'_wpnonce': jq('#ab-reblog-box #_wpnonce').val(),
+				'reblog_source': this.source
+			},
+			function(result, status, jqxhr) {
+				if ( ! ( "type" in result ) ) {
+					alert( "Error: " + jqxhr.responseText );
+				}
+				else if ( "error" == result.type ) {
+					alert( result.message );
+				}
+				else {
+					if ( typeof pm === 'function' ) {
+						console.log(self);
+						pm({
+							target : window.frames['likes-master'],
+							type : 'likesMessage',
+							data : { event: 'didReblog', obj_id: self.obj_id },
+							origin : '*'
+						});
+					}
+
+					jq( '#ab-reblog-box' ).hide();
+					jq( '#wp-admin-bar-wpr-reblog' ).addClass( 'reblogged' ).removeClass( 'reblog' ).find( 'a:first' ).text( 'Reblogged' );
+				}
+			}, 'json' );
+		},
+
+		cancel_reblog: function() {
+			jQuery( '#ab-reblog-box' ).hide();
+			jQuery( '#wp-admin-bar-wpr-reblog' ).removeClass( 'selected' );
+		}
+	};
+
+	wpcom_reblog.init();
+	</script>
+<div id="report-form-window" style="display:none;"></div><script type='text/javascript'>
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Logging In\u2026","submittingText":"Memposkan Komentar\u2026","postCommentText":"Kirim Komentar","connectingToText":"Connecting to %s","commentingAsText":"%1$s: You are commenting using your %2$s account.","logoutText":"Log Keluar","loginText":"Log Masuk","connectURL":"https:\/\/thesolidsnake.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/thesolidsnake.wordpress.com\/wp-login.php?action=logout&_wpnonce=acdb87d244","homeURL":"https:\/\/thesolidsnake.wordpress.com\/","postID":"3471","gravDefault":"wavatar","enterACommentError":"Silakan masukkan komentar","enterEmailError":"Masukkan alamat email di sini","invalidEmailError":"Alamat email tidak valid","enterAuthorError":"Masukkan nama Anda di sini","gravatarFromEmail":"Gambar ini akan tampil ketika Anda memberi komentar. Klik untuk mengubahnya.","logInToExternalAccount":"Log in untuk memakai data dari salah satu akun ini.","change":"Ubah","changeAccount":"Ubah Akun","comment_registration":"1","userIsLoggedIn":"1","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??/wp-content/js/jquery/jquery.autoresize.js,/wp-content/mu-plugins/highlander-comments/script.js?m=1516198001j'></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Tambahkan pemikiran Anda di sini... (opsional)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Tuliskan ke</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+							<option value="10347571">Hajirodeon&#039;s Blog</option>
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Batal</a></span>
+				<input type="submit" name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Blog Ulang Pos" />
+				<input type="hidden" id="carousel-reblog-blog-id" value="4840535" />
+				<input type="hidden" id="carousel-reblog-blog-url" value="https://thesolidsnake.wordpress.com" />
+				<input type="hidden" id="carousel-reblog-blog-title" value="The Solid Snake" />
+				<input type="hidden" id="carousel-reblog-post-url" value="" />
+				<input type="hidden" id="carousel-reblog-post-title" value="" />
+			</div>
+
+			<input type="hidden" id="_wpnonce" name="_wpnonce" value="a95009fc31" /><input type="hidden" name="_wp_http_referer" value="/2014/07/21/memakai-simple-escp-pada-aplikasi-web/" />		</form>
+
+		<div class="arrow"></div>
+	</div>
+<script type='text/javascript' charset='UTF-8' id='polldaddyRatings'><!--//--><![CDATA[//><!--
+PDRTJS_settings_1449883_post_3471={"id":1449883,"unique_id":"wp-post-3471","title":"Memakai%20simple-escp%20Pada%20Aplikasi%26nbsp%3BWeb","permalink":"https:\/\/thesolidsnake.wordpress.com\/2014\/07\/21\/memakai-simple-escp-pada-aplikasi-web\/","item_id":"_post_3471"}; if ( typeof PDRTJS_RATING !== 'undefined' ){if ( typeof PDRTJS_1449883_post_3471 == 'undefined' ){PDRTJS_1449883_post_3471 = new PDRTJS_RATING( PDRTJS_settings_1449883_post_3471 );}}
+//--><!]]></script><script type='text/javascript' charset='UTF-8' src='https://polldaddy.com/js/rating/rating.js'></script>
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/thesolidsnake.wordpress.com\/2014\/07\/21\/memakai-simple-escp-pada-aplikasi-web\/":3471};
+	</script>
+		<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-facebook' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-linkedin' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomlinkedin', 'menubar=1,resizable=1,width=580,height=450' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-twitter' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+		});
+		</script>
+				<script type="text/javascript">
+			var windowOpen;
+		jQuery(document).on( 'ready post-load', function(){
+			jQuery( 'a.share-google-plus-1' ).on( 'click', function() {
+				if ( 'undefined' !== typeof windowOpen ){ // If there's another sharing window open, close it.
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery(this).attr( 'href' ), 'wpcomgoogle-plus-1', 'menubar=1,resizable=1,width=480,height=550' );
+				return false;
+			});
+		});
+		</script>
+			<div id="sharing_email" style="display: none;">
+		<form action="/2014/07/21/memakai-simple-escp-pada-aplikasi-web/" method="post">
+			<label for="target_email">Kirim ke Alamat Surat Elektronik</label>
+			<input type="email" name="target_email" id="target_email" value="" />
+
+							<input type="hidden" name="source_name" value="hajirodeon" />
+				<input type="hidden" name="source_email" value="hajirodeon@yahoo.com" />
+						<input type="text" id="jetpack-source_f_name" name="source_f_name" class="input" value="" size="25" autocomplete="off" />
+			<script> document.getElementById('jetpack-source_f_name').value = ''; </script>
+			<div class="recaptcha" id="sharing_recaptcha"></div><input type="hidden" name="recaptcha_public_key" id="recaptcha_public_key" value="6LcYW8MSAAAAADBAuEH9yaPcF7lWh11Iq62ZKtoo" />
+			<img style="float: right; display: none" class="loading" src="https://s2.wp.com/wp-content/mu-plugins/post-flair/sharing/images/loading.gif" alt="loading" width="16" height="16" />
+			<input type="submit" value="Kirim Surat Elektronik" class="sharing_send" />
+			<a rel="nofollow" href="#cancel" class="sharing_cancel">Batal</a>
+
+			<div class="errors errors-1" style="display: none;">
+				Tulisan tidak terkirim - cek alamat surel Anda!			</div>
+
+			<div class="errors errors-2" style="display: none;">
+				Cek surel gagal, silahkan coba kembali			</div>
+
+			<div class="errors errors-3" style="display: none;">
+				Maaf, blog Anda tidak dapat berbagi tulisan lewat surel.			</div>
+		</form>
+	</div>
+<script type='text/javascript' src='https://s1.wp.com/_static/??-eJzTLy/QTc7PK0nNK9EvyClNz8wr1i+uzCtJrMjITM/IAeKS1CJMEWP94uSizIISoOIM5/yiVL2sYh19yo1yKiotznAvys8vq6SmiV6JZYnUNC8iNwdonH2uraGJkZGxiZGhsUkWAJOOf4A='></script>
+<script type='text/javascript'>
+	(function(){
+		var corecss = document.createElement('link');
+		var themecss = document.createElement('link');
+		var corecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shCore.css?ver=3.0.9b";
+		if ( corecss.setAttribute ) {
+				corecss.setAttribute( "rel", "stylesheet" );
+				corecss.setAttribute( "type", "text/css" );
+				corecss.setAttribute( "href", corecssurl );
+		} else {
+				corecss.rel = "stylesheet";
+				corecss.href = corecssurl;
+		}
+		document.getElementsByTagName("head")[0].insertBefore( corecss, document.getElementById("syntaxhighlighteranchor") );
+		var themecssurl = "https://s0.wp.com/wp-content/plugins/syntaxhighlighter/syntaxhighlighter3/styles/shThemeDefault.css?m=1363304414h&amp;ver=3.0.9b";
+		if ( themecss.setAttribute ) {
+				themecss.setAttribute( "rel", "stylesheet" );
+				themecss.setAttribute( "type", "text/css" );
+				themecss.setAttribute( "href", themecssurl );
+		} else {
+				themecss.rel = "stylesheet";
+				themecss.href = themecssurl;
+		}
+		//document.getElementById("syntaxhighlighteranchor").appendChild(themecss);
+		document.getElementsByTagName("head")[0].insertBefore( themecss, document.getElementById("syntaxhighlighteranchor") );
+	})();
+	SyntaxHighlighter.config.strings.expandSource = '+ expand source';
+	SyntaxHighlighter.config.strings.help = '?';
+	SyntaxHighlighter.config.strings.alert = 'SyntaxHighlighter\n\n';
+	SyntaxHighlighter.config.strings.noBrush = 'Can\'t find brush for: ';
+	SyntaxHighlighter.config.strings.brushNotHtmlScript = 'Brush wasn\'t configured for html-script option: ';
+	SyntaxHighlighter.defaults['pad-line-numbers'] = false;
+	SyntaxHighlighter.defaults['toolbar'] = false;
+	SyntaxHighlighter.all();
+
+// Infinite scroll support
+jQuery( function( $ ) {
+	$( document.body ).on( 'post-load', function() {
+		SyntaxHighlighter.highlight();
+	} );
+} );
+</script>
+<link rel='stylesheet' id='all-css-0-3' href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel.css?m=1481571546h&cssminify=yes' type='text/css' media='all' />
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type='text/javascript'>
+/* <![CDATA[ */
+var thickboxL10n = {"next":"Berikutnya >","prev":"< Sebelumnya","image":"Gambar","of":"dari","close":"Tutup","noiframes":"Fitur ini memerlukan bingkai langsung di tempat. Anda memiliki iframe dinonaktifkan atau browser Anda tidak mendukung mereka.","loadingAnimation":"https:\/\/s1.wp.com\/wp-includes\/js\/thickbox\/loadingAnimation.gif"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpNotesArgs = {"cacheBuster":"2.1.5-0-g5559236-dirty","iframeUrl":"https:\/\/widgets.wp.com\/notifications\/","iframeAppend":"2","iframeScroll":"no","wide":"1","beta":""};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpcom_tos_report_form = {"ajaxurl":"\/wp-admin\/admin-ajax.php","isLoggedoutUser":"","post_ID":"3471","current_url":"https:\/\/thesolidsnake.wordpress.com\/2014\/07\/21\/memakai-simple-escp-pada-aplikasi-web","report_this_content":"Laporkan isi ini"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var actionbardata = {"siteID":"4840535","siteName":"The Solid Snake","siteURL":"http:\/\/thesolidsnake.wordpress.com","icon":"<img alt='' src='https:\/\/s1.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/enterprise","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/thesolidsnake.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fthesolidsnake.wordpress.com%2F2014%2F07%2F21%2Fmemakai-simple-escp-pada-aplikasi-web%2F","themeURL":"","xhrURL":"https:\/\/thesolidsnake.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"24ee40c53d","isSingular":"1","isFolded":"","isLoggedIn":"1","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"ae7087285c\" \/>","referer":"https:\/\/thesolidsnake.wordpress.com\/2014\/07\/21\/memakai-simple-escp-pada-aplikasi-web\/","canFollow":"1","feedID":"1000640","statusMessage":"","customizeLink":"https:\/\/thesolidsnake.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Fthesolidsnake.wordpress.com%2F2014%2F07%2F21%2Fmemakai-simple-escp-pada-aplikasi-web%2F","postID":"3471","shortlink":"https:\/\/wp.me\/pkjf9-TZ","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/thesolidsnake.wordpress.com\/3471","statsLink":"https:\/\/wordpress.com\/stats\/post\/3471\/thesolidsnake.wordpress.com","i18n":{"view":"Lihat Situs","follow":"Ikuti","following":"Mengikuti","edit":"Sunting","login":"Masuk","signup":"Mendaftar","customize":"Sesuaikan","report":"Laporkan isi ini","themeInfo":"Dapatkan tema: Enterprise","shortlink":"Salin shortlink","copied":"Tersalin","followedText":"Pos baru dari situs ini sekarang akan ditampilkan di <a href=\"https:\/\/wordpress.com\/\">Pembaca<\/a> Anda","foldBar":"Ciutkan bilah ini","unfoldBar":"Perluas bilah ini","editSubs":"Kelola langganan","viewReader":"Lihat situs dalam Pembaca","viewReadPost":"View post in Reader","subscribe":"Daftarkan saya","enterEmail":"Masukkan alamat email Anda","followers":"Bergabunglah dengan 68 pengikut lainnya","alreadyUser":"Sudah punya akun WordPress.com? <a href=\"https:\/\/thesolidsnake.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fthesolidsnake.wordpress.com%2F2014%2F07%2F21%2Fmemakai-simple-escp-pada-aplikasi-web%2F\">Login sekarang.<\/a>","stats":"Statistik"}};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"1","lang":"id","ajaxurl":"https:\/\/thesolidsnake.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"6ba058e3d6","display_exif":"0","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Komentar","post_comment":"Kirim Komentar","write_comment":"Tulis Komentar...","loading_comments":"Memuat Komentar...","download_original":"Tampilkan ukuran penuh <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Pastikan memasukkan teks sebelum mengirimkan komentar Anda.","no_comment_email":"Silakan masukkan alamat email ke form komentar.","no_comment_author":"Silakan masukkan nama ke form komentar.","comment_post_error":"Maaf, terjadi galat saat menerbitkan komentar Anda. Silakan coba lagi.","comment_approved":"Komentar Anda telah disetujui.","comment_unapproved":"Komentar Anda sedang dimoderasi.","camera":"Kamera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","comment_registration":"1","require_name_email":"1","login_url":"https:\/\/thesolidsnake.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Fthesolidsnake.wordpress.com%2F2014%2F07%2F21%2Fmemakai-simple-escp-pada-aplikasi-web%2F","blog_id":"4840535","local_comments_commenting_as":"<p id=\"jp-carousel-commenting-as\">Berkomentar sebagai hajirodeon<\/p>","reblog":"Blog Ulang","reblogged":"Diblog Ulang","reblog_add_thoughts":"Tambahkan pemikiran Anda di sini... (opsional)","reblogging":"Reblogging...","post_reblog":"Post Reblog","stats_query_args":"blog=4840535&v=wpcom&tz=7&user_id=10695144&subd=thesolidsnake","is_public":"1","reblog_enabled":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://s2.wp.com/_static/??-eJyVUdFOwzAM/CGyrJsA8YD4FJSmZk2bxJ2dlPH3OBItEyoZvMSJfXf2Ofp9UhZjgpj0wLqD2VmYLruB77SUXLQ+d8CllnpnxxYv62UBLfyQ1eTzyUXW3o1COmfI0JvYeaAtRdMFF1VraCexorbipG4xqG/ehqgAgvAVweQ/roWvQTl2QGyR4DdEa4rHCFujSTlkTsb2UJk6YoKvU5WhMKr5cBO/equDE3JxiJTUG1L4+f7TMoPhBFRa4QxErjhfc/9USCT74hrJJoexkNZbBW0NYWbweoA0ibJaErUOo+MASR13e/0qX6lvLGJClmV540hzb8jF0xKF9BKem/vmqXk8HB/2wyfruywW'></script>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>		<iframe src='https://widgets.wp.com/likes/master.html?ver=20180228#ver=20180228' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+		<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> blogger menyukai ini:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="//stats.wp.com/w.js?56" type="text/javascript" async defer></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['identifyUser', 10695144, 'hajirodeon']);
+_tkq.push(['storeContext', {'blog_id':'4840535','blog_tz':'7','user_lang':'id','blog_lang':'id'}]);
+_stq.push(['view', {'blog':'4840535','v':'wpcom','tz':'7','user_id':'10695144','post':'3471','subd':'thesolidsnake'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1zNDZ8S252Wis9XUQyb3YrcUVIU2R0VH5TcUpqcF9NWi1bMDJfLy90VXNvY2U3ZFZ1RWlDZ2dfWmwuT1t4S1huY3IrQ1V+R1d2T3M5QnJsR0JpcHJ5b3NMSUdBeDdKMHNjWGI3LXxFJXVILWdNbzBxLUVsLTJiQ3VFJkY5MCZQYkt0WHc1bGhPJSVZZmtWZ1dTV2pZK3EySm5DR29JLC5RLXouNlFNPTZzW1h1dyU9MVZvZGhCNGwmb2IubExhTE9OQTgzR2FoQXhbMElwV3pucEcudFZyQUVBWDElQ05jaEw3KzM5cGFlNlNCMks0ZkxdVExZenFaRllbcn5LN0YxM08zQSx+LTYsMVhbeVZLY3kwYm8lMi4yenJvNDJybGNkRFo='}]);
+_stq.push([ 'clickTrackerInit', '4840535', '3471' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+		<div id="wpadminbar" class="nojq nojs ltr">
+							<a class="screen-reader-shortcut" href="#wp-toolbar" tabindex="1">Lewat ke baris perkakas</a>
+						<div class="quicklinks" id="wp-toolbar" role="navigation" aria-label="Batang perkakas" tabindex="0">
+						<ul id="wp-admin-bar-root-default" class="ab-top-menu">
+			
+		<li id="wp-admin-bar-blog" class="menupop my-sites mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/stats/hajirodeon.wordpress.com">Situs Saya</a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-blog-default" class="ab-submenu">
+			
+		<li id="wp-admin-bar-blog-info" class="has-blavatar"><a class="ab-item"  href="https://hajirodeon.wordpress.com/"><div class="ab-site-icon"><img class="avatar" src="https://secure.gravatar.com/blavatar/36045e77d6633178d68616efbfaea505?s=120" alt="Avatar situs saat ini" /> </div><span class="ab-site-title">Hajirodeon&#039;s Blog&hellip;</span><span class="ab-site-description">hajirodeon.wordpress.com</span></a>		</li>
+		<li id="wp-admin-bar-blog-stats" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/stats/hajirodeon.wordpress.com">Statistik <img style="width: 95px; margin: 0; float: right;" src="https://hajirodeon.wordpress.com/wp-includes/charts/admin-bar-hours-scale-2x.php?masterbar=1" alt="Statistik" title="Memperlihatkan situs dilihat setiap jam selama 48 jam terakhir. Klik untuk Statistik Situs penuh." /></a>		</li>
+		<li id="wp-admin-bar-plan" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/plans/hajirodeon.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-plan">Paket</a><a href="https://wordpress.com/plans/hajirodeon.wordpress.com" class="ab-secondary" id="wp-admin-bar-plan-badge">Gratis</a></div>		</li>		</ul>
+			<ul id="wp-admin-bar-publish" class="ab-submenu">
+			
+		<li id="wp-admin-bar-publish-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Manage</div>		</li>
+		<li id="wp-admin-bar-new-page" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/pages/hajirodeon.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-edit-page">Halaman Situs</a><a href="https://wordpress.com/page/hajirodeon.wordpress.com" class="ab-secondary" id="wp-admin-bar-new-page-badge">Tambah</a></div>		</li>
+		<li id="wp-admin-bar-new-post" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/posts/hajirodeon.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-edit-post">Pos Blog</a><a href="https://wordpress.com/post/hajirodeon.wordpress.com" class="ab-secondary" id="wp-admin-bar-new-post-badge">Tambah</a></div>		</li>
+		<li id="wp-admin-bar-new-attachment" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/media/hajirodeon.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-edit-attachment">Media</a><a href="https://wordpress.com/media/hajirodeon.wordpress.com" class="ab-secondary" id="wp-admin-bar-new-attachment-badge">Tambah</a></div>		</li>
+		<li id="wp-admin-bar-comments" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/comments/hajirodeon.wordpress.com">Komentar</a>		</li>		</ul>
+			<ul id="wp-admin-bar-look-and-feel" class="ab-submenu">
+			
+		<li id="wp-admin-bar-look-and-feel-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Personalisasi</div>		</li>
+		<li id="wp-admin-bar-themes" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/themes/hajirodeon.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-themes">Tema</a><a href="https://hajirodeon.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Fthesolidsnake.wordpress.com%2F2014%2F07%2F21%2Fmemakai-simple-escp-pada-aplikasi-web%2F" class="ab-secondary" id="wp-admin-bar-cmz">Penyesuaian</a></div>		</li>		</ul>
+			<ul id="wp-admin-bar-configuration" class="ab-submenu">
+			
+		<li id="wp-admin-bar-configuration-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Konfigurasikan</div>		</li>
+		<li id="wp-admin-bar-sharing" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/sharing/hajirodeon.wordpress.com">Berbagi</a>		</li>
+		<li id="wp-admin-bar-users-toolbar" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/people/team/hajirodeon.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-people">Orang-orang</a><a href="https://wordpress.com/people/new/hajirodeon.wordpress.com" class="ab-secondary" id="wp-admin-bar-people-add">Tambahkan</a></div>		</li>
+		<li id="wp-admin-bar-plugins"><a class="ab-item"  href="https://wordpress.com/plugins/wpcom-masterbar-redirect/hajirodeon.wordpress.com">Plugin</a>		</li>
+		<li id="wp-admin-bar-domains" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/domains/hajirodeon.wordpress.com" class="ab-item ab-primary mb-icon" id="wp-admin-bar-domains">Domain</a><a href="https://wordpress.com/domains/add/hajirodeon.wordpress.com" class="ab-secondary" id="wp-admin-bar-domains-add">Tambah</a></div>		</li>
+		<li id="wp-admin-bar-blog-settings" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/settings/general/hajirodeon.wordpress.com">Pengaturan</a>		</li>
+		<li id="wp-admin-bar-legacy-dashboard" class="mb-icon"><a class="ab-item"  href="https://thesolidsnake.wordpress.com/wp-admin/">Admin WP</a>		</li>
+		<li id="wp-admin-bar-new-site"><a class="ab-item"  href="https://wordpress.com/start/id?ref=admin-bar-logged-in">+ Tambahkan WordPress Baru</a>		</li>		</ul>
+	</div>		</li>
+		<li id="wp-admin-bar-jumptotop-button-menu"><a class="ab-item"  href="#"><div id="jumptotop"><span class="noticon noticon-top"></span></div></a>		</li>
+		<li id="wp-admin-bar-newdash" class="menupop mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/">Pembaca</a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-newdash-default" class="ab-submenu">
+			
+		<li id="wp-admin-bar-streams-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Stream</div>		</li>
+		<li id="wp-admin-bar-following" class="inline-action">		<div class="ab-item ab-empty-item" ><a href="https://wordpress.com/" class="ab-item ab-primary mb-icon" id="wp-admin-bar-followed-sites">Situs yang Diikuti</a><a href="https://wordpress.com/following/edit" class="ab-secondary" id="wp-admin-bar-reader-followed-sites-manage">Kelola</a></div>		</li>
+		<li id="wp-admin-bar-conversations" class="mb-icon"><a class="ab-item"  href="http://wordpress.com/read/conversations">Percakapan</a>		</li>
+		<li id="wp-admin-bar-discover-discover" class="mb-icon-spacer"><a class="ab-item"  href="https://wordpress.com/discover">Temukan</a>		</li>
+		<li id="wp-admin-bar-discover-search" class="mb-icon-spacer"><a class="ab-item"  href="https://wordpress.com/read/search">Cari</a>		</li>
+		<li id="wp-admin-bar-my-activity-my-likes" class="mb-icon-spacer"><a class="ab-item"  href="https://wordpress.com/activities/likes">Kesukaan Saya</a>		</li>		</ul>
+	</div>		</li>		</ul>
+			<ul id="wp-admin-bar-top-secondary" class="ab-top-secondary ab-top-menu">
+			
+		<li id="wp-admin-bar-notes" class="menupop">		<div class="ab-item ab-empty-item" ><span id="wpnt-notes-unread-count" class="wpnt-loading wpn-read"></span><span class="noticon noticon-bell"></span><span class="ab-text">Notifikasi</span></div><div id="wpnt-notes-panel2" style="display:none" lang="id" dir="ltr"><div class="wpnt-notes-panel-header"><span class="wpnt-notes-header"></span><span class="wpnt-notes-panel-link"></span></div></div>		</li>
+		<li id="wp-admin-bar-my-account" class="menupop with-avatar mb-trackable"><a class="ab-item"  aria-haspopup="true" href="https://wordpress.com/me/"><img alt='' src='https://1.gravatar.com/avatar/a22cb6f791a899b2efdf8cff9e5c3fdb?s=32&#038;d=mm&#038;r=G' class='avatar avatar-32' height='32' width='32' /><span class="ab-text">Saya</span></a>			<div class="ab-sub-wrapper">		<ul id="wp-admin-bar-user-actions" class="ab-submenu">
+			
+		<li id="wp-admin-bar-user-info" class="user-info user-info-item">		<div class="ab-item ab-empty-item" tabindex="-1"><img alt='' src='https://1.gravatar.com/avatar/a22cb6f791a899b2efdf8cff9e5c3fdb?s=128&#038;d=mm&#038;r=G' class='avatar avatar-128' height='128' width='128' /><span class="display-name">hajirodeon</span><a class="username" href="http://gravatar.com/hajirodeon">@hajirodeon</a><form action="https://thesolidsnake.wordpress.com/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fwordpress.com%2F&amp;_wpnonce=acdb87d244" method="post"><button class="ab-sign-out" type="submit">Keluar</button></form></div>		</li>
+		<li id="wp-admin-bar-profile-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Profil</div>		</li>
+		<li id="wp-admin-bar-my-profile" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me">Profilku</a>		</li>
+		<li id="wp-admin-bar-account-settings" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/account">Pengaturan Akun</a>		</li>
+		<li id="wp-admin-bar-billing" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/purchases">Kelola Pembelian</a>		</li>
+		<li id="wp-admin-bar-security" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/security">Keamanan</a>		</li>
+		<li id="wp-admin-bar-notifications" class="mb-icon mb-trackable"><a class="ab-item"  href="https://wordpress.com/me/notifications">Notifikasi</a>		</li>
+		<li id="wp-admin-bar-special-header" class="ab-submenu-header">		<div class="ab-item ab-empty-item" >Spesial</div>		</li>
+		<li id="wp-admin-bar-get-apps" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/get-apps">Dapatkan Aplikasi</a>		</li>
+		<li id="wp-admin-bar-next-steps" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/me/next">Langkah Berikutnya</a>		</li>
+		<li id="wp-admin-bar-help" class="mb-icon"><a class="ab-item"  href="https://wordpress.com/help">Bantuan</a>		</li>		</ul>
+	</div>		</li>
+		<li id="wp-admin-bar-ab-new-post" class="mb-trackable"><a class="ab-item"  href="https://wordpress.com/post/hajirodeon.wordpress.com"><span>Tulis</span></a>		</li>		</ul>
+				</div>
+							<a class="screen-reader-shortcut" href="https://thesolidsnake.wordpress.com/wp-login.php?action=logout&#038;_wpnonce=acdb87d244">Log Keluar</a>
+					</div>
+
+	
+<script type="text/javascript">
+/* <![CDATA[ */
+var clickDebugLink;
+
+jQuery(document).ready( function($) {
+	var single = true, w = 1000,
+		supe = false;
+
+	$(document.body).load(function(){ $('#wpadminbar img.grav-hashed').removeClass('grav-hashed'); }); // hack to hide the gravatar hovercard
+
+	if ( single && supe )
+		w = 1385;
+	else if ( supe )
+		w = 1200;
+
+	// debug bar extra
+	clickDebugLink = function( parent_id, obj ) {
+
+		$('#'+parent_id).children('div').hide();
+
+		document.getElementById( obj.href.substr( obj.href.indexOf( '#' ) + 1 ) ).style.display = 'block';
+		$( obj.href.substr( obj.href.indexOf( '#' ) ) ).show()
+
+		$(obj).parent().addClass('current').siblings('li').removeClass('current');
+
+		return false;
+	};
+
+	$( '#wpadminbar #wp-admin-bar-shortlink' ).click( function() {
+		$( '#adminbar-shortlink-input' ).select();
+	});
+
+	// skip tap-to-hover on site switcher for mobile
+	if ( 'ontouchstart' in window ) {
+		$('#wp-admin-bar-switch-site').on( 'touchstart', function( event ) {
+			if ( $( window ).width() > 782 ) {
+				return;
+			}
+			event.stopPropagation();
+			$( event.target ).first( 'a' ).click();
+		});
+	}
+
+});
+/* ]]> */
+</script>
+	<div class="wpcom-bubble action-bubble">
+		<div class="bubble-txt"></div>
+	</div>
+	<script type="text/javascript">function hideBubble() { jQuery('body').append( jQuery( 'div.wpcom-bubble' ).removeClass( 'fadein' ) ).off( 'click.bubble touchstart.bubble' ); jQuery(document).off( 'scroll.bubble' ); };</script>
+		<script type="text/javascript">
+	jQuery( '#wp-admin-bar-jumptotop-button-menu a' ).click( function( e ) {
+		e.preventDefault();
+		jQuery( 'html, body' ).animate( { scrollTop: 0 }, 'fast' );
+	} );
+	function hideShowTbJumpToTop() {
+		var total_width = 0;
+		// Calculate total width taken by items minus our button to see if it'll
+		// overlap with other toolbar menus.
+		jQuery( '#wp-admin-bar-root-default > li' ).each( function() {
+			var self = jQuery( this );
+			if ( 'wp-admin-bar-jumptotop-button-menu' != self.attr( 'id' ) )
+				total_width += self.width();
+		});
+		if ( jQuery( '#wp-admin-bar-jumptotop-button-menu' ).position()['left'] - total_width < 10 ) {
+			jQuery( '#jumptotop' ).animate( { 'top': '-50px' }, 'fast' );
+		} else if (  jQuery( window ).scrollTop() >= 350 && parseInt( jQuery( '#jumptotop' ).css( 'top' ) ) < 0 ) {
+			if ( jQuery( '#wp-admin-bar-jumptotop-button-menu' ).position()['left'] - total_width < 10 )
+			   return;
+			jQuery( '#jumptotop' ).animate( { 'top': 0 }, 'fast' );
+		} else if (  jQuery( window ).scrollTop() < 1 && parseInt( jQuery( '#jumptotop' ).css( 'top' ) ) >= 0 ) {
+			jQuery( '#jumptotop' ).animate( { 'top': '-50px' }, 'fast' );
+		}
+	}
+	// handle on page load if auto scrolling to a position
+	hideShowTbJumpToTop();
+	// bind to scrolll event
+	var jumpToTopTimer = null;
+	jQuery( window ).scroll( function() {
+		clearTimeout( jumpToTopTimer );
+		jumpToTopTimer = setTimeout( jumpToTopRefresh, 150 );
+	} );
+	var jumpToTopRefresh = function() {
+		hideShowTbJumpToTop();
+	};
+	</script>
+	<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+</body>
+</html>

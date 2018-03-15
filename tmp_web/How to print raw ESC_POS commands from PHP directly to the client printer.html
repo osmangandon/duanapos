@@ -1,0 +1,2927 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta name="description" content="Learn how to directly print EPSON ESC/POS commands from PHP to the client printer without print dialog. Works with IE, Chrome, Firefox, Opera &amp; Safari as well as on Linux, Raspberry Pi &amp; Mac systems!">
+
+<link rel="shortlink" href="http://goo.gl/92LkN5" />
+
+<link rel="canonical" href="https://www.neodynamic.com/articles/How-to-print-raw-ESC-POS-commands-from-PHP-directly-to-the-client-printer"><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+    
+
+        
+
+        <link href="https://www.neodynamic.com/styles/neo-3.17.607.css" rel="stylesheet">
+    <link href="https://plus.google.com/+Neodynamic" rel="publisher" /><link rel="shortcut icon" href="//www.neodynamic.com/images/favicon.ico" type="image/x-icon" /><link rel="icon" href="//www.neodynamic.com/images/favicon.ico" type="image/x-icon" /><link rel="alternate" type="application/rss+xml" href="https://feeds.feedburner.com/Neodynamic" title="Neodynamic Blog" />
+
+<link type="text/css" rel="stylesheet" href="https://www.neodynamic.com/sh/styles/shCore.css">
+<link type="text/css" rel="stylesheet" href="https://www.neodynamic.com/sh/styles/shThemeDefault.css">
+
+<title>
+	How to print raw ESC/POS commands from PHP directly to the client printer
+</title></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+    <form method="post" action="./" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMjA0MTg4MzY1OQ9kFgJmD2QWAgIBD2QWAgIEDxYCHgRUZXh0BYsBPGxpbmsgcmVsPSJjYW5vbmljYWwiIGhyZWY9Imh0dHBzOi8vd3d3Lm5lb2R5bmFtaWMuY29tL2FydGljbGVzL0hvdy10by1wcmludC1yYXctRVNDLVBPUy1jb21tYW5kcy1mcm9tLVBIUC1kaXJlY3RseS10by10aGUtY2xpZW50LXByaW50ZXIiPmRkqhWyLsA2o4PgpWqfVtittarr0y/SHJbyAUmnX39JJPQ=" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="32BE0225" />
+</div>
+
+        
+        <div class="container">
+            <div id="navbar" class="navbar navbar-default yamm navbar-static-top navbar-fixed-width">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-grid">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="https://www.neodynamic.com/"></a>
+                </div>
+                <div id="navbar-collapse-grid" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Products</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="menu-container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/products/barcode"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;Barcode Professional</a><br />
+                                                    <small><em>Encoder / Writer / Generator</em></small></h4>
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/net-core">SDK for <strong>.NET CORE</strong> (ASP.NET CORE)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/sdk-vb-net-csharp">SDK for .NET Windows</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/windows-forms">for Windows Forms</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/wpf">for WPF</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/aspnet">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/cri-ssrs-reporting-services">for Reporting Services (SSRS)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/xaml-winrt">for XAML WinRT</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/silverlight">for Silverlight</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/windows-phone">for Windows Phone</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/compact-framework">for .NET CF</a></li>
+
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/products/barcode/reader"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;Barcode Reader</a><br />
+                                                    <small><em>Detect &amp; Decode Barcode Images</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/reader">SDK for .NET</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/products/printing/thermal-label"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;ThermalLabel</a><br />
+                                                    <small><em>Design &amp; Print Barcode Thermal Labels</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/sdk-vb-net-csharp">SDK for .NET</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/editor">Visual Editor for Windows Add-on</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/web-editor">Web Editor for ASP.NET Add-on</a></li>
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/products/printing/raw-data"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;WebClientPrint</a><br />
+                                                    <small><em>RAW &amp; File Printing for Websites</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/aspnet-core">for <strong>ASP.NET Core</strong></a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/aspnet-mvc">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/php">for PHP</a></li>
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/products/printing/raw-data"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;ImageDraw</a><br />
+                                                    <small><em>Dynamic Image Composition</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/sdk-vb-net-csharp">SDK for .NET</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/aspnet">for ASP.NET</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/products/download"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>&nbsp;Download</a></h4>
+                                                <ul class="hidden-xs">
+                                                    <li><small>Take advantage of our Trial versions which are fully-functional and does not expire!</small></li>
+                                                    <li>
+                                                        <br />
+                                                        <a href="https://www.neodynamic.com/products/download" class="btn btn-primary">Download Now!</a><br />
+                                                        <br />
+                                                    </li>
+                                                </ul>
+
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/support"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span>&nbsp;Tech Questions?</a></h4>
+                                                <ul class="hidden-xs">
+                                                    <li><small>Get assistance right from members of our Dev Team!</small></li>
+                                                    <li>
+                                                        <br />
+                                                        <a href="https://www.neodynamic.com/support" class="btn btn-primary">Contact Support</a><br />
+                                                        <br />
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Downloads</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="menu-container">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;Barcode Professional<br />
+                                                    <small><em>Encoder / Writer / Generator</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/net-core/download">SDK for <strong>.NET CORE</strong> (ASP.NET CORE)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/sdk-vb-net-csharp/download">SDK for .NET Windows</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/windows-forms/download">for Windows Forms</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/wpf/download">for WPF</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/aspnet/download">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/cri-ssrs-reporting-services/download">for Reporting Services (SSRS)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/xaml-winrt/download">for XAML WinRT</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/silverlight/download">for Silverlight</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/windows-phone/download">for Windows Phone</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/compact-framework/download">for .NET CF</a></li>
+
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;Barcode Reader<br />
+                                                    <small><em>Detect &amp; Decode Barcode Images</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/reader/download">SDK for .NET</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;ThermalLabel<br />
+                                                    <small><em>Design &amp; Print Barcode Thermal Labels</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/sdk-vb-net-csharp/download">SDK for .NET</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/editor/download">Visual Editor for Windows Add-on</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/web-editor/download">Web Editor for ASP.NET Add-on</a></li>
+                                                    <li><a href="https://www.neodynamic.com/downloads/tlclientprint">TLClientPrint (ASP.NET Client Print)</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;WebClientPrint<br />
+                                                    <small><em>RAW &amp; File Printing for Websites</em></small></h4>
+
+                                                <ul>
+                                                    <li><small><strong>SERVER SIDE</strong></small></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/aspnet-core/download">for <strong>ASP.NET Core</strong></a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/aspnet-mvc/download">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/php/download">for PHP</a></li>
+                                                    <li>
+                                                        <br class="hidden-xs" />
+                                                        <small><strong>CLIENT SIDE</strong></small></li>
+                                                    <li><a href="https://www.neodynamic.com/downloads/wcpp">WCPP for Windows, Linux, RPi &amp; Mac</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;ImageDraw<br />
+                                                    <small><em>Dynamic Image Composition</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/sdk-vb-net-csharp/download">SDK for .NET</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/aspnet/download">for ASP.NET</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Get Help</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="menu-container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/support"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Contact Support</a></h4>
+                                                <ul class="hidden-xs">
+                                                    <li>
+                                                        <hr />
+                                                        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;Get assistance right from members of our Dev Team!</li>
+                                                    <li><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;24hs Max Turn-around</li>
+                                                    <li><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;Bilingual - English / Espa&ntilde;ol</li>
+                                                    <li>
+                                                        <br />
+                                                        <a href="https://www.neodynamic.com/support">Contact Support Now!</a><br />
+                                                        <br />
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/products/help"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>&nbsp;Product's Documentation</a></h4>
+                                                <ul class="hidden-xs">
+                                                    <li>
+                                                        <hr />
+                                                        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;Review product help docs online</li>
+                                                    <li>
+                                                        <br />
+                                                        <a href="https://www.neodynamic.com/products/help">Go to Documentation Center</a><br />
+                                                        <br />
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/barcodes"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;Barcode Center</a></h4>
+                                                <ul class="hidden-xs">
+                                                    <li>
+                                                        <hr />
+                                                        <span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;Learn more about barcode symbologies</li>
+                                                    <li><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span>&nbsp;Linear (1D), Postal, Component Composite, MICR & 2D</li>
+                                                    <li>
+                                                        <br />
+                                                        <a href="https://www.neodynamic.com/barcodes">Go to Barcode Center</a><br />
+                                                        <br />
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Articles</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="menu-container">
+                                        <div class="row">
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;Barcode Professional<br />
+                                                    <small><em>Encoder / Writer / Generator</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/sdk-vb-net-csharp/articles">SDK for .NET Windows</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/windows-forms/articles">for Windows Forms</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/wpf/articles">for WPF</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/aspnet/articles">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/cri-ssrs-reporting-services/articles">for Reporting Services (SSRS)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/silverlight/articles">for Silverlight</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/compact-framework/articles">for .NET CF</a></li>
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;Barcode Reader<br />
+                                                    <small><em>Detect &amp; Decode Barcode Images</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/reader/articles">SDK for .NET</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;ThermalLabel<br />
+                                                    <small><em>Design &amp; Print Barcode Thermal Labels</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/sdk-vb-net-csharp/articles">SDK for .NET</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;WebClientPrint<br />
+                                                    <small><em>RAW &amp; File Printing for Websites</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/aspnet-mvc/articles">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/php/articles">for PHP</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;ImageDraw<br />
+                                                    <small><em>Dynamic Image Composition</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/sdk-vb-net-csharp/articles">SDK for .NET</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/aspnet/articles">for ASP.NET</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Purchase</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="menu-container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span>&nbsp;Barcode Professional<br />
+                                                    <small><em>Encoder / Writer / Generator</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/net-core/buy">SDK for <strong>.NET CORE</strong> (ASP.NET CORE)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/sdk-vb-net-csharp/buy">SDK for .NET Windows</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/windows-forms/buy">for Windows Forms</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/wpf/buy">for WPF</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/aspnet/buy">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/cri-ssrs-reporting-services/buy">for Reporting Services (SSRS)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/xaml-winrt/buy">for XAML WinRT</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/silverlight/buy">for Silverlight</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/windows-phone/buy">for Windows Phone</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/compact-framework/buy">for .NET CF</a></li>
+
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-barcode" aria-hidden="true"></span>&nbsp;Barcode Reader<br />
+                                                    <small><em>Detect &amp; Decode Barcode Images</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/barcode/reader/buy">SDK for .NET</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-film" aria-hidden="true"></span>&nbsp;ThermalLabel<br />
+                                                    <small><em>Design &amp; Print Barcode Thermal Labels</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/sdk-vb-net-csharp/buy">SDK for .NET</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/editor/buy">Visual Editor for Windows Add-on</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/thermal-label/web-editor/buy">Web Editor for ASP.NET Add-on</a></li>
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-print" aria-hidden="true"></span>&nbsp;WebClientPrint<br />
+                                                    <small><em>RAW &amp; File Printing for Websites</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/aspnet-core/buy">for <strong>ASP.NET Core</strong></a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/aspnet-mvc/buy">for ASP.NET (Web Forms &amp; MVC)</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/printing/raw-data/php/buy">for PHP</a></li>
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><span class="glyphicon glyphicon-picture" aria-hidden="true"></span>&nbsp;ImageDraw<br />
+                                                    <small><em>Dynamic Image Composition</em></small></h4>
+
+                                                <ul>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/sdk-vb-net-csharp/buy">SDK for .NET</a></li>
+                                                    <li><a href="https://www.neodynamic.com/products/image-draw/aspnet/buy">for ASP.NET</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/purchase"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;Before Purchasing</a></h4>
+                                                <ul>
+                                                    <li>
+                                                        <hr class="hidden-xs" />
+                                                        <a href="https://www.neodynamic.com/purchase/get-quote">Request a Quote</a><hr class="hidden-xs" />
+                                                    </li>
+                                                    <li><a href="https://www.neodynamic.com/purchase/renewals-upgrades">Renewal &amp; Upgrade</a><hr class="hidden-xs" />
+                                                    </li>
+                                                    <li><a href="https://www.neodynamic.com/eula">Licensing &amp; EULA</a><hr class="hidden-xs" />
+                                                    </li>
+                                                    <li><a href="https://www.neodynamic.com/purchase/resellers">Distributors &amp; Resellers</a></li>
+                                                </ul>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown yamm-fw"><a href="#" data-toggle="dropdown" class="dropdown-toggle">Company</a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <div class="menu-container">
+                                        <div class="row">
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/about"><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span>&nbsp;About Us</a></h4>
+                                                <div class="hidden-xs"><small>Founded in 2004, Neodynamic designs and develops Barcode, Imaging, Labeling & Printing Tools for .NET &amp; Web developers. We are experts in those fields with strong know-how on .NET, ASP.NET, SSRS, PHP &amp; HTML/JS projects. <a href="https://www.neodynamic.com/about">More...</a></small></div>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/contact"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>&nbsp;Contact Us</a></h4>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/customers"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;Customers</a></h4>
+                                                <div class="hidden-xs"><small>Our products are used by many of the world's most important companies, government agencies, banks, and universities. <a href="https://www.neodynamic.com/customers">See our most notable customers...</a></small></div>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/testimonials"><span class="glyphicon glyphicon-bullhorn" aria-hidden="true"></span>&nbsp;Testimonials</a></h4>
+                                            </div>
+                                            <div class="col-sm-4">
+                                                <h4 class="menu-category"><a href="https://www.neodynamic.com/awards"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;Awards</a></h4>
+                                                <ul class="hidden-xs">
+                                                    <li><small>Neodynamic is recognized by its high-quality products and first-class support services that have been acknowledged by its customers around the world.</small></li>
+                                                </ul>
+                                                <hr class="hidden-xs" />
+                                                <h4 class="menu-category"><a href="//neodynamic.wordpress.com"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span>&nbsp;Blog</a></h4>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="hidden-xs">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-8">
+                        <ul class="breadcrumb neoBreadcrumb" itemprop="breadcrumb">
+                            
+
+<li><a href="https://www.neodynamic.com/"><i class="glyphicon glyphicon-home"></i></a></li>
+<li><a href="https://www.neodynamic.com/products">Products</a></li>
+<li><a href="https://www.neodynamic.com/products/printing">Printing</a></li>
+<li><a href="https://www.neodynamic.com/products/printing/raw-data">WebClientPrint</a></li>
+<li><a href="https://www.neodynamic.com/products/printing/raw-data/php">for PHP</a></li>    
+<li><a href="https://www.neodynamic.com/products/printing/raw-data/php/articles">Articles</a></li>
+
+
+                        </ul>
+                    </div>
+                    <div class="col-sm-4">
+                        
+                        <div class="neoBreadcrumb pull-right">
+                            <div class="g-plusone" data-size="medium"></div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        
+
+<div itemscope itemtype="http://schema.org/Article">
+
+
+<div class="container"><div class="row" itemprop="articleBody">
+    <div class="col-sm-12 neoInfoLink"><h1 itemprop="name">How to print raw ESC/POS commands from PHP directly to the client printer</h1>
+
+        <hr />
+        <span class="label label-info">Product</span> <a href="https://www.neodynamic.com/products/printing/raw-data/php">WebClientPrint for PHP</a>
+        <span class="label label-info leftMargin">Published</span> <span itemprop="dateCreated">12/27/2013</span>
+        <span class="label label-info leftMargin">Updated</span> <span itemprop="dateModified">12/26/2017</span>
+        <span class="label label-info leftMargin">Author</span> <span itemprop="author">Neodynamic</span>
+        <hr />
+        <h2>Overview</h2>
+        <p>
+        Many kind of <strong>printers like dot-matrix, impact, kiosk, thermal, inkjet, etc; do internally handle ESC/POS (a.k.a. ESC/P) commands</strong> which are processed to produce the output printing. ESC/POS was designed by EPSON and is widely used by many other printer brands mainly on POS (Point Of Sales or Point of Services) scenarios like retail, banking, hospitality, and healthcare. 
+        </p>
+        <p>
+        <strong>ESC/POS commands are very simple and the main character you'll find in each command is ESC i.e. ASCII hex 1B</strong> (or dec 27). Almost any ESC/POS command will start with the ESC (hex 1B) character although it's not the only one as you'll see in the next sample later. <strong>The main advantage of using raw ESC/POS commands for printing instead of using the built-in browser javascript printing (window.print();) is that the printing performance will be way faster</strong>; a factor that is key in the aforementioned scenarios. In PHP websites, you'll be able to use raw printing feature thanks to our <a href="https://www.neodynamic.com/products/printing/raw-data/php">WebClientPrint for PHP</a> solution that was specially designed for this kind of printing needs. 
+        </p>
+        <p>
+        In this walkthrough, you'll learn <strong>how to print raw ESC/POS commands from a PHP website directly to the client printer</strong> without displaying a print dialog at all. You'll be able to print ESC/POS commands to the Default client printer as well as to any other installed printer at the client machine. <strong>This solution works with any popular browser like Chrome, Firefox, Opera & Safari on Windows, Linux, Raspberry Pi or Mac systems!</strong>
+        </p>
+        <p>
+        The ESC/POS commands that we'll use in this article will print out a simple retail receipt that will look like this:
+        </p>
+        <div class="imgBox">
+            <img class="img-responsive" alt="A Sample Receipt printed from PHP and created by using ESC/POS commands" src="php-print-esc-pos-sample-receipt.png"><br />
+			<em>A Sample Receipt printed from PHP and created by using ESC/POS commands</em>
+            <br /><br />
+		</div> 
+        <h2>How to specify ESC/POS commands in PHP</h2>
+        <p>ESC/POS commands are composed of a set of simple bytes (from 00 up to FF in hex notation) and most of them always starts with ESC which is byte 1B.<br />
+        Some commands require additional parameters which have to be expressed in bytes too. For example, the following shows how the ESC/POS command for "emphasized text " is found in the reference manual and how it should be specified in bytes.
+        <br /><br />
+        </p>
+        <ul>
+            <li>
+            ESC/POS command for: <strong>"Emphasized mode selected."</strong>
+            </li>
+            <li>    
+            From the ESC/POS Reference Manual:
+            <div class="alert alert-info">
+            <strong>ESC ! 8</strong>
+            </div>
+            </li>
+            <li>
+            It must be specified in bytes (HEX notation) as:
+            <div class="alert alert-info">
+            <strong>0x1B!0x08</strong>
+            </div>
+            Notice that ESC needs to be specified as 0x1B and the integer parameter value is NOT digit 8 char (hex 38) BUT byte hex 08!!! <em>Be aware of the way you must specify commands & params values as a misunderstanding on this subject might carry unexpected printing results or no printing output at all.</em>
+            </li>
+        </ul>
+        
+        <p>
+        Later on this article, you'll find the ESC/POS commands and their explanation that you can use in PHP to print the sample receipt shown above.
+        </p>
+        <a href="http://webclientprintphp.azurewebsites.net" target="_blank" class="btn btn-success pull-right">Try Online Demo!</a>
+        
+        <ul>
+            <li><h3><a href="#v4">For WebClientPrint 4.0 instructions</a></h3></li>
+            <li><h3><a href="#v3">For WebClientPrint 3.0 instructions</a></h3></li>
+            <li><h3><a href="#v2">For WebClientPrint 2.0 instructions</a></h3></li>
+        </ul>
+
+        <br /><br /><br />
+        <h2 id="v4">WebClientPrint 4.0 Requirements</h2>
+
+        <h3>Development/Server-side</h3>
+        <p>
+            <i class="glyphicon glyphicon-check"></i>&nbsp; <a href="https://www.neodynamic.com/products/printing/raw-data/php">WebClientPrint 4.0 for PHP</a> (or greater)
+            <br />
+            <i class="glyphicon glyphicon-check"></i>&nbsp; PHP 5.3 (or greater)
+            <br />
+            <i class="glyphicon glyphicon-check"></i>&nbsp; jQuery 1.4.1 (or greater)
+        </p>
+        <h3>Client-side</h3>
+        <p>
+            <i class="glyphicon glyphicon-check"></i>&nbsp; <a href="https://www.neodynamic.com/downloads/wcpp/">WebClientPrint Processor</a> 4.0 for Windows, Linux, Raspberry Pi & Mac
+        </p>
+
+        <h2>Follow up these steps</h2>        
+        <ul>
+            <li>Download &amp; install <a href="https://www.neodynamic.com/products/printing/raw-data/php/download">WebClientPrint for PHP</a></li>
+            <li>Create a new <strong>PHP Website</strong> naming it <strong>PrintESCPOSSample</strong></li>
+            
+            <li>Now follow up the instructions for each <strong>PHP Classic or PHP MVC/Laravel</strong>: <br /><br />
+                 
+                <ul class="nav nav-tabs" id="myTab4">
+            <li><a href="#phpclassic4" data-toggle="tab"><span class="tab-title">PHP Classic</span></a></li>
+            <li><a href="#phpmvc4" data-toggle="tab"><span class="tab-title">PHP MVC/Laravel 5+</span></a></li>
+            
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="phpclassic4">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>&bull; Create a new folder called <strong>wcpcache</strong> at your project's root folder</p>
+                    <p>&bull; Copy the <strong>WebClientPrint.php</strong> to your project's root folder</p>
+
+                    <h3>Creating Controllers</h3>
+
+                    <p>&bull; Create a new PHP file at root folder and name it <strong>WebClientPrintController.php</strong> and then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+//*********************************
+// IMPORTANT NOTE 
+// 1. In this sample we store users related stuff (like
+// the list of printers and whether they have the WCPP 
+// client utility installed) in the wcpcache folder BUT 
+// you can change it to another different storage (like a DB)!
+// which will be required in Load Balacing scenarios
+// 
+// 2. If your website requires user authentication, then
+// THIS FILE MUST be set to ALLOW ANONYMOUS access!!!
+// 
+//*********************************
+ 
+include 'WebClientPrint.php';
+use Neodynamic\SDK\Web\WebClientPrint;
+ 
+//IMPORTANT SETTINGS:
+//===================
+//Set wcpcache folder RELATIVE to WebClientPrint.php file
+//FILE WRITE permission on this folder is required!!!
+WebClientPrint::$wcpCacheFolder = getcwd().'/wcpcache/';
+ 
+if (file_exists(WebClientPrint::$wcpCacheFolder) == false) {
+    //create wcpcache folder
+    $old_umask = umask(0);
+    mkdir(WebClientPrint::$wcpCacheFolder, 0777);
+    umask($old_umask);
+}
+ 
+//===================
+ 
+// Clean built-in Cache
+// NOTE: Remove it if you implement your own cache system
+WebClientPrint::cacheClean(30); //in minutes
+ 
+ 
+// Process WebClientPrint Request
+ 
+$urlParts = parse_url($_SERVER['REQUEST_URI']);
+if (isset($urlParts['query'])){
+    $query = $urlParts['query'];
+    parse_str($query, $qs);
+     
+    //get session id from querystring if any
+    $sid = NULL;
+    if (isset($qs[WebClientPrint::SID])){
+        $sid = $qs[WebClientPrint::SID];
+    }
+     
+    try{
+        //get request type
+        $reqType = WebClientPrint::GetProcessRequestType($query);
+         
+        if($reqType == WebClientPrint::GenPrintScript ||
+           $reqType == WebClientPrint::GenWcppDetectScript){
+            //Let WebClientPrint to generate the requested script
+             
+            //Get Absolute URL of this file
+            $currentAbsoluteURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+            $currentAbsoluteURL .= $_SERVER["SERVER_NAME"];
+            if($_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443")
+            {
+                $currentAbsoluteURL .= ":".$_SERVER["SERVER_PORT"];
+            } 
+            $currentAbsoluteURL .= $_SERVER["REQUEST_URI"];
+            $currentAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '?'));
+             
+            ob_start();
+            ob_clean();
+            header('Content-type: text/javascript');
+            echo WebClientPrint::generateScript($currentAbsoluteURL, $query);
+            return;
+        } 
+        else if ($reqType == WebClientPrint::ClientSetWcppVersion)
+        {
+            //This request is a ping from the WCPP utility
+            //so store the session ID indicating this user has the WCPP installed
+            //also store the WCPP Version if available
+            if(isset($qs[WebClientPrint::WCPP_SET_VERSION]) && strlen($qs[WebClientPrint::WCPP_SET_VERSION]) > 0){
+                WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_WCPP_VER, $qs[WebClientPrint::WCPP_SET_VERSION]);
+            }
+            return;
+        }
+        else if ($reqType == WebClientPrint::ClientSetInstalledPrinters)
+        {
+            //WCPP Utility is sending the installed printers at client side
+            //so store this info with the specified session ID
+            WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_PRINTERS, strlen($qs[WebClientPrint::WCPP_SET_PRINTERS]) > 0 ? $qs[WebClientPrint::WCPP_SET_PRINTERS] : '');
+            return;
+        }
+        else if ($reqType == WebClientPrint::ClientSetInstalledPrintersInfo)
+        {
+            //WCPP Utility is sending the installed printers at client side with detailed info
+            //so store this info with the specified session ID
+            //Printers Info is in JSON format
+            $printersInfo = $_POST['printersInfoContent'];
+             
+            WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_PRINTERSINFO, $printersInfo);
+            return;
+        }
+        else if ($reqType == WebClientPrint::ClientGetWcppVersion)
+        {
+            //return the WCPP version for the specified Session ID (sid) if any
+            ob_start();
+            ob_clean();
+            header('Content-type: text/plain');
+            echo WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_WCPP_VER);
+            return;    
+        }
+        else if ($reqType == WebClientPrint::ClientGetInstalledPrinters)
+        {
+            //return the installed printers for the specified Session ID (sid) if any
+            ob_start();
+            ob_clean();
+            header('Content-type: text/plain');
+            echo base64_decode(WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_PRINTERS));
+            return;
+        }    
+        else if ($reqType == WebClientPrint::ClientGetInstalledPrintersInfo)
+        {
+            //return the installed printers with detailed info for the specified Session ID (sid) if any
+            ob_start();
+            ob_clean();
+            header('Content-type: text/plain');
+            echo base64_decode(WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_PRINTERSINFO));
+            return;
+        }    
+    }
+    catch (Exception $ex)
+    {
+        throw $ex;
+    }
+     
+} 
+</pre>
+                    
+                    
+                    <p>&bull; Create a new PHP file and name it <strong>PrintESCPOSController.php</strong> and then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+include 'WebClientPrint.php';
+
+use Neodynamic\SDK\Web\WebClientPrint;
+use Neodynamic\SDK\Web\DefaultPrinter;
+use Neodynamic\SDK\Web\InstalledPrinter;
+use Neodynamic\SDK\Web\ClientPrintJob;
+
+// Process request
+// Generate ClientPrintJob? only if clientPrint param is in the query string
+$urlParts = parse_url($_SERVER['REQUEST_URI']);
+
+if (isset($urlParts['query'])) {
+    $rawQuery = $urlParts['query'];
+    parse_str($rawQuery, $qs);
+    if (isset($qs[WebClientPrint::CLIENT_PRINT_JOB])) {
+
+        $useDefaultPrinter = ($qs['useDefaultPrinter'] === 'checked');
+        $printerName = urldecode($qs['printerName']);
+
+        //Create ESC/POS commands for sample receipt
+        $esc = '0x1B'; //ESC byte in hex notation
+        $newLine = '0x0A'; //LF byte in hex notation
+        
+        $cmds = '';
+        $cmds = $esc . "@"; //Initializes the printer (ESC @)
+        $cmds .= $esc . '!' . '0x38'; //Emphasized + Double-height + Double-width mode selected (ESC ! (8 + 16 + 32)) 56 dec => 38 hex
+        $cmds .= 'BEST DEAL STORES'; //text to print
+        $cmds .= $newLine . $newLine;
+        $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+        $cmds .= 'COOKIES                   5.00'; 
+        $cmds .= $newLine;
+        $cmds .= 'MILK 65 Fl oz             3.78';
+        $cmds .= $newLine . $newLine;
+        $cmds .= 'SUBTOTAL                  8.78';
+        $cmds .= $newLine;
+        $cmds .= 'TAX 5%                    0.44';
+        $cmds .= $newLine;
+        $cmds .= 'TOTAL                     9.22';
+        $cmds .= $newLine;
+        $cmds .= 'CASH TEND                10.00';
+        $cmds .= $newLine;
+        $cmds .= 'CASH DUE                  0.78';
+        $cmds .= $newLine . $newLine;
+        $cmds .= $esc . '!' . '0x18'; //Emphasized + Double-height mode selected (ESC ! (16 + 8)) 24 dec => 18 hex
+        $cmds .= '# ITEMS SOLD 2';
+        $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+        $cmds .= $newLine . $newLine;
+        $cmds .= '11/03/13  19:53:17';
+
+		//Create a ClientPrintJob obj that will be processed at the client side by the WCPP
+		$cpj = new ClientPrintJob();
+		//set ESCPOS commands to print...
+		$cpj-&gt;printerCommands = $cmds;
+        $cpj-&gt;formatHexValues = true;
+		
+		if ($useDefaultPrinter || $printerName === 'null') {
+			$cpj-&gt;clientPrinter = new DefaultPrinter();
+		} else {
+			$cpj-&gt;clientPrinter = new InstalledPrinter($printerName);
+		}
+
+		//Send ClientPrintJob back to the client
+		ob_start();
+		ob_clean();
+		header('Content-type: application/octet-stream');
+		echo $cpj-&gt;sendToClient();
+		ob_end_flush();
+		exit();
+        
+    }
+}
+</pre>
+
+
+                    <h3>Creating Web Pages</h3>
+
+                    <p>&bull; The default page is for detecting whether the client machine has the <a href="https://www.neodynamic.com/downloads/wcpp">WebClientPrint Processor (WCPP)</a> Utility installed. Create a new PHP page and name it <strong>index.php</strong>. Then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+  session_start();
+  
+  include 'WebClientPrint.php';
+  use Neodynamic\SDK\Web\WebClientPrint;
+  
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Detecting WebClientPrint Processor...&lt;/title&gt;
+        
+        &lt;style&gt;
+        body{font: 13px 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;}        
+        &lt;/style&gt;
+    
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="msgInProgress"&gt;
+            &lt;div id="mySpinner" style="width:32px;height:32px"&gt;&lt;/div&gt;
+            &lt;br /&gt;
+            Detecting WCPP utility at client side... 
+            &lt;br /&gt;
+            Please wait a few seconds...
+            &lt;br /&gt;
+        &lt;/div&gt;
+        &lt;div id="msgInstallWCPP" style="display:none;"&gt;    
+            &lt;h3&gt;#1 Install WebClientPrint Processor (WCPP)!&lt;/h3&gt;
+            &lt;p&gt;
+                &lt;strong&gt;WCPP is a native app (without any dependencies!)&lt;/strong&gt; that handles all print jobs 
+                generated by the &lt;strong&gt;WebClientPrint PHP component&lt;/strong&gt; at the server side. The WCPP 
+                is in charge of the whole printing process and can be 
+                installed on &lt;strong&gt;Windows, Linux, Raspberry Pi & Mac!&lt;/strong&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;a href="http://www.neodynamic.com/downloads/wcpp/" target="_blank"&gt;Download and Install WCPP from Neodynamic website&lt;/a&gt;&lt;br /&gt;                
+            &lt;/p&gt;         
+            &lt;h3&gt;#2 After installing WCPP...&lt;/h3&gt;
+            &lt;p&gt;
+                &lt;a href="PrintESCPOS.php"&gt;You can go and test the printing page&lt;/a&gt;
+            &lt;/p&gt;
+
+        &lt;/div&gt;
+        
+        &lt;!-- Add Reference to jQuery at Google CDN --&gt;
+        &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
+
+        &lt;!-- Add Reference to spin.js (an animated spinner) --&gt;
+        &lt;script src="http://fgnass.github.io/spin.js/spin.min.js"&gt;&lt;/script&gt;
+
+        &lt;script type="text/javascript"&gt;
+
+            var wcppPingTimeout_ms = 10000; //10 sec
+            var wcppPingTimeoutStep_ms = 500; //0.5 sec
+
+            function wcppDetectOnSuccess(){
+                // WCPP utility is installed at the client side
+                // redirect to WebClientPrint sample page
+
+                // get WCPP version
+                var wcppVer = arguments[0];
+                if(wcppVer.substring(0, 1) == "4")
+                    window.location.href = "PrintESCPOS.php";
+                else //force to install WCPP v4.0
+                    wcppDetectOnFailure();
+            }
+
+            function wcppDetectOnFailure() {
+                // It seems WCPP is not installed at the client side
+                // ask the user to install it
+                $('#msgInProgress').hide();
+                $('#msgInstallWCPP').show();                
+            }
+
+            $(document).ready(function () {
+                // Create the Spinner with options (http://fgnass.github.io/spin.js/)
+                var spinner = new Spinner({
+                      lines: 12, 
+                      length: 7, 
+                      width: 3, 
+                      radius: 10, 
+                      color: '#336699', 
+                      speed: 1, 
+                      trail: 60               
+                  }).spin($('#mySpinner')[0]); 
+            });
+
+        &lt;/script&gt;
+        
+        &lt;?php
+        
+        //Get Absolute URL of this page
+        $currentAbsoluteURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+        $currentAbsoluteURL .= $_SERVER["SERVER_NAME"];
+        if($_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443")
+        {
+            $currentAbsoluteURL .= ":".$_SERVER["SERVER_PORT"];
+        } 
+        $currentAbsoluteURL .= $_SERVER["REQUEST_URI"];
+    
+        //WebClientPrinController.php is at the same page level as WebClientPrint.php
+        $webClientPrintControllerAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '/')).'/WebClientPrintController.php';
+
+        // Create WCPP detection script
+        echo WebClientPrint::createWcppDetectionScript($webClientPrintControllerAbsoluteURL, session_id());
+
+        ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+              
+
+
+                    <p>&bull; Add a new PHP page and name it <strong>PrintESCPOS.php</strong>. Copy/paste the following code:</p>
+
+<pre class="brush: xml; ">
+&lt;?php 
+    session_start();
+
+    include 'WebClientPrint.php';
+    use Neodynamic\SDK\Web\WebClientPrint;
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;How to directly Print ESCPOS Commands without Preview or Printer Dialog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Store User's SessionId --&gt;
+    &lt;input type="hidden" id="sid" name="sid" value="&lt;?php echo session_id(); ?&gt;" /&gt;
+    
+    &lt;h1&gt;How to directly Print ESCPOS Commands without Preview or Printer Dialog&lt;/h1&gt;
+    &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox" id="useDefaultPrinter" /&gt; &lt;strong&gt;Use default printer&lt;/strong&gt; or...
+    &lt;/label&gt;
+    &lt;div id="loadPrinters"&gt;
+    &lt;br /&gt;
+    WebClientPrint can detect the installed printers in your machine.
+    &lt;br /&gt;
+    &lt;input type="button" onclick="javascript:jsWebClientPrint.getPrinters();" value="Load installed printers..." /&gt;
+                    
+    &lt;br /&gt;&lt;br /&gt;
+    &lt;/div&gt;
+    &lt;div id="installedPrinters" style="visibility:hidden"&gt;
+    &lt;br /&gt;
+    &lt;label for="installedPrinterName"&gt;Select an installed Printer:&lt;/label&gt;
+    &lt;select name="installedPrinterName" id="installedPrinterName"&gt;&lt;/select&gt;
+    &lt;/div&gt;
+            
+    &lt;br /&gt;&lt;br /&gt;
+    &lt;input type="button" style="font-size:18px" onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + $('#installedPrinterName').val());" value="Print Label..." /&gt;
+        
+    &lt;script type="text/javascript"&gt;
+        var wcppGetPrintersTimeout_ms = 10000; //10 sec
+        var wcppGetPrintersTimeoutStep_ms = 500; //0.5 sec
+
+        function wcpGetPrintersOnSuccess(){
+            // Display client installed printers
+            if(arguments[0].length &gt; 0){
+                var p=arguments[0].split("|");
+                var options = '';
+                for (var i = 0; i &lt; p.length; i++) {
+                    options += '&lt;option&gt;' + p[i] + '&lt;/option&gt;';
+                }
+                $('#installedPrinters').css('visibility','visible');
+                $('#installedPrinterName').html(options);
+                $('#installedPrinterName').focus();
+                $('#loadPrinters').hide();                                                        
+            }else{
+                alert("No printers are installed in your system.");
+            }
+        }
+
+        function wcpGetPrintersOnFailure() {
+            // Do something if printers cannot be got from the client
+            alert("No printers are installed in your system.");
+        }
+    &lt;/script&gt;
+    
+    &lt;!-- Add Reference to jQuery at Google CDN --&gt;
+    &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+
+    &lt;?php
+    //Get Absolute URL of this page
+    $currentAbsoluteURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+    $currentAbsoluteURL .= $_SERVER["SERVER_NAME"];
+    if($_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443")
+    {
+        $currentAbsoluteURL .= ":".$_SERVER["SERVER_PORT"];
+    } 
+    $currentAbsoluteURL .= $_SERVER["REQUEST_URI"];
+    
+    //WebClientPrinController.php is at the same page level as WebClientPrint.php
+    $webClientPrintControllerAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '/')).'/WebClientPrintController.php';
+    
+    //PrintESCPOSController.php is at the same page level as WebClientPrint.php
+    $printESCPOSControllerAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '/')).'/PrintESCPOSController.php';
+    
+    //Specify the ABSOLUTE URL to the WebClientPrintController.php and to the file that will create the ClientPrintJob object
+    echo WebClientPrint::createScript($webClientPrintControllerAbsoluteURL, $printESCPOSControllerAbsoluteURL, session_id());
+    ?&gt;
+       
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+
+                </div>
+                            
+            </div>
+            </div>
+            
+            <div class="tab-pane" id="phpmvc4">
+            <div class="row">
+                
+                <div class="col-sm-12">
+                    <h3>WebClientPrint Setup for Laravel 5+</h3>
+
+                    <p>&bull; Create a new folder called <strong>WebClientPrint</strong> under <strong>app</strong> folder of your project</p>
+                    <p>&bull; Copy the <strong>WebClientPrint.php</strong> to that <strong>WebClientPrint</strong> folder</p>
+                    <p>&bull; Create a new folder called <strong>wcpcache</strong> under the <strong>WebClientPrint</strong> folder</p>
+                    
+
+                    <h3>Creating Controllers</h3>
+                    <p>&bull; Add a new Controller to your project and name it <strong>WebClientPrintController.php</strong>. Then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+ 
+namespace App\Http\Controllers;
+ 
+use Illuminate\Http\Request;
+ 
+//*********************************
+// IMPORTANT NOTE 
+// 1. In this sample we store users related stuff (like
+// the list of printers and whether they have the WCPP 
+// client utility installed) in the wcpcache folder BUT 
+// you can change it to another different storage (like a DB)!
+// which will be required in Load Balacing scenarios
+// 
+// 2. If your website requires user authentication, then
+// THIS FILE MUST be set to ALLOW ANONYMOUS access!!!
+//
+// 3. EXCLUDE this Controller from CSRF Protection
+// Ref https://laravel.com/docs/5.5/csrf#csrf-excluding-uris
+//*********************************
+ 
+//Includes WebClientPrint classes
+include_once(app_path() . '\WebClientPrint\WebClientPrint.php');
+use Neodynamic\SDK\Web\WebClientPrint;
+ 
+ 
+class WebClientPrintController extends Controller
+{
+ 
+    public function processRequest(Request $request){
+ 
+         
+        //IMPORTANT SETTINGS:
+        //===================
+        //Set wcpcache folder RELATIVE to WebClientPrint.php file
+        //FILE WRITE permission on this folder is required!!!
+        WebClientPrint::$wcpCacheFolder = app_path() . '/WebClientPrint/wcpcache/';
+        //===================
+ 
+        // Clean built-in Cache
+        // NOTE: Remove it if you implement your own cache system
+        WebClientPrint::cacheClean(30); //in minutes
+ 
+        //get session id from querystring if any
+        $sid = NULL;
+        if ($request-&gt;has(WebClientPrint::SID)){
+            $sid = $request-&gt;input(WebClientPrint::SID);
+        }
+         
+        try{
+            //get query string from url
+            $query = substr($request-&gt;fullUrl(), strpos($request-&gt;fullUrl(), '?')+1);
+            //get request type
+            $reqType = WebClientPrint::GetProcessRequestType($query);
+             
+            if($reqType == WebClientPrint::GenPrintScript ||
+            $reqType == WebClientPrint::GenWcppDetectScript){
+                //Let WebClientPrint to generate the requested script
+                 
+                //Get Absolute URL of this file
+                $currentAbsoluteURL = substr($request-&gt;fullUrl(), 0, strrpos($request-&gt;fullUrl(), '?'));
+                 
+                // Return WebClientPrint's javascript code 
+                return response(WebClientPrint::generateScript($currentAbsoluteURL, $query))
+                        -&gt;header('Content-Type', 'text/javascript');
+                 
+            } 
+            else if ($reqType == WebClientPrint::ClientSetWcppVersion)
+            {
+                //This request is a ping from the WCPP utility
+                //so store the session ID indicating this user has the WCPP installed
+                //also store the WCPP Version if available
+                if($request-&gt;has(WebClientPrint::WCPP_SET_VERSION) && strlen($request-&gt;input(WebClientPrint::WCPP_SET_VERSION)) &gt; 0){
+                    WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_WCPP_VER, $request-&gt;input(WebClientPrint::WCPP_SET_VERSION));
+                }
+                return;
+            }
+            else if ($reqType == WebClientPrint::ClientSetInstalledPrinters)
+            {
+                //WCPP Utility is sending the installed printers at client side
+                //so store this info with the specified session ID
+                WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_PRINTERS, strlen($request-&gt;input(WebClientPrint::WCPP_SET_PRINTERS)) &gt; 0 ? $request-&gt;input(WebClientPrint::WCPP_SET_PRINTERS) : '');
+                return;
+            }
+            else if ($reqType == WebClientPrint::ClientSetInstalledPrintersInfo)
+            {
+                //WCPP Utility is sending the installed printers at client side with detailed info
+                //so store this info with the specified session ID
+                //Printers Info is in JSON format
+                $printersInfo = $request-&gt;input('printersInfoContent');
+                 
+                WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_PRINTERSINFO, $printersInfo);
+                return;
+            }
+            else if ($reqType == WebClientPrint::ClientGetWcppVersion)
+            {
+                //return the WCPP version for the specified Session ID (sid) if any
+                return response(WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_WCPP_VER))
+                        -&gt;header('Content-Type', 'text/plain');                 
+            }
+            else if ($reqType == WebClientPrint::ClientGetInstalledPrinters)
+            {
+                //return the installed printers for the specified Session ID (sid) if any
+                return response(base64_decode(WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_PRINTERS)))
+                        -&gt;header('Content-Type', 'text/plain'); 
+            }    
+            else if ($reqType == WebClientPrint::ClientGetInstalledPrintersInfo)
+            {
+                //return the installed printers with detailed info for the specified Session ID (sid) if any
+                return response(base64_decode(WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_PRINTERSINFO)))
+                        -&gt;header('Content-Type', 'text/plain'); 
+            }    
+        }
+        catch (Exception $ex)
+        {
+            throw $ex;
+        }
+ 
+    }
+     
+}
+</pre>
+
+                    <p>&bull; Exclude <strong>WebClientPrintAPIController</strong> from CSRF Protection by editing <strong>app\Http\Middleware\VerifyCsrfToken.php</strong> so it looks like the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+namespace App\Http\Middleware;
+
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken as BaseVerifier;
+
+class VerifyCsrfToken extends BaseVerifier
+{
+    /**
+     * The URIs that should be excluded from CSRF verification.
+     *
+     * @var array
+     */
+    protected $except = [
+        'WebClientPrintController'
+    ];
+}
+
+</pre>
+
+<p>&bull; Edit the <strong>HomeController</strong> so it looks like the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Session;
+
+//Includes WebClientPrint classes
+include_once(app_path() . '\WebClientPrint\WebClientPrint.php');
+use Neodynamic\SDK\Web\WebClientPrint;
+
+
+class HomeController extends Controller
+{
+    public function index(){
+
+        $wcppScript = WebClientPrint::createWcppDetectionScript(action('WebClientPrintController@processRequest'), Session::getId());    
+
+        return view('home.index', ['wcppScript' => $wcppScript]);
+    }
+
+    public function printESCPOS(){
+        return view('home.printESCPOS');
+    }
+    
+}
+</pre>
+
+
+<p>&bull; Add a new Controller and name it <strong>PrintESCPOSController</strong> and paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+
+//*********************************
+// IMPORTANT NOTE 
+// ==============
+// If your website requires user authentication, then
+// THIS FILE MUST be set to ALLOW ANONYMOUS access!!!
+//
+//*********************************
+
+//Includes WebClientPrint classes
+include_once(app_path() . '\WebClientPrint\WebClientPrint.php');
+use Neodynamic\SDK\Web\WebClientPrint;
+use Neodynamic\SDK\Web\Utils;
+use Neodynamic\SDK\Web\DefaultPrinter;
+use Neodynamic\SDK\Web\InstalledPrinter;
+use Neodynamic\SDK\Web\PrintFile;
+use Neodynamic\SDK\Web\ClientPrintJob;
+
+use Session;
+
+class PrintESCPOSController extends Controller
+{
+    public function index(){
+
+        $wcpScript = WebClientPrint::createScript(action('WebClientPrintController@processRequest'), action('PrintESCPOSController@printCommands'), Session::getId());    
+
+        return view('home.printESCPOS', ['wcpScript' => $wcpScript]);
+    }
+
+    public function printCommands(Request $request){
+        
+       if ($request-&gt;exists(WebClientPrint::CLIENT_PRINT_JOB)) {
+
+            $useDefaultPrinter = ($request-&gt;input('useDefaultPrinter') === 'checked');
+            $printerName = urldecode($request-&gt;input('printerName'));
+            
+			//Create ESC/POS commands for sample receipt
+            $esc = '0x1B'; //ESC byte in hex notation
+            $newLine = '0x0A'; //LF byte in hex notation
+            
+            $cmds = '';
+            $cmds = $esc . "@"; //Initializes the printer (ESC @)
+            $cmds .= $esc . '!' . '0x38'; //Emphasized + Double-height + Double-width mode selected (ESC ! (8 + 16 + 32)) 56 dec => 38 hex
+            $cmds .= 'BEST DEAL STORES'; //text to print
+            $cmds .= $newLine . $newLine;
+            $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+            $cmds .= 'COOKIES                   5.00'; 
+            $cmds .= $newLine;
+            $cmds .= 'MILK 65 Fl oz             3.78';
+            $cmds .= $newLine . $newLine;
+            $cmds .= 'SUBTOTAL                  8.78';
+            $cmds .= $newLine;
+            $cmds .= 'TAX 5%                    0.44';
+            $cmds .= $newLine;
+            $cmds .= 'TOTAL                     9.22';
+            $cmds .= $newLine;
+            $cmds .= 'CASH TEND                10.00';
+            $cmds .= $newLine;
+            $cmds .= 'CASH DUE                  0.78';
+            $cmds .= $newLine . $newLine;
+            $cmds .= $esc . '!' . '0x18'; //Emphasized + Double-height mode selected (ESC ! (16 + 8)) 24 dec => 18 hex
+            $cmds .= '# ITEMS SOLD 2';
+            $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+            $cmds .= $newLine . $newLine;
+            $cmds .= '11/03/13  19:53:17';
+
+			//Create a ClientPrintJob obj that will be processed at the client side by the WCPP
+			$cpj = new ClientPrintJob();
+			//set ESCPOS commands to print...
+			$cpj-&gt;printerCommands = $cmds;
+			$cpj-&gt;formatHexValues = true;
+			
+			if ($useDefaultPrinter || $printerName === 'null') {
+				$cpj-&gt;clientPrinter = new DefaultPrinter();
+			} else {
+				$cpj-&gt;clientPrinter = new InstalledPrinter($printerName);
+			}
+		
+			//Send ClientPrintJob back to the client
+			return response($cpj-&gt;sendToClient())
+						-&gt;header('Content-Type', 'application/octet-stream');
+                
+            
+        }
+    }    
+    
+}
+</pre>
+
+                    <h3>Creating/Editing Views</h3>
+
+                    <p>&bull; Edit the <strong>resources / views / layouts / app.blade.php</strong> file so it looks like follows:</p>
+
+<pre class="brush: xml; ">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;WebClientPrint for PHP&lt;/title&gt;    
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div&gt;
+        @yield('body')
+	&lt;/div&gt;
+
+	&lt;script src="https://code.jquery.com/jquery-2.2.4.min.js"&gt;&lt;/script&gt;
+    
+    @yield('scripts')
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+                    <p>&bull; The default View is for detecting whether the client machine has the <a href="https://www.neodynamic.com/downloads/wcpp">WebClientPrint Processor (WCPP)</a> Utility installed. Edit the <strong>resources / views / home / index.blade.php</strong> file and add the folowing section to the BODY:</p>
+
+<pre class="brush: xml; ">
+@extends('layouts.app')
+
+@section('body')
+&lt;div id="msgInProgress"&gt;
+    
+    &lt;h3&gt;Detecting WCPP utility at client side...&lt;/h3&gt;
+    &lt;h3&gt;Please wait a few seconds...&lt;/h3&gt;
+    &lt;br /&gt;
+&lt;/div&gt;
+&lt;div id="msgInstallWCPP" style="display:none;"&gt;
+    &lt;h3&gt;#1 Install WebClientPrint Processor (WCPP)!&lt;/h3&gt;
+    &lt;p&gt;
+        &lt;strong&gt;WCPP is a native app (without any dependencies!)&lt;/strong&gt; that handles all print jobs
+        generated by the &lt;strong&gt;WebClientPrint for PHP component&lt;/strong&gt; at the server side. The WCPP
+        is in charge of the whole printing process and can be
+        installed on &lt;strong&gt;Windows, Linux, Mac & Raspberry Pi!&lt;/strong&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;a href="//www.neodynamic.com/downloads/wcpp/" target="_blank" &gt;Download and Install WCPP from Neodynamic website&lt;/a&gt;&lt;br /&gt;
+    &lt;/p&gt;
+    &lt;h3&gt;#2 After installing WCPP...&lt;/h3&gt;
+    &lt;p&gt;
+        &lt;a href="{{action('HomeController@printESCPOS')}}" &gt;You can go and test the printing page...&lt;/a&gt;
+    &lt;/p&gt;
+
+&lt;/div&gt;
+@endsection
+
+@section('scripts')
+&lt;script type="text/javascript"&gt;
+
+            var wcppPingTimeout_ms = 10000; //10 sec
+            var wcppPingTimeoutStep_ms = 500; //0.5 sec
+                     
+            function wcppDetectOnSuccess(){
+                // WCPP utility is installed at the client side
+                // redirect to WebClientPrint sample page
+                
+                // get WCPP version
+                var wcppVer = arguments[0];
+                if(wcppVer.substring(0, 1) == "4")
+                    window.location.href = '{{action('HomeController@printESCPOS')}}';
+                else //force to install WCPP v4.0
+                    wcppDetectOnFailure();
+            }
+
+            function wcppDetectOnFailure() {
+                // It seems WCPP is not installed at the client side
+                // ask the user to install it
+                $('#msgInProgress').hide();
+                $('#msgInstallWCPP').show();
+            }
+
+&lt;/script&gt;
+
+
+{!! 
+
+// Register the WCPP Detection script code
+// The $wcpScript was generated by HomeController@index
+
+$wcppScript;
+
+!!}
+
+@endsection
+</pre>
+
+                    <p>&bull; Add a new View with the following name and under such folders: <strong>resources / views / home / printESCPOS.blade.php</strong> Then, copy/paste the folowing code:</p>
+
+<pre class="brush: xml; ">
+@extends('layouts.app')
+
+@section('body')
+
+&lt;h1&gt;How to directly Print ESCPOS Commands without Preview or Printer Dialog&lt;/h1&gt;
+&lt;label class="checkbox"&gt;
+	&lt;input type="checkbox" id="useDefaultPrinter" /&gt; &lt;strong&gt;Use default printer&lt;/strong&gt; or...
+&lt;/label&gt;
+&lt;div id="loadPrinters"&gt;
+&lt;br /&gt;
+WebClientPrint can detect the installed printers in your machine.
+&lt;br /&gt;
+&lt;input type="button" onclick="javascript:jsWebClientPrint.getPrinters();" value="Load installed printers..." /&gt;
+				
+&lt;br /&gt;&lt;br /&gt;
+&lt;/div&gt;
+&lt;div id="installedPrinters" style="visibility:hidden"&gt;
+&lt;br /&gt;
+&lt;label for="installedPrinterName"&gt;Select an installed Printer:&lt;/label&gt;
+&lt;select name="installedPrinterName" id="installedPrinterName"&gt;&lt;/select&gt;
+&lt;/div&gt;
+		
+&lt;br /&gt;&lt;br /&gt;
+&lt;input type="button" style="font-size:18px" onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + $('#installedPrinterName').val());" value="Print Label..." /&gt;
+	  
+@endsection
+
+@section('scripts')
+
+&lt;script type="text/javascript"&gt;
+	var wcppGetPrintersTimeout_ms = 10000; //10 sec
+    var wcppGetPrintersTimeoutStep_ms = 500; //0.5 sec
+
+	function wcpGetPrintersOnSuccess(){
+		// Display client installed printers
+		if(arguments[0].length &gt; 0){
+			var p=arguments[0].split("|");
+			var options = '';
+			for (var i = 0; i &lt; p.length; i++) {
+				options += '&lt;option&gt;' + p[i] + '&lt;/option&gt;';
+			}
+			$('#installedPrinters').css('visibility','visible');
+			$('#installedPrinterName').html(options);
+			$('#installedPrinterName').focus();
+			$('#loadPrinters').hide();                                                        
+		}else{
+			alert("No printers are installed in your system.");
+		}
+	}
+
+	function wcpGetPrintersOnFailure() {
+		// Do something if printers cannot be got from the client
+		alert("No printers are installed in your system.");
+	}
+&lt;/script&gt;
+
+
+{!! 
+
+// Register the WebClientPrint script code
+// The $wcpScript was generated by PrintESCPOSController@index
+
+$wcpScript;
+
+!!}
+
+@endsection
+</pre>
+
+                    <p>&bull; Finally, add the following routes to <strong>routes / web.php</strong></p>
+
+<pre class="brush: php; ">
+Route::get('/', 'HomeController@index');
+Route::get('home', 'HomeController@index');
+Route::get('home/index', 'HomeController@index');
+Route::get('home/printESCPOS', 'HomeController@printESCPOS');
+Route::get('PrintESCPOSController', 'PrintESCPOSController@printCommands');
+Route::any('WebClientPrintController', 'WebClientPrintController@processRequest');
+</pre>
+                </div>
+            </div>
+            </div>
+                   
+               
+        </div>
+
+            </li>
+
+            <li>That's it! Run your website and test it. <strong>Click on Print Label</strong> to print the ESC/POS Commands without print dialog. You can print it to the <strong>Default client printer</strong> or you can get a <strong>list of the installed printers</strong> available at the client machine.
+            
+            <br /><br />
+            <div id="txt-header-footer2" class="alert alert-info">
+            <strong>NOTE</strong> You can also print directly to any LPT Parallel Port, RS232 Serial Port or IP/Ethernet Printer although these scenarios have not been considered in this article for simplicity. For further details on those scenarios, please contact our <a href="https://www.neodynamic.com/support">tech support</a>.
+            </div>
+            
+            </li>
+            
+        </ul>
+
+
+        <hr />
+        <br /><br /><br /><br />
+        
+        <h2 id="v3">WebClientPrint 3.0 Requirements</h2>
+
+        <h3>Development/Server-side</h3>
+        <p>
+            <i class="glyphicon glyphicon-check"></i>&nbsp; <a href="https://www.neodynamic.com/products/printing/raw-data/php">WebClientPrint 3.0 for PHP</a> (or greater)
+            <br />
+            <i class="glyphicon glyphicon-check"></i>&nbsp; PHP 5.3 (or greater)
+            <br />
+            <i class="glyphicon glyphicon-check"></i>&nbsp; jQuery 1.4.1 (or greater)
+        </p>
+        <h3>Client-side</h3>
+        <p>
+            <i class="glyphicon glyphicon-check"></i>&nbsp; <a href="https://www.neodynamic.com/downloads/wcpp/wcpp3.aspx">WebClientPrint Processor</a> 3.0 for Windows, Linux, Raspberry Pi & Mac
+        </p>
+
+        <h2>Follow up these steps</h2>        
+        <ul>
+            <li>Download &amp; install <a href="https://www.neodynamic.com/products/printing/raw-data/php/download">WebClientPrint for PHP</a></li>
+            <li>Create a new <strong>PHP Website</strong> naming it <strong>PrintESCPOSSample</strong></li>
+            
+            <li>Now follow up the instructions for each <strong>PHP Classic or PHP MVC/Laravel</strong>: <br /><br />
+                 
+                <ul class="nav nav-tabs" id="myTab">
+            <li><a href="#phpclassic" data-toggle="tab"><span class="tab-title">PHP Classic</span></a></li>
+            <li><a href="#phpmvc" data-toggle="tab"><span class="tab-title">PHP MVC/Laravel 5+</span></a></li>
+            
+        </ul>
+        <div class="tab-content">
+            <div class="tab-pane active" id="phpclassic">
+            <div class="row">
+                <div class="col-sm-12">
+                    <p>&bull; Create a new folder called <strong>wcpcache</strong> at your project's root folder</p>
+                    <p>&bull; Copy the <strong>WebClientPrint.php</strong> to your project's root folder</p>
+
+                    <h3>Creating Controllers</h3>
+
+                    <p>&bull; Create a new PHP file at root folder and name it <strong>WebClientPrintController.php</strong> and then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+//*********************************
+// IMPORTANT NOTE 
+// 1. In this sample we store users related stuff (like
+// the list of printers and whether they have the WCPP 
+// client utility installed) in the wcpcache folder BUT 
+// you can change it to another different storage (like a DB)!
+// which will be required in Load Balacing scenarios
+// 
+// 2. If your website requires user authentication, then
+// THIS FILE MUST be set to ALLOW ANONYMOUS access!!!
+// 
+//*********************************
+
+include 'WebClientPrint.php';
+use Neodynamic\SDK\Web\WebClientPrint;
+
+//IMPORTANT SETTINGS:
+//===================
+//Set wcpcache folder RELATIVE to WebClientPrint.php file
+//FILE WRITE permission on this folder is required!!!
+WebClientPrint::$wcpCacheFolder = getcwd().'/wcpcache/';
+//===================
+
+// Clean built-in Cache
+// NOTE: Remove it if you implement your own cache system
+WebClientPrint::cacheClean(30); //in minutes
+
+
+// Process WebClientPrint Request
+
+$urlParts = parse_url($_SERVER['REQUEST_URI']);
+if (isset($urlParts['query'])){
+    $query = $urlParts['query'];
+    parse_str($query, $qs);
+    
+    //get session id from querystring if any
+    $sid = NULL;
+    if (isset($qs[WebClientPrint::SID])){
+        $sid = $qs[WebClientPrint::SID];
+    }
+    
+    try{
+        //get request type
+        $reqType = WebClientPrint::GetProcessRequestType($query);
+        
+        if($reqType == WebClientPrint::GenPrintScript ||
+           $reqType == WebClientPrint::GenWcppDetectScript){
+            //Let WebClientPrint to generate the requested script
+            
+            //Get Absolute URL of this file
+            $currentAbsoluteURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+            $currentAbsoluteURL .= $_SERVER["SERVER_NAME"];
+            if($_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443")
+            {
+                $currentAbsoluteURL .= ":".$_SERVER["SERVER_PORT"];
+            } 
+            $currentAbsoluteURL .= $_SERVER["REQUEST_URI"];
+            $currentAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '?'));
+            
+            ob_start();
+            ob_clean();
+            header('Content-type: text/javascript');
+            echo WebClientPrint::generateScript($currentAbsoluteURL, $query);
+            return;
+        } 
+        else if ($reqType == WebClientPrint::ClientSetWcppVersion)
+        {
+            //This request is a ping from the WCPP utility
+            //so store the session ID indicating this user has the WCPP installed
+            //also store the WCPP Version if available
+            if(isset($qs[WebClientPrint::WCPP_SET_VERSION]) && strlen($qs[WebClientPrint::WCPP_SET_VERSION]) > 0){
+                WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_WCPP_VER, $qs[WebClientPrint::WCPP_SET_VERSION]);
+            }
+            return;
+        }
+        else if ($reqType == WebClientPrint::ClientSetInstalledPrinters)
+        {
+            //WCPP Utility is sending the installed printers at client side
+            //so store this info with the specified session ID
+            WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_PRINTERS, strlen($qs[WebClientPrint::WCPP_SET_PRINTERS]) > 0 ? base64_decode($qs[WebClientPrint::WCPP_SET_PRINTERS]) : '');
+            return;
+        }
+        else if ($reqType == WebClientPrint::ClientGetWcppVersion)
+        {
+            //return the WCPP version for the specified Session ID (sid) if any
+            ob_start();
+            ob_clean();
+            header('Content-type: text/plain');
+            echo WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_WCPP_VER);
+            return;    
+        }
+        else if ($reqType == WebClientPrint::ClientGetInstalledPrinters)
+        {
+            //return the installed printers for the specified Session ID (sid) if any
+            ob_start();
+            ob_clean();
+            header('Content-type: text/plain');
+            echo WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_PRINTERS);
+            return;
+        }    
+    }
+    catch (Exception $ex)
+    {
+        throw $ex;
+    }
+    
+} 
+</pre>
+                    
+                    
+                    <p>&bull; Create a new PHP file and name it <strong>PrintESCPOSController.php</strong> and then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+include 'WebClientPrint.php';
+
+use Neodynamic\SDK\Web\WebClientPrint;
+use Neodynamic\SDK\Web\DefaultPrinter;
+use Neodynamic\SDK\Web\InstalledPrinter;
+use Neodynamic\SDK\Web\ClientPrintJob;
+
+// Process request
+// Generate ClientPrintJob? only if clientPrint param is in the query string
+$urlParts = parse_url($_SERVER['REQUEST_URI']);
+
+if (isset($urlParts['query'])) {
+    $rawQuery = $urlParts['query'];
+    parse_str($rawQuery, $qs);
+    if (isset($qs[WebClientPrint::CLIENT_PRINT_JOB])) {
+
+        $useDefaultPrinter = ($qs['useDefaultPrinter'] === 'checked');
+        $printerName = urldecode($qs['printerName']);
+
+        //Create ESC/POS commands for sample receipt
+        $esc = '0x1B'; //ESC byte in hex notation
+        $newLine = '0x0A'; //LF byte in hex notation
+        
+        $cmds = '';
+        $cmds = $esc . "@"; //Initializes the printer (ESC @)
+        $cmds .= $esc . '!' . '0x38'; //Emphasized + Double-height + Double-width mode selected (ESC ! (8 + 16 + 32)) 56 dec => 38 hex
+        $cmds .= 'BEST DEAL STORES'; //text to print
+        $cmds .= $newLine . $newLine;
+        $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+        $cmds .= 'COOKIES                   5.00'; 
+        $cmds .= $newLine;
+        $cmds .= 'MILK 65 Fl oz             3.78';
+        $cmds .= $newLine . $newLine;
+        $cmds .= 'SUBTOTAL                  8.78';
+        $cmds .= $newLine;
+        $cmds .= 'TAX 5%                    0.44';
+        $cmds .= $newLine;
+        $cmds .= 'TOTAL                     9.22';
+        $cmds .= $newLine;
+        $cmds .= 'CASH TEND                10.00';
+        $cmds .= $newLine;
+        $cmds .= 'CASH DUE                  0.78';
+        $cmds .= $newLine . $newLine;
+        $cmds .= $esc . '!' . '0x18'; //Emphasized + Double-height mode selected (ESC ! (16 + 8)) 24 dec => 18 hex
+        $cmds .= '# ITEMS SOLD 2';
+        $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+        $cmds .= $newLine . $newLine;
+        $cmds .= '11/03/13  19:53:17';
+
+		//Create a ClientPrintJob obj that will be processed at the client side by the WCPP
+		$cpj = new ClientPrintJob();
+		//set ESCPOS commands to print...
+		$cpj-&gt;printerCommands = $cmds;
+        $cpj-&gt;formatHexValues = true;
+		
+		if ($useDefaultPrinter || $printerName === 'null') {
+			$cpj-&gt;clientPrinter = new DefaultPrinter();
+		} else {
+			$cpj-&gt;clientPrinter = new InstalledPrinter($printerName);
+		}
+
+		//Send ClientPrintJob back to the client
+		ob_start();
+		ob_clean();
+		header('Content-type: application/octet-stream');
+		echo $cpj-&gt;sendToClient();
+		ob_end_flush();
+		exit();
+        
+    }
+}
+</pre>
+
+
+                    <h3>Creating Web Pages</h3>
+
+                    <p>&bull; The default page is for detecting whether the client machine has the <a href="https://www.neodynamic.com/downloads/wcpp">WebClientPrint Processor (WCPP)</a> Utility installed. Create a new PHP page and name it <strong>index.php</strong>. Then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+  session_start();
+  
+  include 'WebClientPrint.php';
+  use Neodynamic\SDK\Web\WebClientPrint;
+  
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Detecting WebClientPrint Processor...&lt;/title&gt;
+        
+        &lt;style&gt;
+        body{font: 13px 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;}        
+        &lt;/style&gt;
+    
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="msgInProgress"&gt;
+            &lt;div id="mySpinner" style="width:32px;height:32px"&gt;&lt;/div&gt;
+            &lt;br /&gt;
+            Detecting WCPP utility at client side... 
+            &lt;br /&gt;
+            Please wait a few seconds...
+            &lt;br /&gt;
+        &lt;/div&gt;
+        &lt;div id="msgInstallWCPP" style="display:none;"&gt;    
+            &lt;h3&gt;#1 Install WebClientPrint Processor (WCPP)!&lt;/h3&gt;
+            &lt;p&gt;
+                &lt;strong&gt;WCPP is a native app (without any dependencies!)&lt;/strong&gt; that handles all print jobs 
+                generated by the &lt;strong&gt;WebClientPrint PHP component&lt;/strong&gt; at the server side. The WCPP 
+                is in charge of the whole printing process and can be 
+                installed on &lt;strong&gt;Windows, Linux, Raspberry Pi & Mac!&lt;/strong&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;a href="http://www.neodynamic.com/downloads/wcpp/" target="_blank"&gt;Download and Install WCPP from Neodynamic website&lt;/a&gt;&lt;br /&gt;                
+            &lt;/p&gt;         
+            &lt;h3&gt;#2 After installing WCPP...&lt;/h3&gt;
+            &lt;p&gt;
+                &lt;a href="PrintESCPOS.php"&gt;You can go and test the printing page&lt;/a&gt;
+            &lt;/p&gt;
+
+        &lt;/div&gt;
+        
+        &lt;!-- Add Reference to jQuery at Google CDN --&gt;
+        &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
+
+        &lt;!-- Add Reference to spin.js (an animated spinner) --&gt;
+        &lt;script src="http://fgnass.github.io/spin.js/spin.min.js"&gt;&lt;/script&gt;
+
+        &lt;script type="text/javascript"&gt;
+
+            var wcppPingDelay_ms = 10000; 
+
+            function wcppDetectOnSuccess(){
+                // WCPP utility is installed at the client side
+                // redirect to WebClientPrint sample page
+
+                // get WCPP version
+                var wcppVer = arguments[0];
+                if(wcppVer.substring(0, 1) == "3")
+                    window.location.href = "PrintESCPOS.php";
+                else //force to install WCPP v3.0
+                    wcppDetectOnFailure();
+            }
+
+            function wcppDetectOnFailure() {
+                // It seems WCPP is not installed at the client side
+                // ask the user to install it
+                $('#msgInProgress').hide();
+                $('#msgInstallWCPP').show();                
+            }
+
+            $(document).ready(function () {
+                // Create the Spinner with options (http://fgnass.github.io/spin.js/)
+                var spinner = new Spinner({
+                      lines: 12, 
+                      length: 7, 
+                      width: 3, 
+                      radius: 10, 
+                      color: '#336699', 
+                      speed: 1, 
+                      trail: 60               
+                  }).spin($('#mySpinner')[0]); 
+            });
+
+        &lt;/script&gt;
+        
+        &lt;?php
+        
+        //Get Absolute URL of this page
+        $currentAbsoluteURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+        $currentAbsoluteURL .= $_SERVER["SERVER_NAME"];
+        if($_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443")
+        {
+            $currentAbsoluteURL .= ":".$_SERVER["SERVER_PORT"];
+        } 
+        $currentAbsoluteURL .= $_SERVER["REQUEST_URI"];
+    
+        //WebClientPrinController.php is at the same page level as WebClientPrint.php
+        $webClientPrintControllerAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '/')).'/WebClientPrintController.php';
+
+        // Create WCPP detection script
+        echo WebClientPrint::createWcppDetectionScript($webClientPrintControllerAbsoluteURL, session_id());
+
+        ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+              
+
+
+                    <p>&bull; Add a new PHP page and name it <strong>PrintESCPOS.php</strong>. Copy/paste the following code:</p>
+
+<pre class="brush: xml; ">
+&lt;?php 
+    session_start();
+
+    include 'WebClientPrint.php';
+    use Neodynamic\SDK\Web\WebClientPrint;
+?&gt;
+
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;How to directly Print ESCPOS Commands without Preview or Printer Dialog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Store User's SessionId --&gt;
+    &lt;input type="hidden" id="sid" name="sid" value="&lt;?php echo session_id(); ?&gt;" /&gt;
+    
+    &lt;h1&gt;How to directly Print ESCPOS Commands without Preview or Printer Dialog&lt;/h1&gt;
+    &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox" id="useDefaultPrinter" /&gt; &lt;strong&gt;Use default printer&lt;/strong&gt; or...
+    &lt;/label&gt;
+    &lt;div id="loadPrinters"&gt;
+    &lt;br /&gt;
+    WebClientPrint can detect the installed printers in your machine.
+    &lt;br /&gt;
+    &lt;input type="button" onclick="javascript:jsWebClientPrint.getPrinters();" value="Load installed printers..." /&gt;
+                    
+    &lt;br /&gt;&lt;br /&gt;
+    &lt;/div&gt;
+    &lt;div id="installedPrinters" style="visibility:hidden"&gt;
+    &lt;br /&gt;
+    &lt;label for="installedPrinterName"&gt;Select an installed Printer:&lt;/label&gt;
+    &lt;select name="installedPrinterName" id="installedPrinterName"&gt;&lt;/select&gt;
+    &lt;/div&gt;
+            
+    &lt;br /&gt;&lt;br /&gt;
+    &lt;input type="button" style="font-size:18px" onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + $('#installedPrinterName').val());" value="Print Label..." /&gt;
+        
+    &lt;script type="text/javascript"&gt;
+        var wcppGetPrintersDelay_ms = 5000; //5 sec
+
+        function wcpGetPrintersOnSuccess(){
+            // Display client installed printers
+            if(arguments[0].length &gt; 0){
+                var p=arguments[0].split("|");
+                var options = '';
+                for (var i = 0; i &lt; p.length; i++) {
+                    options += '&lt;option&gt;' + p[i] + '&lt;/option&gt;';
+                }
+                $('#installedPrinters').css('visibility','visible');
+                $('#installedPrinterName').html(options);
+                $('#installedPrinterName').focus();
+                $('#loadPrinters').hide();                                                        
+            }else{
+                alert("No printers are installed in your system.");
+            }
+        }
+
+        function wcpGetPrintersOnFailure() {
+            // Do something if printers cannot be got from the client
+            alert("No printers are installed in your system.");
+        }
+    &lt;/script&gt;
+    
+    &lt;!-- Add Reference to jQuery at Google CDN --&gt;
+    &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+
+    &lt;?php
+    //Get Absolute URL of this page
+    $currentAbsoluteURL = (@$_SERVER["HTTPS"] == "on") ? "https://" : "http://";
+    $currentAbsoluteURL .= $_SERVER["SERVER_NAME"];
+    if($_SERVER["SERVER_PORT"] != "80" && $_SERVER["SERVER_PORT"] != "443")
+    {
+        $currentAbsoluteURL .= ":".$_SERVER["SERVER_PORT"];
+    } 
+    $currentAbsoluteURL .= $_SERVER["REQUEST_URI"];
+    
+    //WebClientPrinController.php is at the same page level as WebClientPrint.php
+    $webClientPrintControllerAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '/')).'/WebClientPrintController.php';
+    
+    //PrintESCPOSController.php is at the same page level as WebClientPrint.php
+    $printESCPOSControllerAbsoluteURL = substr($currentAbsoluteURL, 0, strrpos($currentAbsoluteURL, '/')).'/PrintESCPOSController.php';
+    
+    //Specify the ABSOLUTE URL to the WebClientPrintController.php and to the file that will create the ClientPrintJob object
+    echo WebClientPrint::createScript($webClientPrintControllerAbsoluteURL, $printESCPOSControllerAbsoluteURL, session_id());
+    ?&gt;
+       
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+
+
+                </div>
+                            
+            </div>
+            </div>
+            
+            <div class="tab-pane" id="phpmvc">
+            <div class="row">
+                
+                <div class="col-sm-12">
+                    <h3>WebClientPrint Setup for Laravel 5+</h3>
+
+                    <p>&bull; Create a new folder called <strong>WebClientPrint</strong> under <strong>app</strong> folder of your project</p>
+                    <p>&bull; Copy the <strong>WebClientPrint.php</strong> to that <strong>WebClientPrint</strong> folder</p>
+                    <p>&bull; Create a new folder called <strong>wcpcache</strong> under the <strong>WebClientPrint</strong> folder</p>
+                    
+
+                    <h3>Creating Controllers</h3>
+                    <p>&bull; Add a new Controller to your project and name it <strong>WebClientPrintController.php</strong>. Then copy/paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+//*********************************
+// IMPORTANT NOTE 
+// 1. In this sample we store users related stuff (like
+// the list of printers and whether they have the WCPP 
+// client utility installed) in the wcpcache folder BUT 
+// you can change it to another different storage (like a DB)!
+// which will be required in Load Balacing scenarios
+// 
+// 2. If your website requires user authentication, then
+// THIS FILE MUST be set to ALLOW ANONYMOUS access!!!
+//
+//*********************************
+
+//Includes WebClientPrint classes
+include_once(app_path() . '\WebClientPrint\WebClientPrint.php');
+use Neodynamic\SDK\Web\WebClientPrint;
+
+
+class WebClientPrintController extends Controller
+{
+
+    public function processRequest(Request $request){
+
+        
+        //IMPORTANT SETTINGS:
+        //===================
+        //Set wcpcache folder RELATIVE to WebClientPrint.php file
+        //FILE WRITE permission on this folder is required!!!
+        WebClientPrint::$wcpCacheFolder = app_path() . '/WebClientPrint/wcpcache/';
+        //===================
+
+        // Clean built-in Cache
+        // NOTE: Remove it if you implement your own cache system
+        WebClientPrint::cacheClean(30); //in minutes
+
+        //get session id from querystring if any
+        $sid = NULL;
+        if ($request-&gt;has(WebClientPrint::SID)){
+            $sid = $request-&gt;input(WebClientPrint::SID);
+        }
+        
+        try{
+            //get query string from url
+            $query = substr($request-&gt;fullUrl(), strpos($request-&gt;fullUrl(), '?')+1);
+            //get request type
+            $reqType = WebClientPrint::GetProcessRequestType($query);
+            
+            if($reqType == WebClientPrint::GenPrintScript ||
+            $reqType == WebClientPrint::GenWcppDetectScript){
+                //Let WebClientPrint to generate the requested script
+                
+                //Get Absolute URL of this file
+                $currentAbsoluteURL = substr($request-&gt;fullUrl(), 0, strrpos($request-&gt;fullUrl(), '?'));
+                
+                // Return WebClientPrint's javascript code 
+                return response(WebClientPrint::generateScript($currentAbsoluteURL, $query))
+                        -&gt;header('Content-Type', 'text/javascript');
+                
+            } 
+            else if ($reqType == WebClientPrint::ClientSetWcppVersion)
+            {
+                //This request is a ping from the WCPP utility
+                //so store the session ID indicating this user has the WCPP installed
+                //also store the WCPP Version if available
+                if($request-&gt;has(WebClientPrint::WCPP_SET_VERSION) && strlen($request-&gt;input(WebClientPrint::WCPP_SET_VERSION)) > 0){
+                    WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_WCPP_VER, $request-&gt;input(WebClientPrint::WCPP_SET_VERSION));
+                }
+                return;
+            }
+            else if ($reqType == WebClientPrint::ClientSetInstalledPrinters)
+            {
+                //WCPP Utility is sending the installed printers at client side
+                //so store this info with the specified session ID
+                WebClientPrint::cacheAdd($sid, WebClientPrint::WCP_CACHE_PRINTERS, strlen($request-&gt;input(WebClientPrint::WCPP_SET_PRINTERS)) > 0 ? base64_decode($request-&gt;input(WebClientPrint::WCPP_SET_PRINTERS)) : '');
+                return;
+            }
+            else if ($reqType == WebClientPrint::ClientGetWcppVersion)
+            {
+                //return the WCPP version for the specified Session ID (sid) if any
+                return response(WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_WCPP_VER))
+                        -&gt;header('Content-Type', 'text/plain');                 
+            }
+            else if ($reqType == WebClientPrint::ClientGetInstalledPrinters)
+            {
+                //return the installed printers for the specified Session ID (sid) if any
+                return response(WebClientPrint::cacheGet($sid, WebClientPrint::WCP_CACHE_PRINTERS))
+                        -&gt;header('Content-Type', 'text/plain'); 
+            }    
+        }
+        catch (Exception $ex)
+        {
+            throw $ex;
+        }
+
+    }
+    
+}
+</pre>
+
+
+<p>&bull; Edit the <strong>HomeController</strong> so it looks like the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use Session;
+
+//Includes WebClientPrint classes
+include_once(app_path() . '\WebClientPrint\WebClientPrint.php');
+use Neodynamic\SDK\Web\WebClientPrint;
+
+
+class HomeController extends Controller
+{
+    public function index(){
+
+        $wcppScript = WebClientPrint::createWcppDetectionScript(action('WebClientPrintController@processRequest'), Session::getId());    
+
+        return view('home.index', ['wcppScript' => $wcppScript]);
+    }
+
+    public function printESCPOS(){
+        return view('home.printESCPOS');
+    }
+    
+}
+</pre>
+
+
+<p>&bull; Add a new Controller and name it <strong>PrintESCPOSController</strong> and paste the following code:</p>
+
+<pre class="brush: php; ">
+&lt;?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+
+//*********************************
+// IMPORTANT NOTE 
+// ==============
+// If your website requires user authentication, then
+// THIS FILE MUST be set to ALLOW ANONYMOUS access!!!
+//
+//*********************************
+
+//Includes WebClientPrint classes
+include_once(app_path() . '\WebClientPrint\WebClientPrint.php');
+use Neodynamic\SDK\Web\WebClientPrint;
+use Neodynamic\SDK\Web\Utils;
+use Neodynamic\SDK\Web\DefaultPrinter;
+use Neodynamic\SDK\Web\InstalledPrinter;
+use Neodynamic\SDK\Web\PrintFile;
+use Neodynamic\SDK\Web\ClientPrintJob;
+
+use Session;
+
+class PrintESCPOSController extends Controller
+{
+    public function index(){
+
+        $wcpScript = WebClientPrint::createScript(action('WebClientPrintController@processRequest'), action('PrintESCPOSController@printCommands'), Session::getId());    
+
+        return view('home.printESCPOS', ['wcpScript' => $wcpScript]);
+    }
+
+    public function printCommands(Request $request){
+        
+       if ($request-&gt;exists(WebClientPrint::CLIENT_PRINT_JOB)) {
+
+            $useDefaultPrinter = ($request-&gt;input('useDefaultPrinter') === 'checked');
+            $printerName = urldecode($request-&gt;input('printerName'));
+            
+			//Create ESC/POS commands for sample receipt
+            $esc = '0x1B'; //ESC byte in hex notation
+            $newLine = '0x0A'; //LF byte in hex notation
+            
+            $cmds = '';
+            $cmds = $esc . "@"; //Initializes the printer (ESC @)
+            $cmds .= $esc . '!' . '0x38'; //Emphasized + Double-height + Double-width mode selected (ESC ! (8 + 16 + 32)) 56 dec => 38 hex
+            $cmds .= 'BEST DEAL STORES'; //text to print
+            $cmds .= $newLine . $newLine;
+            $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+            $cmds .= 'COOKIES                   5.00'; 
+            $cmds .= $newLine;
+            $cmds .= 'MILK 65 Fl oz             3.78';
+            $cmds .= $newLine . $newLine;
+            $cmds .= 'SUBTOTAL                  8.78';
+            $cmds .= $newLine;
+            $cmds .= 'TAX 5%                    0.44';
+            $cmds .= $newLine;
+            $cmds .= 'TOTAL                     9.22';
+            $cmds .= $newLine;
+            $cmds .= 'CASH TEND                10.00';
+            $cmds .= $newLine;
+            $cmds .= 'CASH DUE                  0.78';
+            $cmds .= $newLine . $newLine;
+            $cmds .= $esc . '!' . '0x18'; //Emphasized + Double-height mode selected (ESC ! (16 + 8)) 24 dec => 18 hex
+            $cmds .= '# ITEMS SOLD 2';
+            $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+            $cmds .= $newLine . $newLine;
+            $cmds .= '11/03/13  19:53:17';
+
+			//Create a ClientPrintJob obj that will be processed at the client side by the WCPP
+			$cpj = new ClientPrintJob();
+			//set ESCPOS commands to print...
+			$cpj-&gt;printerCommands = $cmds;
+			$cpj-&gt;formatHexValues = true;
+			
+			if ($useDefaultPrinter || $printerName === 'null') {
+				$cpj-&gt;clientPrinter = new DefaultPrinter();
+			} else {
+				$cpj-&gt;clientPrinter = new InstalledPrinter($printerName);
+			}
+		
+			//Send ClientPrintJob back to the client
+			return response($cpj-&gt;sendToClient())
+						-&gt;header('Content-Type', 'application/octet-stream');
+                
+            
+        }
+    }    
+    
+}
+</pre>
+
+                    <h3>Creating/Editing Views</h3>
+
+                    <p>&bull; Edit the <strong>resources / views / layouts / app.blade.php</strong> file so it looks like follows:</p>
+
+<pre class="brush: xml; ">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;WebClientPrint for PHP&lt;/title&gt;    
+&lt;/head&gt;
+&lt;body&gt;
+    
+    &lt;div&gt;
+        @yield('body')
+	&lt;/div&gt;
+
+	&lt;script src="https://code.jquery.com/jquery-2.2.4.min.js"&gt;&lt;/script&gt;
+    
+    @yield('scripts')
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+                    <p>&bull; The default View is for detecting whether the client machine has the <a href="https://www.neodynamic.com/downloads/wcpp">WebClientPrint Processor (WCPP)</a> Utility installed. Edit the <strong>resources / views / home / index.blade.php</strong> file and add the folowing section to the BODY:</p>
+
+<pre class="brush: xml; ">
+@extends('layouts.app')
+
+@section('body')
+&lt;div id="msgInProgress"&gt;
+    
+    &lt;h3&gt;Detecting WCPP utility at client side...&lt;/h3&gt;
+    &lt;h3&gt;Please wait a few seconds...&lt;/h3&gt;
+    &lt;br /&gt;
+&lt;/div&gt;
+&lt;div id="msgInstallWCPP" style="display:none;"&gt;
+    &lt;h3&gt;#1 Install WebClientPrint Processor (WCPP)!&lt;/h3&gt;
+    &lt;p&gt;
+        &lt;strong&gt;WCPP is a native app (without any dependencies!)&lt;/strong&gt; that handles all print jobs
+        generated by the &lt;strong&gt;WebClientPrint for PHP component&lt;/strong&gt; at the server side. The WCPP
+        is in charge of the whole printing process and can be
+        installed on &lt;strong&gt;Windows, Linux, Mac & Raspberry Pi!&lt;/strong&gt;
+    &lt;/p&gt;
+    &lt;p&gt;
+        &lt;a href="//www.neodynamic.com/downloads/wcpp/" target="_blank" &gt;Download and Install WCPP from Neodynamic website&lt;/a&gt;&lt;br /&gt;
+    &lt;/p&gt;
+    &lt;h3&gt;#2 After installing WCPP...&lt;/h3&gt;
+    &lt;p&gt;
+        &lt;a href="{{action('HomeController@printESCPOS')}}" &gt;You can go and test the printing page...&lt;/a&gt;
+    &lt;/p&gt;
+
+&lt;/div&gt;
+@endsection
+
+@section('scripts')
+&lt;script type="text/javascript"&gt;
+
+            var wcppPingDelay_ms = 5000;
+                     
+            function wcppDetectOnSuccess(){
+                // WCPP utility is installed at the client side
+                // redirect to WebClientPrint sample page
+                
+                // get WCPP version
+                var wcppVer = arguments[0];
+                if(wcppVer.substring(0, 1) == "3")
+                    window.location.href = '{{action('HomeController@printESCPOS')}}';
+                else //force to install WCPP v3.0
+                    wcppDetectOnFailure();
+            }
+
+            function wcppDetectOnFailure() {
+                // It seems WCPP is not installed at the client side
+                // ask the user to install it
+                $('#msgInProgress').hide();
+                $('#msgInstallWCPP').show();
+            }
+
+&lt;/script&gt;
+
+
+{!! 
+
+// Register the WCPP Detection script code
+// The $wcpScript was generated by HomeController@index
+
+$wcppScript;
+
+!!}
+
+@endsection
+</pre>
+
+                    <p>&bull; Add a new View with the following name and under such folders: <strong>resources / views / home / printESCPOS.blade.php</strong> Then, copy/paste the folowing code:</p>
+
+<pre class="brush: xml; ">
+@extends('layouts.app')
+
+@section('body')
+
+{{-- Store User's SessionId --}}
+<input type="hidden" id="sid" name="sid" value="{{Session::getId()}}" />
+
+&lt;h1&gt;How to directly Print ESCPOS Commands without Preview or Printer Dialog&lt;/h1&gt;
+&lt;label class="checkbox"&gt;
+	&lt;input type="checkbox" id="useDefaultPrinter" /&gt; &lt;strong&gt;Use default printer&lt;/strong&gt; or...
+&lt;/label&gt;
+&lt;div id="loadPrinters"&gt;
+&lt;br /&gt;
+WebClientPrint can detect the installed printers in your machine.
+&lt;br /&gt;
+&lt;input type="button" onclick="javascript:jsWebClientPrint.getPrinters();" value="Load installed printers..." /&gt;
+				
+&lt;br /&gt;&lt;br /&gt;
+&lt;/div&gt;
+&lt;div id="installedPrinters" style="visibility:hidden"&gt;
+&lt;br /&gt;
+&lt;label for="installedPrinterName"&gt;Select an installed Printer:&lt;/label&gt;
+&lt;select name="installedPrinterName" id="installedPrinterName"&gt;&lt;/select&gt;
+&lt;/div&gt;
+		
+&lt;br /&gt;&lt;br /&gt;
+&lt;input type="button" style="font-size:18px" onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + $('#installedPrinterName').val());" value="Print Label..." /&gt;
+	  
+@endsection
+
+@section('scripts')
+
+&lt;script type="text/javascript"&gt;
+	var wcppGetPrintersDelay_ms = 5000; //5 sec
+
+	function wcpGetPrintersOnSuccess(){
+		// Display client installed printers
+		if(arguments[0].length &gt; 0){
+			var p=arguments[0].split("|");
+			var options = '';
+			for (var i = 0; i &lt; p.length; i++) {
+				options += '&lt;option&gt;' + p[i] + '&lt;/option&gt;';
+			}
+			$('#installedPrinters').css('visibility','visible');
+			$('#installedPrinterName').html(options);
+			$('#installedPrinterName').focus();
+			$('#loadPrinters').hide();                                                        
+		}else{
+			alert("No printers are installed in your system.");
+		}
+	}
+
+	function wcpGetPrintersOnFailure() {
+		// Do something if printers cannot be got from the client
+		alert("No printers are installed in your system.");
+	}
+&lt;/script&gt;
+
+
+{!! 
+
+// Register the WebClientPrint script code
+// The $wcpScript was generated by PrintESCPOSController@index
+
+$wcpScript;
+
+!!}
+
+@endsection
+</pre>
+
+                    <p>&bull; Finally, add the following routes to <strong>routes / web.php</strong></p>
+
+<pre class="brush: php; ">
+Route::get('/', 'HomeController@index');
+Route::get('home', 'HomeController@index');
+Route::get('home/index', 'HomeController@index');
+Route::get('home/printESCPOS', 'HomeController@printESCPOS');
+Route::get('PrintESCPOSController', 'PrintESCPOSController@printCommands');
+Route::get('WebClientPrintController', 'WebClientPrintController@processRequest');
+</pre>
+                </div>
+            </div>
+            </div>
+                   
+               
+        </div>
+
+            </li>
+
+            <li>That's it! Run your website and test it. <strong>Click on Print Label</strong> to print the ESC/POS Commands without print dialog. You can print it to the <strong>Default client printer</strong> or you can get a <strong>list of the installed printers</strong> available at the client machine.
+            
+            <br /><br />
+            <div id="txt-header-footer" class="alert alert-info">
+            <strong>NOTE</strong> You can also print directly to any LPT Parallel Port, RS232 Serial Port or IP/Ethernet Printer although these scenarios have not been considered in this article for simplicity. For further details on those scenarios, please contact our <a href="https://www.neodynamic.com/support">tech support</a>.
+            </div>
+            
+            </li>
+            
+        </ul>
+
+
+        <hr />
+        <br /><br /><br /><br />
+        <h2 id="v2">WebClientPrint 2.0 Requirements</h2>
+        <h3>Development/Server-side</h3>
+        <p>
+            <i class="glyphicon glyphicon-check"></i>&nbsp; <a href="https://www.neodynamic.com/products/printing/raw-data/php">WebClientPrint 2.0 for PHP</a>
+            <br />
+            <i class="glyphicon glyphicon-check"></i>&nbsp; PHP 5.3 (or greater)
+            <br />
+            <i class="glyphicon glyphicon-check"></i>&nbsp; jQuery 1.4.1 (or greater)
+        </p>
+        <h3>Client-side</h3>
+        <p>
+            <i class="glyphicon glyphicon-check"></i>&nbsp; <a href="https://www.neodynamic.com/downloads/wcpp/wcpp2.aspx">WebClientPrint Processor</a> 2.0 for Windows, Linux & Mac
+            
+        </p>
+        
+        <h2>Follow up these steps</h2>        
+        <ul>
+            <li>Download &amp; install <a href="https://www.neodynamic.com/products/printing/raw-data/php/download">WebClientPrint for PHP</a></li>
+            <li>Create a new <strong>PHP Website</strong> naming it <strong>PrintESCPOSReceiptSample</strong></li>
+            <li>Create a new folder called <strong>wcpcache</strong> at your project's root folder</li>
+            <li>Copy the <strong>WebClientPrint.php</strong> to your project's root folder</li>
+            <li>Edit <strong>WebClientPrint.php</strong> to set the following properties based on your settings:<br />
+<pre class="brush: php; ">
+//IMPORTANT SETTINGS:
+//===================
+//Set ABSOLUTE URL to WebClientPrint.php file
+WebClientPrint::$webClientPrintAbsoluteUrl = Utils::getRoot().'/PrintESCPOSReceiptSample/WebClientPrint.php';
+//Set wcpcache folder RELATIVE to WebClientPrint.php file
+//FILE WRITE permission on this folder is required!!!
+WebClientPrint::$wcpCacheFolder = 'wcpcache/';
+//===================
+</pre>            
+            
+            
+            </li>
+            <li>
+            Open or edit the <strong>index.php</strong> page and paste the following code. The task of this page is to try to detect the WCPP and inform the user to install it if it's missing.
+
+<pre class="brush: php; ">
+&lt;?php
+  session_start();
+  
+  include 'WebClientPrint.php';
+  use Neodynamic\SDK\Web\WebClientPrint;
+  
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;Detecting WebClientPrint Processor...&lt;/title&gt;
+        
+        &lt;?php
+        //Add WCPP Detection Metatag for supporting IE
+        echo WebClientPrint::getWcppDetectionMetaTag();
+        ?&gt;
+        
+        &lt;style&gt;
+        body{font: 13px 'Segoe UI', Tahoma, Arial, Helvetica, sans-serif;}        
+        &lt;/style&gt;
+    
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div id="msgInProgress"&gt;
+            &lt;div id="mySpinner" style="width:32px;height:32px"&gt;&lt;/div&gt;
+            &lt;br /&gt;
+            Detecting WCPP utility at client side... 
+            &lt;br /&gt;
+            Please wait a few seconds...
+            &lt;br /&gt;
+        &lt;/div&gt;
+        &lt;div id="msgInstallWCPP" style="display:none;"&gt;    
+            &lt;h3&gt;#1 Install WebClientPrint Processor (WCPP)!&lt;/h3&gt;
+            &lt;p&gt;
+                &lt;strong&gt;WCPP is a native app (without any dependencies!)&lt;/strong&gt; that handles all print jobs 
+                generated by the &lt;strong&gt;WebClientPrint PHP component&lt;/strong&gt; at the server side. The WCPP 
+                is in charge of the whole printing process and can be 
+                installed on &lt;strong&gt;Windows, Linux & Mac!&lt;/strong&gt;
+            &lt;/p&gt;
+            &lt;p&gt;
+                &lt;a href="http://www.neodynamic.com/downloads/wcpp/" target="_blank"&gt;Download and Install WCPP from Neodynamic website&lt;/a&gt;&lt;br /&gt;                
+            &lt;/p&gt;         
+            &lt;h3&gt;#2 After installing WCPP...&lt;/h3&gt;
+            &lt;p&gt;
+                &lt;a href="PrintReceipt.php"&gt;You can go and test the printing page&lt;/a&gt;
+            &lt;/p&gt;
+
+        &lt;/div&gt;
+        
+        &lt;!-- Add Reference to jQuery at Google CDN --&gt;
+        &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"&gt;&lt;/script&gt;
+
+        &lt;!-- Add Reference to spin.js (an animated spinner) --&gt;
+        &lt;script src="http://fgnass.github.io/spin.js/spin.min.js"&gt;&lt;/script&gt;
+
+        &lt;script type="text/javascript"&gt;
+
+            var wcppPingDelay_ms = 10000; 
+
+            function wcppDetectOnSuccess(){
+                // WCPP utility is installed at the client side
+                // redirect to WebClientPrint sample page
+
+                // get WCPP version
+                var wcppVer = arguments[0];
+                if(wcppVer.substring(0, 1) == "2")
+                    window.location.href = "PrintReceipt.php";
+                else //force to install WCPP v2.0
+                    wcppDetectOnFailure();
+            }
+
+            function wcppDetectOnFailure() {
+                // It seems WCPP is not installed at the client side
+                // ask the user to install it
+                $('#msgInProgress').hide();
+                $('#msgInstallWCPP').show();                
+            }
+
+            $(document).ready(function () {
+                // Create the Spinner with options (http://fgnass.github.io/spin.js/)
+                var spinner = new Spinner({
+                      lines: 12, 
+                      length: 7, 
+                      width: 3, 
+                      radius: 10, 
+                      color: '#336699', 
+                      speed: 1, 
+                      trail: 60               
+                  }).spin($('#mySpinner')[0]); 
+            });
+
+        &lt;/script&gt;
+        
+        &lt;?php
+        // Create WCPP detection script
+        echo WebClientPrint::createWcppDetectionScript();
+        ?&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+            </li>
+            <li>
+            Finally, add a <strong>new PHP page</strong> and name it <strong>PrintReceipt.php</strong>
+            <br /><br />
+            Please paste the following code on your PrintReceipt.php file.
+
+            
+<pre class="brush: php; ">
+&lt;?php 
+    session_start();
+
+    include 'WebClientPrint.php';
+    use Neodynamic\SDK\Web\WebClientPrint;
+    use Neodynamic\SDK\Web\Utils;
+    use Neodynamic\SDK\Web\DefaultPrinter;
+    use Neodynamic\SDK\Web\InstalledPrinter;
+    use Neodynamic\SDK\Web\ClientPrintJob;
+
+    // Process request
+    // Generate ClientPrintJob? only if clientPrint param is in the query string
+    $urlParts = parse_url($_SERVER['REQUEST_URI']);
+    
+    if (isset($urlParts['query'])){
+        $rawQuery = $urlParts['query'];
+        parse_str($rawQuery, $qs);
+        if(isset($qs[WebClientPrint::CLIENT_PRINT_JOB])){
+
+            $useDefaultPrinter = ($qs['useDefaultPrinter'] === 'checked');
+            $printerName = urldecode($qs['printerName']);
+
+            //Create ESC/POS commands for sample receipt
+            $esc = '0x1B'; //ESC byte in hex notation
+            $newLine = '0x0A'; //LF byte in hex notation
+            
+            $cmds = $esc . "@"; //Initializes the printer (ESC @)
+            $cmds .= $esc . '!' . '0x38'; //Emphasized + Double-height + Double-width mode selected (ESC ! (8 + 16 + 32)) 56 dec => 38 hex
+            $cmds .= 'BEST DEAL STORES'; //text to print
+            $cmds .= $newLine . $newLine;
+            $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+            $cmds .= 'COOKIES                   5.00'; 
+            $cmds .= $newLine;
+            $cmds .= 'MILK 65 Fl oz             3.78';
+            $cmds .= $newLine . $newLine;
+            $cmds .= 'SUBTOTAL                  8.78';
+            $cmds .= $newLine;
+            $cmds .= 'TAX 5%                    0.44';
+            $cmds .= $newLine;
+            $cmds .= 'TOTAL                     9.22';
+            $cmds .= $newLine;
+            $cmds .= 'CASH TEND                10.00';
+            $cmds .= $newLine;
+            $cmds .= 'CASH DUE                  0.78';
+            $cmds .= $newLine . $newLine;
+            $cmds .= $esc . '!' . '0x18'; //Emphasized + Double-height mode selected (ESC ! (16 + 8)) 24 dec => 18 hex
+            $cmds .= '# ITEMS SOLD 2';
+            $cmds .= $esc . '!' . '0x00'; //Character font A selected (ESC ! 0)
+            $cmds .= $newLine . $newLine;
+            $cmds .= '11/03/13  19:53:17';
+
+            //Create a ClientPrintJob obj that will be processed at the client side by the WCPP
+            $cpj = new ClientPrintJob();
+            //set ESC/POS commands to print...
+            $cpj-&gt;printerCommands = $cmds;
+            $cpj-&gt;formatHexValues = true;
+            //set client printer
+            if ($useDefaultPrinter || $printerName === 'null'){
+                $cpj-&gt;clientPrinter = new DefaultPrinter();
+            }else{
+                $cpj-&gt;clientPrinter = new InstalledPrinter($printerName);
+            }
+
+            //Send ClientPrintJob back to the client
+            ob_start();
+            ob_clean();
+            echo $cpj-&gt;sendToClient();
+            ob_end_flush(); 
+            exit();
+        }
+    }
+?&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;How to directly Print ESC/POS Commands without Preview or Printer Dialog&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Store User's SessionId --&gt;
+    &lt;input type="hidden" id="sid" name="sid" value="&lt;?php echo session_id(); ?&gt;" /&gt;
+    
+    &lt;h1&gt;How to directly Print ESC/POS Commands without Preview or Printer Dialog&lt;/h1&gt;
+    &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox" id="useDefaultPrinter" /&gt; &lt;strong&gt;Use default printer&lt;/strong&gt; or...
+    &lt;/label&gt;
+    &lt;div id="loadPrinters"&gt;
+    &lt;br /&gt;
+    WebClientPrint can detect the installed printers in your machine.
+    &lt;br /&gt;
+    &lt;input type="button" onclick="javascript:jsWebClientPrint.getPrinters();" value="Load installed printers..." /&gt;
+                    
+    &lt;br /&gt;&lt;br /&gt;
+    &lt;/div&gt;
+    &lt;div id="installedPrinters" style="visibility:hidden"&gt;
+    &lt;br /&gt;
+    &lt;label for="installedPrinterName"&gt;Select an installed Printer:&lt;/label&gt;
+    &lt;select name="installedPrinterName" id="installedPrinterName"&gt;&lt;/select&gt;
+    &lt;/div&gt;
+            
+    &lt;br /&gt;&lt;br /&gt;
+    &lt;input type="button" style="font-size:18px" onclick="javascript:jsWebClientPrint.print('useDefaultPrinter=' + $('#useDefaultPrinter').attr('checked') + '&printerName=' + $('#installedPrinterName').val());" value="Print Receipt..." /&gt;
+        
+    &lt;script type="text/javascript"&gt;
+        var wcppGetPrintersDelay_ms = 5000; //5 sec
+
+        function wcpGetPrintersOnSuccess(){
+            // Display client installed printers
+            if(arguments[0].length &gt; 0){
+                var p=arguments[0].split("|");
+                var options = '';
+                for (var i = 0; i &lt; p.length; i++) {
+                    options += '&lt;option&gt;' + p[i] + '&lt;/option&gt;';
+                }
+                $('#installedPrinters').css('visibility','visible');
+                $('#installedPrinterName').html(options);
+                $('#installedPrinterName').focus();
+                $('#loadPrinters').hide();                                                        
+            }else{
+                alert("No printers are installed in your system.");
+            }
+        }
+
+        function wcpGetPrintersOnFailure() {
+            // Do something if printers cannot be got from the client
+            alert("No printers are installed in your system.");
+        }
+    &lt;/script&gt;
+    
+    &lt;!-- Add Reference to jQuery at Google CDN --&gt;
+    &lt;script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" type="text/javascript"&gt;&lt;/script&gt;
+
+    &lt;?php
+    //Specify the ABSOLUTE URL to the php file that will create the ClientPrintJob object
+    //In this case, this same page
+    echo WebClientPrint::createScript(Utils::getRoot().'/PrintESCPOSReceiptSample/PrintReceipt.php')
+    ?&gt;
+       
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</pre>
+            </li>
+            <li>That's it! Run your website and test it. <strong>Click on Print Receipt</strong> to print the ESC/POS Commands without print dialog. You can print it to the <strong>Default client printer</strong> or you can get a <strong>list of the installed printers</strong> available at the client machine.
+            
+            <br /><br />
+            <div id="txt-header-footer" class="alert alert-info">
+            <strong>NOTE</strong> You can also print directly to any LPT Parallel Port, RS232 Serial Port or IP/Ethernet Printer although these scenarios have not been considered in this article for simplicity. For further details on those scenarios, please contact our <a href="https://www.neodynamic.com/support">tech support</a>.
+            </div>
+            
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+</div></div>
+
+<br /><br />
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+            <h2>Useful? Share it!</h2>
+            
+
+<table>
+    <tr>
+        <td style="vertical-align:top;">
+            <div class="g-plusone" data-size="medium"></div>
+        </td>        
+        <td style="vertical-align:top;">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+            <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "https://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } } (document, "script", "twitter-wjs");</script>
+        </td>
+        <td style="vertical-align:top;">
+            <div id="fb-root"></div>
+            <script>    (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+                    fjs.parentNode.insertBefore(js, fjs);
+                } (document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-like" data-href="https://www.neodynamic.com/articles/How-to-print-raw-ESC-POS-commands-from-PHP-directly-to-the-client-printer/default.aspx" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend" data-font="segoe ui"></div>        
+        </td>
+        <td style="vertical-align:top;" >        
+            <div style="margin-left:25px;">
+                <script src="//platform.linkedin.com/in.js" type="text/javascript"></script><script type="IN/Share" data-url="https://www.neodynamic.com/articles/How-to-print-raw-ESC-POS-commands-from-PHP-directly-to-the-client-printer/default.aspx" data-counter="right"></script>
+            </div>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+            <br />
+            
+        </div>
+        <div class="col-sm-6">
+            <h2>Need help? Contact Support</h2>
+            <p>
+                We provide <a href="https://www.neodynamic.com/support">best-in-class 
+									customer service and support directly from members of our dev team!</a> If we are available when you contact us, 
+								you will get a response in few minutes; otherwise the maximum turnaround is 
+								24hs in most cases.
+            </p>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+        
+        <footer id="mpfooter">
+
+            <div class="container neofooterFrame">
+
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div>
+                            <h3>Products</h3>
+                            <a href="https://www.neodynamic.com/products/barcode"><i class="glyphicon glyphicon-qrcode"></i><span class="neofooterHighTitle"><strong>Barcode Professional</strong></span><br />
+                                <small class="neofooterSubTitle"><em>Encoder/Writer/Generator</em></small></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/products/barcode/reader"><i class="glyphicon glyphicon-barcode"></i><span class="neofooterHighTitle"><strong>Barcode Reader</strong></span><br />
+                                <small class="neofooterSubTitle"><em>Detect &amp; Decode Barcode Images</em></small></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/products/printing/thermal-label"><i class="glyphicon glyphicon-file"></i><span class="neofooterHighTitle"><strong>ThermalLabel</strong></span><br />
+                                <small class="neofooterSubTitle"><em>Design &amp;Print Barcode Thermal Labels</em></small></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/products/printing/raw-data"><i class="glyphicon glyphicon-print"></i><span class="neofooterHighTitle"><strong>WebClientPrint</strong></span><br />
+                                <small class="neofooterSubTitle"><em>Raw Data Printing for Websites</em></small></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/products/image-draw"><i class="glyphicon glyphicon-picture"></i><span class="neofooterHighTitle"><strong>ImageDraw</strong></span><br />
+                                <small class="neofooterSubTitle"><em>Dynamic Image Composition</em></small></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div>
+                            <h3>Downloads</h3>
+                            <a href="https://www.neodynamic.com/products/download"><i class="glyphicon glyphicon-download"></i><span class="neofooterHighTitle">Download fully-functional trials</span></a>
+                            <h3>Get Help</h3>
+                            <a href="https://www.neodynamic.com/support"><i class="glyphicon glyphicon-user"></i><span class="neofooterHighTitle">Contact Support</span></a>
+                            <br />
+                            <br />
+                            <a href="https://www.neodynamic.com/articles"><i class="glyphicon glyphicon-share"></i><span class="neofooterHighTitle">Articles, Tutorials &amp; Guides</span></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/products/help"><i class="glyphicon glyphicon-share"></i><span class="neofooterHighTitle">Get Help Docs</span></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/barcodes"><i class="glyphicon glyphicon-share"></i><span class="neofooterHighTitle">Barcode Center</span></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div>
+                            <h3>Purchase</h3>
+                            <a href="https://www.neodynamic.com/products/buy"><i class="glyphicon glyphicon-shopping-cart"></i><span class="neofooterHighTitle">Buy Licenses</span></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/purchase/renewals-upgrades"><i class="glyphicon glyphicon-refresh"></i><span class="neofooterHighTitle">Renewal &amp; Upgrade</span></a>
+                            <br />
+                            <a href="https://www.neodynamic.com/purchase/get-quote"><i class="glyphicon glyphicon-list-alt"></i><span class="neofooterHighTitle">Request a Quote</span></a>
+                            <br />
+                            <h3>Keep in touch</h3>
+                            <a href="https://www.neodynamic.com/contact"><i class="glyphicon glyphicon-envelope"></i><span class="neofooterHighTitle">Contact Us</span></a>
+                            <br />
+                            <a href="//plus.google.com/+Neodynamic" rel="publisher">
+                                <img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+" style="border: 0; width: 16px; height: 16px;" /><span class="neofooterHighTitle">Follow Us</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-3">
+                        <div>
+                            <h3>Company</h3>
+                            <p>
+                                <strong>Founded in 2004</strong>, <strong>Neodynamic</strong> designs and develops <strong>Barcode, Imaging, Labeling &amp; Printing</strong>
+                                Tools <strong>for .NET, PHP &amp; Web developers</strong>. We are <strong>experts </strong>
+                                in those fields with <strong>strong know-how on .NET, ASP.NET, SSRS, PHP  &amp; HTML/JS</strong>
+                                projects.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="pull-right">
+                            <small>Copyright &copy; 2004 - 2018 Neodynamic SRL - All rights reserved.&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.neodynamic.com/privacy">Privacy Policy</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.neodynamic.com/contact">Contact Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.neodynamic.com/sitemap">Sitemap</a></small><br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+                
+                    
+                
+            </div>
+
+        </footer>
+
+
+
+    </form>
+    
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    
+    <script>
+        $(function () {
+            $(document).on('click', '.yamm .dropdown-menu', function (e) {
+                e.stopPropagation()
+            })
+        })
+    </script>
+
+    
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-185478-1']);
+        _gaq.push(['_trackPageview']);
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+
+    
+    <script type="text/javascript">
+        (function () {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+        })();
+    </script>
+    
+
+    <script type="text/javascript" src="https://www.neodynamic.com/sh/scripts/shCore.js"></script>
+	<script type="text/javascript" src="https://www.neodynamic.com/sh/scripts/shBrushPhp.js"></script>
+	<script type="text/javascript" src="https://www.neodynamic.com/sh/scripts/shBrushXml.js"></script>
+	<script type="text/javascript">
+	    SyntaxHighlighter.config.clipboardSwf = 'https://www.neodynamic.com/sh/scripts/clipboard.swf';
+	    SyntaxHighlighter.all();
+	</script>
+    <script type="text/javascript">
+        $('#myTab4 a[href="#phpclassic4"]').tab('show');
+        $('#myTab a[href="#phpclassic"]').tab('show');
+    </script>
+
+
+
+
+</body>
+</html>
